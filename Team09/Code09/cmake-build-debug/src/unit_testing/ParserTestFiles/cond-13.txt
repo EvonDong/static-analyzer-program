@@ -1,0 +1,5 @@
+procedure main {
+	while ((a + b > 3) || (c != y) || (d == 7)) {
+		print c;
+	}
+}

@@ -1,0 +1,56 @@
+/* This file is a replication of Program05.txt but with statement numbers labelled for each line.
+ * This file is not used in the actual testing but for debugging purposes (one can refer to this file instead)
+ */
+
+procedure main { 	
+1	  main = 1;
+2	  while ((main > 0) && (((((x + y) /2 ) + (x + x)) > 0) || (y < 10))) {
+3		print main;
+4		if (main > x) then {
+5			print = 1;
+6			main = print + else;
+		} else {
+7			read = main;
+8			print = read / 1;}
+9		true = 100;
+10		while = (true);}
+11	  if (1 > 0) then {
+12		else = 1;
+13		print else;
+	  } else {
+14		ifthenelse = (2 + 17);
+15		print ifthenelse;}
+16	  print print;
+17	  read read;
+18	  print read;
+19	  read print;
+20	  print = read;
+21	  read = print;
+22	  while((while > (while / (while + while))) || (while % if / then == else)) {
+23		while(a > 0) {
+24			while (b > 0) {
+25				while (c > 0) {
+26					while(d > 0) {
+27						while(e > 0) {
+28							if = then;
+29							then = else;
+30							if = else; } } } } } }
+31	  procedure = main + 2; }
+
+	procedure raymarch {
+32		read steps;
+33		print depth;  }
+
+    procedure call {
+34        while ((call == 1) || (call == call)) {
+35            call print; }     }
+
+    procedure print {
+36        print call;
+37        if ((print == call) && ((print > ca11) || (print < ca11))) then {
+38            ca11 = print + 2;
+          } else {
+39           call re4d; } }
+
+    procedure re4d {
+40        read re4d;}

@@ -1,0 +1,185 @@
+1 - Basic AffectsBip
+
+Select BOOLEAN such that AffectsBip(171,173)
+TRUE
+5000
+2 - Basic AffectsBip*
+
+Select BOOLEAN such that AffectsBip*(171,173)
+TRUE
+5000
+3 - AffectsBip, while, chained calls
+
+Select BOOLEAN such that AffectsBip(178,175)
+TRUE
+5000
+4 - AffectsBip call
+
+Select BOOLEAN such that AffectsBip(181, 180)
+TRUE
+5000
+5 - AffectsBip*, order of processing
+
+Select BOOLEAN such that AffectsBip*(183,185)
+FALSE
+5000
+6 - AffectsBip, order of processing
+
+Select BOOLEAN such that AffectsBip(194,201)
+FALSE
+5000
+7 - AffectsBip, order of processing
+
+Select BOOLEAN such that AffectsBip(194,196)
+FALSE
+5000
+8 - AffectsBip, if else
+
+Select BOOLEAN such that AffectsBip(519,522)
+FALSE
+5000
+9 - AffectsBip, if else
+
+Select BOOLEAN such that AffectsBip(519,524)
+TRUE
+5000
+10 - AffectsBip, backward traversal
+
+Select BOOLEAN such that AffectsBip(526,522)
+TRUE
+5000
+11 - AffectsBip, cannot travel upwards
+
+Select BOOLEAN such that AffectsBip(527,519)
+FALSE
+5000
+12 - AffectsBip, call
+call c;
+Select c such that AffectsBip(c, 527)
+none
+5000
+13 - AffectsBip, stmt
+stmt s;
+Select s such that AffectsBip(s, 522)
+526
+5000
+14 - AffectsBip, print
+print p; assign a;
+Select s such that AffectsBip(p, a)
+none
+5000
+15 - AffectsBip, read
+read r; assign a;
+Select s such that AffectsBip(r, a)
+none
+5000
+16 - AffectsBip, wildcard, wildcard
+read r; assign a;
+Select s such that AffectsBip(_, _)
+none
+5000
+17 - AffectsBip, while
+stmt s;
+Select BOOLEAN such that AffectsBip(530, s)
+FALSE
+5000
+18 - AffectsBip, order of processing
+
+Select BOOLEAN such that AffectsBip(531,534)
+FALSE
+5000
+19 - AffectsBip*, order of processing
+
+Select BOOLEAN such that AffectsBip*(531,534)
+TRUE
+5000
+20 - AffectsBip, order of processing
+
+Select BOOLEAN such that AffectsBip(531,535)
+TRUE
+5000
+21 - Backwards call, can go to a procedure chronologically before
+
+Select BOOLEAN such that AffectsBip(539,538)
+TRUE
+5000
+22 - Backwards call, procedure call is connected to statement after call
+
+Select BOOLEAN such that AffectsBip(538,541)
+TRUE
+5000
+23 - Backwards call, control flow graph direction is correct and statement after call cannot go back to called procedure
+
+Select BOOLEAN such that AffectsBip(541,538)
+FALSE
+5000
+24 - Backwards call, called procedure cannot go back to statement before call
+
+Select BOOLEAN such that AffectsBip(538,539)
+FALSE
+5000
+25 - Self AffectsBip
+
+Select BOOLEAN such that AffectsBip(544,544)
+FALSE
+5000
+26 - AffectsBip, branch
+
+Select BOOLEAN such that AffectsBip(584,583)
+TRUE
+5000
+27 - AffectsBip, branch
+
+Select BOOLEAN such that AffectsBip(586,583)
+FALSE
+5000
+28 - AffectsBip, branch, doesnt go to other procedure
+stmt s;
+Select s such that AffectsBip(590, s)
+588
+5000
+29 - AffectsBip, while if else
+
+Select BOOLEAN such that AffectsBip(598,599)
+TRUE
+5000
+30 - AffectsBip, if else
+
+Select BOOLEAN such that AffectsBip(601, 602)
+FALSE
+5000
+31 - AffectsBip*, chain
+stmt s;
+Select s such that AffectsBip*(542, s)
+544,566,557,548
+5000
+32 - AffectsBip, while exit
+
+Select BOOLEAN such that AffectsBip*(574,578)
+FALSE
+5000
+33 - AffectsBip*, while if else, goes around else first to 577 then to 575
+
+Select BOOLEAN such that AffectsBip*(574,582)
+FALSE
+5000
+34 - AffectsBip*, while if else, goes around else first to 577 then to 575
+
+Select BOOLEAN such that AffectsBip*(573,576)
+TRUE
+5000
+35 - AffectsBip*, while if else, goes around else first to 577 then to 575
+
+Select BOOLEAN such that AffectsBip(581,576)
+FALSE
+5000
+36 - AffectsBip*, while if else, goes around else first to 577 then to 575
+
+Select BOOLEAN such that AffectsBip(582,577)
+TRUE
+5000
+37 - AffectBip, call doesnt go back to front of procedure
+
+Select BOOLEAN such that AffectsBip(583,568)
+FALSE
+5000

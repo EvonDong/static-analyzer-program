@@ -1,0 +1,5 @@
+procedure main {
+	while ((main > 3) && !(main == 3)) {
+		print b;
+	}
+}

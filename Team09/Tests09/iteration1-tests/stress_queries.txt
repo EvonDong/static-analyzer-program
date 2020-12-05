@@ -1,0 +1,300 @@
+1 - comments
+constant c;
+Select c
+0, 9, 4, 1, 341242, 8248, 7
+5000
+2 - comments
+variable v;
+Select v
+a, b, c, d, f, g, k, i, j, p, q, e, h, m, read, l, x, while, procedure, if, statement, print, call, then, depth, steps
+5000
+3 - comments
+read r;
+Select r
+3, 15, 19, 21, 24, 30, 31, 41
+5000
+4 - comments
+print p;
+Select p
+9, 17, 18, 20, 25, 32, 34, 40, 42
+5000
+5 - comments
+assign a;
+Select a
+26, 27, 28, 29, 33, 35, 36, 38, 39, 22, 23
+5000
+6 - comments
+if i;
+Select i
+1, 5, 6, 10, 14, 37
+5000
+7 - comments
+while w;
+Select w
+2, 4, 7, 8, 11, 12, 13, 16
+5000
+8 - comments
+stmt s;
+Select s such that Follows(1, 9)
+none
+5000
+9 - comments
+stmt s;
+Select s such that Follows(1, s)
+30
+5000
+10 - comments
+stmt s;
+Select s such that Follows(s, 30)
+1
+5000
+11 - comments
+if i;
+Select i such that Follows(i, _)
+1
+5000
+12 - comments
+print p;
+Select p such that Follows(_, p)
+18, 20, 25, 32, 34, 42
+5000
+13 - comments
+stmt s; assign a;
+Select s such that Follows(s, a)
+21, 22, 26, 27, 28, 32, 34, 35, 38
+5000
+14 - comments
+read r; assign a;
+Select r such that Follows(r, a)
+21
+5000
+15 - comments
+stmt s;
+Select s such that Follows(_, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42
+5000
+16 - comments
+stmt s;
+Select s such that Follows(1, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42
+5000
+17 - comments
+stmt s;
+Select s such that Follows(_, 31)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42
+5000
+18 - comments
+stmt s;
+Select s such that Parent(10, 25)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42
+5000
+19 - comments
+stmt s;
+Select s such that Parent(s, 5)
+4
+5000
+20 - comments
+stmt s;
+Select s such that Parent(14, s)
+15, 16
+5000
+21 - comments
+if i;
+Select i such that Parent(i, _)
+1, 5, 6, 10, 14, 37
+5000
+22 - comments
+while w;
+Select w such that Parent(_, w)
+2, 4, 7, 8, 11, 12, 13, 16
+5000
+23 - comments
+assign a; while w;
+Select w such that Parent(a, w)
+none
+5000
+24 - comments
+while w1, w2;
+Select w1 such that Parent(w1, w2)
+7, 11, 12
+5000
+25 - comments
+if i; print p;
+Select p such that Parent(i, p)
+25, 40
+5000
+26 - comments
+stmt s;
+Select w such that Parent(15, _)
+none
+5000
+27 - comments
+while w;
+Select w such that Parent(_, 5)
+2, 4, 7, 8, 11, 12, 13, 16
+5000
+28 - comments
+assign a;
+Select a such that Parent(_, _)
+26, 27, 28, 29, 33, 35, 36, 39, 22, 23, 38
+5000
+29 - comments
+while w;
+Select w such that Uses(w, "j")
+4, 11, 12, 13, 16
+5000
+30 - comments
+variable v;
+Select v such that Uses(11, v)
+a, b, c, d, f, g, k, i, j, print, read
+5000
+31 - comments
+procedure p;
+Select p such that Uses(p, "nonExisting")
+none
+5000
+32 - comments
+variable v;
+Select v such that Uses(50, v)
+none
+5000
+33 - comments
+assign a;
+Select a such that Modifies(a, "a")
+26, 33
+5000
+34 - comments
+variable v;
+Select v such that Modifies(1, v)
+a, d, i, j, p, m, read, print
+5000
+35 - comments
+procedure p;
+Select p such that Modifies(p, "nonExisting")
+none
+5000
+36 - comments
+variable v;
+Select v such that Modifies(90, v)
+none
+5000
+37 - comments
+procedure p;
+Select p such that Modifies(_, "call")
+none
+5000
+38 - comments
+assign a;
+Select a pattern a(_, "a")
+none
+5000
+39 - comments
+assign a;
+Select a pattern a(_, "a - k")
+none
+5000
+40 - comments
+assign a;
+Select a pattern a(_, _"a"_)
+29
+5000
+41 - comments
+assign a;
+Select a pattern a(_, _"f%a"_)
+29
+5000
+42 - comments
+assign a;
+Select a pattern a("a", _"d* k"_)
+33
+5000
+43 - comments
+assign a;
+Select a pattern a("procedure", _)
+36
+5000
+44 - comments
+variable v; assign a;
+Select v pattern a(v, _"k"_)
+d, j, m, a, print
+5000
+45 - comments
+variable v; assign a;
+Select a pattern a(v, _)
+26, 27, 28, 29, 33, 35, 36, 39, 22, 23, 38
+5000
+46 - comments
+stmt s; assign a;
+Select s pattern a(_, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42
+5000
+47 - comments
+stmt a;
+Select a pattern a("m", _)
+none
+5000
+48 - comments
+stmt s;
+Select s such that Follows*(1, 17)
+none
+5000
+49 - comments
+stmt s;
+Select s such that Follows*(s, 31)
+1, 30
+5000
+50 - comments
+assign a;
+Select a such that Follows*(31, a)
+33, 35, 36
+5000
+51 - comments
+while while;
+Select while such that Follows*(while, _)
+none
+5000
+52 - comments
+if if;
+Select if such that Follows*(_, if)
+37
+5000
+53 - comments
+variable v;
+Select v such that Follows*(_, 22)
+a, b, c, d, f, g, k, i, j, p, q, e, h, m, read, l, x, while, procedure, if, statement, print, call, then, depth, steps
+5000
+54 - comments
+procedure p;
+Select p such that Follows*(36, _)
+procedure, raymarch
+5000
+55 - comments
+constant c;
+Select c such that Follows*(_, _)
+0, 9, 4, 1, 341242, 8248, 7
+5000
+56 - comments
+stmt s; while w;
+Select s such that Follows*(s, w)
+none
+5000
+57 - comments
+stmt s; while w;
+Select c such that Follows*(w, s)
+none
+5000
+58 - comments
+assign a;
+Select a such that Parent*(9, 10)
+none
+5000
+59 - comments
+stmt if23;
+Select if23 such that Parent*(1, if23)
+2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+5000
+60 - comments
+stmt gr3a7;
+Select gr3a7 such that Parent*(gr3a7, 17)
+1, 4, 5, 6, 10, 11, 12, 13, 14, 16
+5000

@@ -1,0 +1,6 @@
+procedure main {
+while (((!(a + b > (x * 5) + d / 7)) || (a + k < 6 - 100)) && ((7 + d < 7)
+    && ((main >= procedure) || (!(3 == 10))))) {
+    print a;
+}
+}

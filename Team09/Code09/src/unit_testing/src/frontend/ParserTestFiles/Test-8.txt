@@ -1,0 +1,7 @@
+procedure main {
+	if (a = b) then {
+	
+	} else {
+		print a;
+	}
+}

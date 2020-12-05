@@ -1,0 +1,68 @@
+procedure main { 	
+	  main = 1;
+	  while ((main > 0) && (((((x + y) /2 ) + (x + x)) > 0) || (y < 10))) {
+		print main;
+		if (main > x) then {
+			print = 1;
+			main = print + else;
+		} else {
+			read = main;
+			print = read / 1;
+		}
+		true = 100;
+		while = (true);
+	  }
+	  if (1 > 0) then {
+		else = 1;
+		print else;
+	  } else {
+		ifthenelse = (2 + 17);
+		print ifthenelse;
+	  }
+	  print print;
+	  read read;
+	  print read;
+	  read print;
+	  print = read;
+	  read = print;
+	  while((while > (while / (while + while))) || (while % if / then == else)) {
+		while(a > 0) {
+			while (b > 0) {
+				while (c > 0) {
+					while(d > 0) {
+						while(e > 0) {
+							if = then;
+							then = else;
+							if = else;
+						}
+					}
+				}
+			}
+		}
+	  }
+	  procedure = main + 2;
+	}
+
+	procedure raymarch {
+		read steps;
+		print depth; 
+	}
+
+    procedure call {
+        while ((call == 1) || (call == call)) {
+            call print;
+        }    
+    }
+
+    procedure print {
+        print call;
+        if ((print == call) && ((print > ca11) || (print < ca11))) then {
+            ca11 = print + 2;
+        } else {
+           call re4d;
+        }
+    }
+
+    procedure re4d {
+        read re4d;
+    }

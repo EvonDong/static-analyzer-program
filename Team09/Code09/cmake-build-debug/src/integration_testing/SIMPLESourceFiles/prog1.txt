@@ -1,0 +1,906 @@
+procedure callOne {
+	x = 1;
+	call callTwo;
+	a = x; 
+}
+
+procedure callTwo {
+	if (i!=2) then {
+		x = a + 1;
+	} else {
+		a = b; 
+	}
+}
+
+procedure while {
+	while (a != b) {
+		a = b + c;
+		b = a + c;
+	}
+}
+
+procedure ifelse {
+	x = 1;
+	if (i!=2) then {
+		x = a + 1;
+	} else {
+		a = b; 
+	}
+	a = x; 
+}
+
+procedure basicAffectsStar {
+    x=a;
+    v=x;
+    z=v;
+}
+
+procedure moreAffectsStar {
+	x=a;
+	v=x;
+	z=v;
+	y=z;
+	p=y;
+}
+
+procedure crossProcedure {
+	a=b;
+	call crossProcedure2;
+}
+
+procedure crossProcedure2 {
+	b=a;
+}
+
+procedure ifElseSep {
+	a=b;
+	if (c == d) then {
+		c=a;
+		d=c;
+	} else {
+		e=d;
+		f=e;
+	}
+	b=a;
+}
+
+procedure whileLoop {
+	a=b;
+	while (c == d) {
+		b=a;
+		c=b;
+		d=c;
+		e=d;
+		while (d != c) {
+			d=e;
+			c=d;
+			b=c;
+			a=b;
+		}
+	}
+	b=a;
+}
+
+procedure read {
+	a=b;
+	read a;
+	b=a;
+}
+
+procedure dualPattern {
+	x = 3;
+	while (c != d) {
+		while (b != 6) {
+			x = x + 1;
+		}
+	}
+}
+
+procedure print {
+	a=b;
+	print a;
+	b=a;
+}
+
+procedure whileIfElse{
+	o=f;
+	n=o;
+	f=n;
+	while (a == b) {
+		if (c == d) then {
+			o=f;
+		} else {
+			n=o;
+			f=n;
+		}
+	}
+	o=f;
+}
+
+procedure whileOne {
+	while (a == b) {
+		a=b;
+	}
+}
+
+procedure whileTwoIfElse {
+	o=f;
+	n=o;
+	while (a == b) {
+		while (c == d) {
+			if (n == f) then {
+				f=n;
+				print f;
+				o=f;
+				n=o;
+			} else {
+				f=n;
+				read f;
+				o=f;
+				n=o;
+			}
+		}
+		f=n;
+	}
+	f=n;
+}
+
+procedure wilyWhile {
+	while (a == c) {
+		while (c == a) {
+			while (a == c) {
+				while (c == a) {
+					a=c;
+				}
+			}
+		}
+	}
+}
+
+procedure ifStack {
+	if (a==b) then {
+		while (c==d) {
+			if (a==b) then {
+				c=d;
+			} else {
+				f=c;
+			}
+		}
+	} else {
+		while (c==d) {
+			e=f;
+		}
+	}
+}
+
+procedure moreIfs {
+	if (o==n) then {
+		while (m==k) {
+			if (m!=k) then {
+				while (mk==1) {
+					o=f;
+					n=o;
+					f=n;
+				}
+				o=f;
+				n=o;
+				f=n;
+			} else {
+				while (1==1) {
+					o=f;
+					n=o;
+					f=n;
+				}
+			}
+		}
+	} else {
+		while (2==1) {
+			o=f;
+			n=o;
+			f=n;
+		}
+	}
+	o=f;
+	n=o;
+	f=n;
+}
+
+procedure you {
+	c=e;
+	o=c;
+	m=o;
+	print m;
+	l=m;
+	e=l;
+	t=e;
+	e=t;
+}
+
+procedure me {
+	e=m;
+	m=e;
+	m=e;
+	m=e;
+	m=e;
+	m=e;
+	m=e;
+}
+
+procedure readPrintChooseYourOwnAdventure {
+	m=k;
+	k=m;
+	if (m==k) then {
+		print k;
+		while (k==m) {
+			m=k;
+			if (m==k) then {
+				read k;
+				m=k;
+				if (m==k) then {
+					read k;
+					k=m;
+				} else {
+					print k;
+					m=k;
+				}
+			} else {
+				print k;
+				m=k;
+				if (m==k) then {
+					read k;
+					m=k;
+				} else {
+					print k;
+					m=k;
+				}
+			}		
+		}
+	} else {
+		read k;
+		while (k==m) {
+			m=k;
+			if (m==k) then {
+				read k;
+				m=k;
+				if (m==k) then {
+					read k;
+					m=k;
+				} else {
+					print k;
+					m=k;
+				}
+			} else {
+				print k;
+				m=k;
+				if (m==k) then {
+					read k;
+					m=k;
+				} else {
+					print k;
+					m=k;
+				}
+			}		
+		}
+	}
+}
+
+procedure unRelatedRead {
+	m=k;
+	read k;
+	k=m;
+}
+
+procedure affectsBip1 {
+	a=x;
+	call affectsBip2;
+}
+
+procedure affectsBip2 {
+	x=a;
+}
+
+procedure affectsBip3 {
+	while (a==b) {
+		a=x;
+		call affectsBip4;
+	}
+}
+
+procedure affectsBip4 {
+	call affectsBip5;
+}
+
+procedure affectsBip5 {
+	x=a;
+}
+
+procedure affectsBip6 {
+	call affectsBip7;
+	x=a;
+}
+
+procedure affectsBip7 {
+	a=x;
+}
+
+procedure affectsBip8 {
+	a=x;
+	m=k;
+	call affectsBip9;
+	u=r;
+	o=p;
+}
+
+procedure affectsBip9 {
+	x=a;
+	k=b;
+	call affectsBip10;
+	y=u;
+	t=o;
+}
+
+procedure affectsBip10 {
+	a=t;
+	b=y;
+}
+
+procedure start {
+	a=x;
+	call call;
+	x=a;
+}
+
+procedure call {
+	call call1;
+}
+
+procedure call1 {
+	call call2;
+}
+
+procedure call2 {
+	call call3;	
+}
+
+procedure call3 {
+	call call4;
+}
+
+procedure call4 {
+	a=x;
+}
+
+procedure start2 {
+	a=x;
+	call call5;
+	x=a;
+}
+
+procedure call5 {
+	b=c;
+}
+
+procedure deer {
+	ramen=pasta;
+	if (a==b) then {
+		while (c==d) {
+			pasta=ramen;
+			naengmyeon=pasta;
+			ramen = naengmyeon;
+		}
+	} else {
+		while (c==d) {
+			if (a>4) then {
+				rice=white;
+				red=rice;
+				hair=red;
+				white=hair;
+			} else {
+				rice=white;
+			}
+		}
+	}
+	red=hair;
+}
+
+procedure shark {
+	z=u;
+	y=u;
+	t=o;
+	u=z;
+}
+
+procedure dog {
+	maltese=chihuahua;
+	while (maltese != dog) {
+		if (chihuahua < bulldog) then {
+			chi=huahua;
+			read dog;
+		} else {
+			while (dog==small) {
+				chihuahua=maltese;
+			}
+		}
+		chihuahua=pomeranian;
+	}
+}
+
+procedure gorilla {
+	z=u;
+	y=u;
+	t=o;
+	k=z;
+	e=i;
+	c=h;
+	a=n;
+	m=k;
+}
+
+procedure cat {
+	while (cat == dog) {
+		while (m==m) {
+			while (siamese==tabby) {
+				while (siamese==stray) {
+					while (stray < dog) {
+						m=m;
+					}
+				}
+			}
+		}
+	}
+}
+
+procedure bread {
+	if (bread==butter) then {
+		if (butter < cheese) then {
+			if (croissant != 3) then {
+				read bread;
+			} else {
+				print bread;
+			}
+		} else {
+			if (3 != d) then {
+				if (c < o) then {
+					bread=butter;
+				} else {
+					butter=bread;
+				}
+			} else {
+				bread=butter;
+			}
+		}
+	} else {
+		if (bread <= bread) then {
+			croissant=dairy;
+		} else {
+			read dairy;
+			read diary;
+			dairy=croissant;
+		}
+	}
+}
+
+procedure chooseYourOwnAdventurePart2 {
+	if (m==k) then {
+		while (m==k) {
+			if (k==m) then {
+				while (k==m) {
+					if (m==k) then {
+						m=k;
+					} else {
+						a=p;
+					}
+				}
+			} else {
+				while (m==k) {
+					if (k==m) then {
+						k=m;
+					} else {
+						p=a;
+					}
+				}
+			}
+		}
+	} else {
+		while (m==k) {
+			if (m==k) then {
+				while (m==k) {
+					if (m==k) then {
+						k=m;
+					} else {
+						p=a;
+					}
+				}
+			} else {
+				while (k==m) {
+					if (m==k) then {
+						m=k;
+					} else {
+						a=p;
+					}
+				}
+			}
+		}
+	}
+}
+
+procedure calling {
+	m=k;
+}
+
+procedure gnillac {
+	k=m;
+	call calling;
+	m=k;
+}
+
+procedure circuit {
+	if (m==k) then {
+		while (k==m) {
+			while (m==k) {
+				while (k==m) {
+					while (m==k) {
+						while (k==m) {
+							while (m==k) {
+								fuse=fuse;
+							}
+						}
+					}
+				}
+			}
+		}
+	} else {
+		line=straight;
+	}
+}
+
+procedure moreMs {
+	if (m==k) then {
+		m=k;
+		a=p;
+		m=k;
+		a=p;
+		m=k;
+		a=p;
+		m=k;
+	} else {
+		a=p;
+		m=k;
+		a=p;
+		m=k;
+		a=p;
+		m=k;
+		a=p;
+	}
+}
+
+procedure longAssign {
+	a=b+c+d+e+f+g+h;
+	m=i+j+k+l+a+n+o;
+	o=p+q+r+s+m+t+u;
+	n=v+w+x+y+o+z+a;
+	f=b+c+d+e+n+g+h;
+}
+
+procedure longAssign2 {
+	a=b+c+d+e+f+g+h;
+	y=c+f+g+e+t+b+j;
+	u=e+d+w+b+g+q+l;
+	t=s+w+r+t+b+k+i;
+	m=i+j+k+l+a+n+o;
+	y=c+f+g+e+t+b+j;
+	u=e+d+w+b+g+q+l;
+	t=s+w+r+t+b+k+i;
+	o=p+q+r+s+m+t+u;
+	y=c+f+g+e+t+b+j;
+	u=e+d+w+b+g+q+l;
+	t=s+w+r+t+b+k+i;
+	n=v+w+x+y+o+z+a;
+	y=c+f+g+e+t+b+j;
+	u=e+d+w+b+g+q+l;
+	t=s+w+r+t+b+k+i;
+	f=b+c+d+e+n+g+h;
+}
+
+procedure longAssign3 {
+	a=b+c+d+e+f+g+h;
+	if (m==k) then {
+		while (k==m) {
+			m=i+j+k+l+a+n+o;
+			while (m==k) {
+				o=p+q+r+s+m+t+u;
+				while (k==m) {
+					n=v+w+x+y+o+z+a;
+					while (m==k) {
+						f=b+c+d+e+n+g+h;
+					}
+				}
+			}
+		}
+	} else {
+		if (m==k) then {
+			m=i+j+k+l+a+n+o;
+			o=p+q+r+s+m+t+u;
+		} else {
+			n=v+w+x+y+o+z+a;
+			f=b+c+d+e+n+g+h;
+		}
+	}
+}
+
+procedure recharge {
+	if (battery==dead) then {
+		a=x;
+		read print;
+		print read;
+		read x;
+		print x;
+		x=a;
+	} else {
+		a=x;
+		read print;
+		print read;
+		read a;
+		print a;
+		x=a;
+	}
+}
+
+procedure alphabetMaze {
+	if (m==k) then {
+		if (k==m) then {
+			while (m==k) {
+				a=b+c+d+e;
+			}
+			a = q+w+e+r+t+y;
+		} else {
+			while (m==k) {
+				print a;
+				b=s+f+B+H+t+d+C+e;
+				f=l+t+r+v+h+j+u+R;
+				while (k==m) {
+					m=p+V+N+h+d+c+s;
+					if (m==k) then {
+						print m;
+					} else {
+						read m;
+						while (m==k) {
+							k=m+v+e+h+j+K;
+						}
+					}
+					a=s+v+n+J+y+w+c+v;
+				}
+				print b;
+			}
+			n=c+d+g+N+j+t+e+g+b;
+			read a;
+		}
+	} else {
+		while (m==k) {
+			a=b+c+V+d+e+G+H+f;
+		}
+	}
+	a=m+n+b+v+c+x+z;
+	if (k==m) then {
+		while (m==k) {
+			while (k==m) {
+				m=a+x+C+B+f+h+j+t+f;
+			}
+		}
+	} else {
+		if (m==k) then {
+			a=v+b+h+T+f+g+h+f;
+		} else {
+			m=d+v+h+m+y+d+g+n+h;
+		}
+	}
+}
+
+procedure notTheSame {
+	while (1==1) {
+		a=A;
+	}
+}
+
+procedure same {
+	while (1==1) {
+		a=a;
+	}
+}
+
+procedure notTheSameAgain {
+	while (1==1) {
+		a=B+c;
+		b=A+c;
+	}
+}
+
+procedure sameAgain {
+	while (1==1) {
+		a=b+c;
+		b=a+c;
+	}
+}
+
+procedure violin {
+	a=c+v+B+n+m+j+h+g+f+k;
+	if (m==k) then {
+		read a;
+		m=a;
+		while (k==m) {
+			print a;
+			if (m==k) then {
+				while (k==m) {
+					a=m;
+				}
+			} else {
+				read a;
+				while (k==m) {
+					a=m;
+				}
+			}
+		}
+	} else {
+		print a;
+		m=a;
+		while (k==m) {
+			read a;
+			if (m==k) then {
+				while (k==m) {
+					a=m;
+				}
+			} else {
+				read a;
+				while (k==m) {
+					a=m;
+				}
+			}
+		}
+	}
+
+	if (m==k) then {
+		while (k==m) {
+			print a;
+			print a;
+			if (m==k) then {
+				while (k==m) {
+					a=m;
+					m=k;
+				}
+			} else {
+				while (k==m) {
+					k=p;
+					p=o;
+				}
+			}
+		}
+	} else {
+		read a;
+		while (k==m) {
+			print a;
+			if (m==k) then {
+				while (k==m) {
+					a=m;
+					m=k;
+				}
+			} else {
+				while (k==m) {
+					m=k;
+					a=m;
+				}
+			}
+		}
+	}
+}
+
+procedure rain {		
+	while(rain==go) {
+		while(rain==its) {
+			if (raining < its) then {
+				read raining;
+				print read;
+				read print;
+				call = call;
+				read = call;
+				read call;
+				call = print;
+				print = read;
+				print call;
+			} else {
+				read rain;
+				while (raining == true) {
+					o=a;
+					o=w;
+					o=a;
+				}
+				if (a==b) then {
+					print rain;
+					a=b+c+F+T+h+y+o;
+					m=c+v+n+h+j+i+n;
+				} else {
+					m=c;
+					while (rain==drops) {
+						read p;
+					}
+				}
+				m=c+v+g+t+n+J+g+a;
+			}
+		}
+		if (ifs < w) then {
+			ifs = w;
+		} else {
+			w = ifs;
+		}
+	}
+	if (spain == madrid) then {
+		moscow=moscow;
+		while (p==2) {
+			m=k;
+		}
+	} else {
+		u=t;
+	}
+}
+
+procedure the {
+	end=near;
+	if (m==k) then {
+		m=s+f+V+H+T+h+J+b+g;
+		a=v+g+r+N+d+f+B+g+x;
+		print = print;
+		read = print;
+		call = d+c+b+f+r+b+H;
+	} else {
+		while (k==m) {
+			read print;
+			print m;
+			if (m==k) then {
+				while (k==m) {
+					m=a;
+				}
+			} else {
+				a=m;
+				while (m==k) {
+					if (m==k) then {
+						k=m+F+V+b+g+T+x+v;
+						read k;
+						print k;
+						read = call;
+					} else {
+						call = read;
+						print = call;
+						read = print;
+						ten = read;
+					}
+				}
+				call = read;
+			}
+		}
+	}
+}
+
+procedure whileWhile {
+	print a;
+	read a;
+	while (m==k) {
+		a=p;
+		read a;
+		p=a;
+		print p;
+		call next;
+		a=p;
+	}
+	while (k==m) {
+		a=p;
+		print a;
+		p=a;
+		read p;
+		call next;
+		a=p;
+	}
+	read a;
+}
+
+procedure next {
+	a=p;
+}

@@ -1,0 +1,120 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>tests</name><parsing_time_taken>7226.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="cyclic calls">1</id><querystr><![CDATA[procedure p; Select p such that Calls(p, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>415.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" Next="1" SuchThat="1" CondNum="4" RelNum="2" comment="Select stmts that affects the statement directly after it">2</id><querystr><![CDATA[assign a1, a2; Select a2 such that Affects(3, a2) and Next(5, a2)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>495.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Parentstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" CondNum="7" RelNum="2" comment="Select while statement that provides nesting and modifies variable v that is used as a control in ifs in the nest directly or indirectly">3</id><querystr><![CDATA[while w; if ifs; variable v; Select w such that Parent*(w, ifs) and Modifies(w, v) pattern ifs(v, _, _)]]></querystr>
+<stuans>159,162,279,284,80</stuans>
+<correct>80,159,162,279,284</correct>
+<time_taken>2562.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Parentstar="1" UnnamedVar="2" Pattern="1" SuchThat="1" CondNum="7" RelNum="2" comment="Select while statement that provides nesting and modifies variable v that is used as a control in ifs in the nest directly or indirectly">4</id><querystr><![CDATA[while w; if ifs; variable v; Select <ifs, w> such that Parent*(w, ifs) and Modifies(w, v) pattern ifs(v, _, _)]]></querystr>
+<stuans>163 159,163 162,166 159,166 162,287 279,287 284,82 80</stuans>
+<correct>82 80,163 159,166 159,163 162,166 162,287 279,287 284</correct>
+<time_taken>2385.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="6" RelNum="2" comment="Select if statement that provides nesting and modifies variable v that is used as a control in while in the nest directly or indirectly">5</id><querystr><![CDATA[while w; if ifs; variable v; Select ifs.stmt# such that Parent*(ifs, w) and Modifies(ifs, v) pattern w(v, _)]]></querystr>
+<stuans>101,154,163,232,280,73,91,96,99</stuans>
+<correct>73,91,96,99,101,154,163,232,280</correct>
+<time_taken>5059.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="6" RelNum="2" comment="Select if statement that provides nesting and modifies variable v that is used as a control in while in the nest directly or indirectly">6</id><querystr><![CDATA[while w; if ifs; variable v; Select <ifs, w> such that Parent*(ifs, w) and Modifies(ifs, v) pattern w(v, _)]]></querystr>
+<stuans>101 103,154 184,154 162,154 159,154 175,154 186,163 184,163 175,163 186,232 233,280 284,73 76,91 103,96 103,99 103</stuans>
+<correct>73 76,91 103,96 103,99 103,101 103,154 159,154 162,154 175,154 184,154 186,163 175,163 184,163 186,232 233,280 284</correct>
+<time_taken>5003.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" With="1" CondNum="2" RelNum="0" comment="Select statements with statement number equal to constants">7</id><querystr><![CDATA[constant c; stmt s; Select s with s.stmt# = c.value]]></querystr>
+<stuans>1,10,100,11,12,123,13,14,15,150,16,17,18,180,19,2,20,200,21,22,23,24,25,26,29,3,30,4,45,46,48,5,50,51,52,53,54,6,7,70,8,81,9</stuans>
+<correct>1,10,100,11,12,123,13,14,15,150,16,17,18,180,19,2,20,200,21,22,23,24,25,26,29,3,30,4,45,46,48,5,50,51,52,53,54,6,7,70,8,81,9</correct>
+<time_taken>569.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" Modifies="1" Nextstar="1" Uses="1" SuchThat="1" CondNum="6" RelNum="4" comment="Select boolean that is only false at the end">8</id><querystr><![CDATA[variable v1, v2; assign a1, a2; call c; Select BOOLEAN such that Uses(a1, v1) and Modifies (a2, v1) and Calls(c, "covid") and Next*(470, 470)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>377.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" Modifies="1" Nextstar="1" Uses="1" SuchThat="1" CondNum="6" RelNum="4" comment="Select boolean that is false at the very start">9</id><querystr><![CDATA[variable v1, v2; assign a1, a2; call c; Select BOOLEAN such that Next*(470, 470) and Uses(a1, v1) and Modifies (a2, v1) and Calls(c, "covid")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>377.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" Parentstar="4" SuchThat="1" CondNum="7" RelNum="5" comment="Select while nested in ifs nested in while nested in ifs nested in while nested in ifs">10</id><querystr><![CDATA[if ifs1, ifs2, ifs3, ifs4; while w1, w2, w3, w4; Select w1 such that Parent(ifs1, w1) and Parent*(w1, ifs2) and Parent*(ifs2, w2) and Parent*(w2, ifs3) and Parent*(ifs3, w3)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>514.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Uses="1" SuchThat="1" CondNum="4" RelNum="2" comment="Select stmts that Uses and Modifies the same variable">11</id><querystr><![CDATA[variable v; assign a; Select v such that Modifies(a, v) and Uses(a, v)]]></querystr>
+<stuans>tests,pattern,years,sugar,pearls,gender,seventeen,seventh,help,hello,x,o,z,twentythree,i,y,oh,fiftynine,year,age,weight,iq,b</stuans>
+<correct>pattern,seventeen,twentythree,fiftynine,year,age,weight,iq,b,tests,years,sugar,pearls,gender,seventh,hello,x,o,z,help,oh,y,i</correct>
+<time_taken>1044.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" Modifies="1" SuchThat="1" CondNum="4" RelNum="2" comment="all assignments that affects themselves">12</id><querystr><![CDATA[variable v; assign a; Select v such that Affects(a, a) and Modifies(a, v)]]></querystr>
+<stuans>tests,sugar,pearls,gender,seventeen,seventh,help,hello,o,twentythree,i,fiftynine,weight</stuans>
+<correct>fiftynine,gender,hello,help,i,o,pearls,seventeen,seventh,sugar,tests,twentythree,weight</correct>
+<time_taken>671.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" Modifies="1" SuchThat="1" CondNum="4" RelNum="2" comment="Select stmts that affects the same variable">13</id><querystr><![CDATA[variable v; assign a; Select v.varName such that Affects(a, a) and Modifies (a, v)]]></querystr>
+<stuans>tests,sugar,pearls,gender,seventeen,seventh,help,hello,o,twentythree,i,fiftynine,weight</stuans>
+<correct>fiftynine,gender,hello,help,i,o,pearls,seventeen,seventh,sugar,tests,twentythree,weight</correct>
+<time_taken>705.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" Modifies="1" SuchThat="1" With="1" CondNum="5" RelNum="2" comment="Select stmts that affects the same variable">14</id><querystr><![CDATA[variable v; assign a; Select BOOLEAN such that Affects (a, a) and Modifies(a, v) with v.varName = "hello"]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>689.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="comment">15</id><querystr><![CDATA[assign a1, a2, a3, a4; Select a4 such that Affects*(a1, a2) with a2.varName = "me"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>429.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="4" Pattern="1" SuchThat="1" CondNum="8" RelNum="1" comment="select v that is used as a control in while nested in if and assigned within the if stmt block">16</id><querystr><![CDATA[if ifs; while w; variable v; assign a; Select v pattern w(v, _) and ifs(v, _, _) and a(v, _) such that Parent(ifs, a)]]></querystr>
+<stuans>c,x,v,iq</stuans>
+<correct>c,iq,v,x</correct>
+<time_taken>838.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="4" Pattern="1" SuchThat="1" CondNum="8" RelNum="1" comment="select v that is used as a control in while nested in if and assigned within the if stmt block">17</id><querystr><![CDATA[if ifs; while w; variable v; assign a; Select ifs such that Parent(ifs, a) pattern w(v, _) and ifs(v, _, _) and a(v, _)]]></querystr>

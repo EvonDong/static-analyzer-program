@@ -1,0 +1,115 @@
+1 - select synonym, parentStar of call statement
+call c;
+Select c such that Parent*(26, c)
+32, 35, 37, 43, 49, 58, 59, 64, 66
+5000
+2 - select synonym, parentStar of call statement
+call c;
+Select c such that Parent*(56, c)
+58, 59, 64
+5000
+3 - select synonym, parentStar of call statement
+call c;
+Select c such that Parent*(74, c)
+75, 79, 80, 83, 85, 86
+5000
+4 - select synonym, parentStar of while statement
+while w;
+Select w such that Parent*(74, w)
+76, 81
+5000
+5 - select synonym, parentStar of assign statement
+assign a;
+Select a such that Parent*(74, a)
+77, 78, 82, 84
+5000
+6 - select synonym, parentStar of call statement, invalid firstArgs
+call c;
+Select c such that Parent*(93, c)
+none
+5000
+7 - select synonym, parentStar of call statement
+call c;
+Select c such that Parent*(95, c)
+96, 100, 103
+5000
+8 - select synonym, parentStar of assign statement
+assign a;
+Select a such that Parent*(95, a)
+98, 99, 102, 104
+5000
+9 - select synonym, parentStar of stmt
+stmt s;
+Select s such that Parent*(95, s)
+96, 97, 98, 99, 100, 101, 102, 103, 104
+5000
+10 - select synonym, parentStar of progLine
+prog_line pl;
+Select pl such that Parent*(95, pl)
+96, 97, 98, 99, 100, 101, 102, 103, 104
+5000
+11 - select synonym, parentStar of while
+while w;
+Select w such that Parent*(107, w)
+108, 112, 114, 120, 123, 124, 128, 131, 133, 142
+5000
+12 - select synonym, parentStar of read
+read r;
+Select r such that Parent*(124, r)
+126, 129
+5000
+13 - select synonym, parentStar of assign
+assign a;
+Select a such that Parent*(274, a)
+277, 278, 279, 280, 283, 284, 285, 287, 288, 290, 292, 293, 295, 296
+5000
+14 - select synonym, parentStar of print
+print p;
+Select p such that Parent*(274, p)
+281, 297, 299, 300
+5000
+15 - select synonym, stmt parentStar
+stmt s;
+Select s such that Parent*(s, 35)
+33, 30, 28, 26
+5000
+16 - select synonym, if parentStar
+if ifs;
+Select ifs such that Parent*(ifs, 35)
+33, 28, 26
+5000
+17 - select synonym, if parentStar
+if ifs;
+Select ifs such that Parent*(ifs, 58)
+54, 26
+5000
+18 - select synonym, if parentStar
+stmt s;
+Select s such that Parent*(s, 85)
+81, 74
+5000
+19 - select synonym, if parentStar
+if ifs;
+Select ifs such that Parent*(ifs, 99)
+95
+5000
+20 - select synonym, if parentStar
+if ifs;
+Select ifs such that Parent*(ifs, 104)
+95
+5000
+21 - select synonym invalid indentifier
+read r;
+Select r such that Parent*("invalid", r)
+none
+5000
+22 - select synonym, invalid clause
+assign a;
+Select a such that Par*(274, a)
+none
+5000
+23 - select synonym, parentStar of read multiple tabs, spaces
+read r;
+Select r such that   Parent*	(	124,    r  )
+126, 129
+5000

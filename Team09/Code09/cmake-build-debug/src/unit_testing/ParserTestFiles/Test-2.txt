@@ -1,0 +1,7 @@
+procedure main {
+	a = 2;
+}
+
+procedure side {
+	print variable;
+}

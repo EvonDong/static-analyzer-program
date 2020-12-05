@@ -1,0 +1,340 @@
+1 - Affects, cross-procedural
+stmt s;
+Select BOOLEAN such that Affects(1, 3)
+FALSE
+5000
+2 - Affects, while loop
+stmt s;
+Select BOOLEAN such that Affects(9, 8)
+TRUE
+5000
+3 - Affects, if else
+stmt s;
+Select BOOLEAN such that Affects(10, 14)
+TRUE
+5000
+4 - Basic AffectsStar
+stmt s;
+Select BOOLEAN such that Affects*(15,17)
+TRUE
+5000
+5 - Layered AffectsStar
+stmt s;
+Select BOOLEAN such that Affects*(18, 22)
+TRUE
+5000
+6 - Two AffectsStar
+stmt s, s1; assign a;
+Select <s, a, s1> such that Affects*(s, a) and Affects*(a, s1) with s.stmt# = 8
+8 8 8,8 8 9,8 9 9,8 9 8
+5000
+7 - Affects, assign that Modifies variable that call Uses
+stmt s;
+Select BOOLEAN such that Affects(23, 24)
+FALSE
+5000
+8 - AffectsStar, if else seperation part 1
+stmt s;
+Select BOOLEAN such that Affects*(26, 29)
+TRUE
+5000
+9 - AffectsStar, if else seperation part 2
+stmt s;
+Select BOOLEAN such that Affects(26, 28)
+TRUE
+5000
+10 - AffectsStar, if else seperation part 3
+stmt s;
+Select BOOLEAN such that Affects(29, 30)
+FALSE
+5000
+11 - AffectsStar, if else seperation part 4
+stmt s;
+Select BOOLEAN such that Affects*(26, 31)
+FALSE
+5000
+12 - Affects, while loop
+stmt s;
+Select BOOLEAN such that Affects(43,35)
+TRUE
+5000
+13 - Affects, while loop
+stmt s;
+Select BOOLEAN such that Affects(43,44)
+TRUE
+5000
+14 - AffectsStar, while loop
+stmt s;
+Select BOOLEAN such that Affects*(40,37)
+TRUE
+5000
+15 - Affects, read
+stmt s;
+Select BOOLEAN such that Affects(45,47)
+FALSE
+5000
+16 - Affects, cross-procedural with assign
+stmt s; assign a;
+Select BOOLEAN such that Affects(1, a)
+FALSE
+5000
+17 - Affects, cross-procedural with stmt
+stmt s; assign a;
+Select BOOLEAN such that Affects(1, s)
+FALSE
+5000
+18 - Affects with semantic error
+stmt s; assign a; variable v;
+Select BOOLEAN such that Affects(1, v)
+FALSE
+5000
+19 - Affects* with semantic error
+stmt s; assign a; variable v;
+Select BOOLEAN such that Affects*(1, v)
+FALSE
+5000
+20 - Affects* with semantic error
+stmt s; assign a; variable v;
+Select BOOLEAN such that Affects*(v, 8)
+FALSE
+5000
+21 - Affects, cross-procedural with stmt
+stmt s; assign a;
+Select s such that Affects(1, s)
+none
+5000
+22 - Affects, cross-procedural with stmt
+stmt s; assign a;
+Select BOOLEAN such that Affects(4, _)
+FALSE
+5000
+23 - Affects, cross-procedural with stmt
+stmt s; assign a;
+Select BOOLEAN such that Affects(4, _)
+FALSE
+5000
+24 - Affects, while loop with assign
+stmt s; assign a;
+Select a such that Affects(9, a)
+8
+5000
+25 - Affects, while loop with stmt
+stmt s; assign a;
+Select s such that Affects(9, s)
+8
+5000
+26 - Affects, while loop  with stmt
+stmt s; assign a;
+Select BOOLEAN such that Affects(9, s)
+TRUE
+5000
+27 - Affects, while loop  with prog_line
+stmt s; assign a; prog_line p;
+Select BOOLEAN such that Affects*(15, p)
+TRUE
+5000
+28 - Affects, while loop mixed
+stmt s; assign a; prog_line p;
+Select BOOLEAN such that Affects*(a, p)
+TRUE
+5000
+29 - Affects, while loop  with assign
+stmt s; assign a; prog_line p;
+Select BOOLEAN such that Affects*(a, 22)
+TRUE
+5000
+30 - Affects, while loop
+stmt s; assign a; prog_line p;
+Select a such such that Affects*(a, 4)
+none
+5000
+31 - Affects, while loop
+stmt s; assign a; prog_line p;
+Select BOOLEAN such that Affects*(a, a)
+TRUE
+5000
+32 - Affects, while loop
+stmt s; assign a; prog_line p;
+Select BOOLEAN such that Affects*(a, p)
+TRUE
+5000
+33 - Two AffectsStar
+stmt s, s1; assign a;
+Select BOOLEAN such that Affects*(s, a) and Affects*(a, s1) with s.stmt# = 8
+TRUE
+5000
+34 - Two AffectsStar
+stmt s, s1; assign a; prog_line p;
+Select <s, p, s1> such that Affects*(s, p) and Affects*(p, s1) with s.stmt# = 8
+8 8 8,8 8 9,8 9 9,8 9 8
+5000
+35 - Two AffectsStar
+stmt s, s1; assign a; prog_line p;
+Select <s, p, s1> such that Affects*(s, p) and Affects*(p, s1) with s.stmt# = p with s.stmt# = 8
+8 8 8,8 8 9
+5000
+36 - Two AffectsStar
+stmt s, s1; assign a; prog_line p;
+Select <s, p, s1> such that Affects*(s, p) and Affects*(p, s1) with s.stmt# = p with s.stmt# = 8 such that Affects(9, a)
+8 8 8,8 8 9
+5000
+37 - Two AffectsStar
+stmt s, s1; assign a; prog_line p;
+Select <s, p, s1> such that Affects*(s, p) and Affects*(p, s1) with s.stmt# = p with s.stmt# = 8 such that Affects(8140, a)
+none
+5000
+38 - Affects, read
+stmt s;
+Select s such that Affects(45,47)
+none
+5000
+39 - Affects, read
+stmt s;
+Select s such that Affects(45,47)  such that Affects(10, 14)
+none
+5000
+40 - Affects, read syntactic error
+stmt s;
+Select BOOLEAN such Affects(45,47)  such that Affects(10, 14)
+FALSE
+5000
+41 - AffectsStar, if else seperation part 4
+stmt s;
+Select BOOLEAN such that Affects(10, 14) with 5 = 20
+FALSE
+5000
+42 - Two AffectsStar
+stmt s, s1; assign a; prog_line p;
+Select <s, p, s1> such that Affects*(s, p) and Affects*(p, s1) with s.stmt# = 8 with s1.stmt# = p
+8 8 8,8 9 9
+5000
+43 - Affects print
+stmt s,s1;
+Select BOOLEAN such that Affects(52,54)
+TRUE
+5000
+44 - While, if else
+
+Select BOOLEAN such that Affects*(60,62)
+TRUE
+5000
+45 - While
+
+Select BOOLEAN such that Affects*(64,64)
+FALSE
+5000
+46 - While
+
+Select BOOLEAN such that Affects(55,61)
+TRUE
+5000
+47 - If else separation
+stmt s;
+Select s such that Affects(89,s)
+90
+5000
+48 - Affects, print
+stmt s;
+Select BOOLEAN such that Affects(116,118)
+TRUE
+5000
+49 - Affects, layer of Uses
+
+Select BOOLEAN such that Affects(122,128)
+TRUE
+5000
+50 - AffectsStar, print
+stmt s;
+Select BOOLEAN such that Affects*(114,121)
+TRUE
+5000
+51 - Affects, read vs print
+stmt s;
+Select s such that Affects*(s,73)
+66,67,71,73,74,77,78
+5000
+52 - Affects, unrelated read
+stmt s;
+Select BOOLEAN such that Affects(168,170)
+TRUE
+5000
+53 - Affects, read vs print, while, if else
+stmt s;
+Select s such that Affects(130,s)
+134
+5000
+54 - Affects, non Bip
+
+Select BOOLEAN such that Affects(171,173)
+FALSE
+5000
+55 - Affects, chain of calls, modify
+
+Select BOOLEAN such that Affects(194,195)
+FALSE
+5000
+56 - Affects, chain of calls, no modify
+
+Select BOOLEAN such that Affects(202,204)
+TRUE
+5000
+57 - Affects, if else, while
+
+Select BOOLEAN such that Affects(216,219)
+TRUE
+5000
+58 - Affects, unrelated modifications
+
+Select BOOLEAN such that Affects(220,223)
+TRUE
+5000
+59 - AffectsStar, unrelated modifications
+
+Select BOOLEAN such that Affects*(232,239)
+TRUE
+5000
+60 - Affects, backwards calling
+
+Select BOOLEAN such that Affects(283,285)
+FALSE
+5000
+61 - AffectsStar, long assign
+
+Select BOOLEAN such that Affects*(310,314)
+TRUE
+5000
+62 - AffectsStar, long assign with many unrelated assigns in between
+
+Select BOOLEAN such that Affects*(315,331)
+TRUE
+5000
+63 - Affects, read print
+
+Select BOOLEAN such that Affects(348,353)
+TRUE
+5000
+64 - Affects, read print
+
+Select BOOLEAN such that Affects(354,359)
+FALSE
+5000
+65 - Affects*, different case
+
+Select BOOLEAN such that Affects*(391,391)
+FALSE
+5000
+66 - Affects*, reassign to itself
+
+Select BOOLEAN such that Affects*(393,393)
+TRUE
+5000
+67 - Affects*, different case
+
+Select BOOLEAN such that Affects*(395,395)
+FALSE
+5000
+68 - Affects*
+
+Select BOOLEAN such that Affects*(398,398)
+TRUE
+5000

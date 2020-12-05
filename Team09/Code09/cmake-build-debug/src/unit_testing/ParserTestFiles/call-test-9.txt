@@ -1,0 +1,7 @@
+procedure main {
+	call test;
+}
+
+procedure test1 {
+	a = b;
+}

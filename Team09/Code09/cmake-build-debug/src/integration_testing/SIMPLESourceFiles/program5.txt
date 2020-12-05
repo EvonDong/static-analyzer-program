@@ -1,0 +1,47 @@
+procedure procedure {
+	if(a == a) then {
+		while (a > 0) { read a; }
+	} else {
+		while (a != 0) {
+			if (b>c) then {
+				if ( (b == c) && (b>=9) ) then {
+					while ( (d < a) || (c != a) ) {
+						while (!(c == 4)) {
+							print a;
+						}
+					}
+				} else {
+					if (f != g) then {
+						while (g >= (a + b * k)) {
+							while ((c * g / d % f - c) != a) {
+								while ((b- a)==(a -b)) {
+									if (i < j) then {read i;} else { while (1 == 1){print j;}}
+								}
+							}
+						}
+					} else {
+						read p; print q;
+					}
+				}
+			} else {
+				a=b+c-d*e/f%g;
+				d = b * ((g*k)/f);
+				j = ((k * e)+h) / e;
+				m = j + (h - (i* (j - k)/(f % a)-k)+m) * d;
+			}
+		}
+	}
+	read f;
+	read read;
+	print l;
+	a = h*k + d *(k);
+	print x;
+	j = while*1;
+	procedure = 341242 * if + 8248;
+	if((!((procedure > statement)||((read < print )&&(print >= call)))) && (while <= ((if - (k) % (7)) * 0)) )then{
+		then = read;
+		print = call * k +h-h%j;
+	} else{
+		print print;
+	}
+}

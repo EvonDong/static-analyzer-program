@@ -1,0 +1,5 @@
+procedure main {
+	while ((a + b > (x * y) / c + (p + o) * 43) && ((a > 6) || ((c < v) && ((c > 7) || ((x * y) > 9 + 9))))) {
+		print a;
+	}
+}

@@ -1,0 +1,805 @@
+1 - Wrong synonym type
+assign a;
+Select a with a.stmt# = 107
+none
+5000
+2 - Wrong attribute
+stmt s;
+Select s with s.value = "a"
+none
+5000
+3 - Wrong attribute
+stmt s;
+Select s with s.varName = 1
+none
+5000
+4 - Wrong attribute
+stmt s;
+Select s with s.procName = "a"
+none
+5000
+5 - Wrong attribute
+stmt s;
+Select s with s.value = "a"
+none
+5000
+6 - Wrong attribute
+assign a;
+Select a with a.varName = "a"
+none
+5000
+7 - Wrong attribute
+assign a;
+Select a with a.value = 114
+none
+5000
+8 - Invalid Follows, synonym doesnt fit
+stmt s; assign a;
+Select s such that Follows(s,a) with s.stmt#=476
+none
+5000
+9 - Invalid self-Follows
+
+Select BOOLEAN such that Follows(2,2)
+FALSE
+5000
+10 - Invalid self-Parent
+
+Select BOOLEAN such that Parent(4,4)
+FALSE
+5000
+11 - Invalid self-Parent*
+
+Select BOOLEAN such that Parent*(49,49)
+FALSE
+5000
+12 - Invalid self-Next
+
+Select BOOLEAN such that Next(2,2)
+FALSE
+5000
+13 - Invalid Follows, stmt, variable
+stmt s; variable v;
+Select s such that Follows(s,v)
+none
+5000
+14 - Invalid Follows, variable, stmt
+stmt s; variable v;
+Select s such that Follows(v,s)
+none
+5000
+15 - Invalid Follows, assign, variable
+assign s; variable v;
+Select s such that Follows(s,v)
+none
+5000
+16 - Invalid Follows, variable, assign
+assign s; variable v;
+Select s such that Follows(v,s)
+none
+5000
+17 - Invalid Follows, print, variable
+print s; variable v;
+Select s such that Follows(s,v)
+none
+5000
+18 - Invalid Follows, print, variable
+print s; variable v;
+Select s such that Follows(v,s)
+none
+5000
+19 - Invalid Follows, read, variable
+read s; variable v;
+Select s such that Follows(s,v)
+none
+5000
+20 - Invalid Follows, variable, read
+read s; variable v;
+Select s such that Follows(v,s)
+none
+5000
+21 - Invalid Follows, call, variable
+call s; variable v;
+Select s such that Follows(s,v)
+none
+5000
+22 - Invalid Follows, variable, call
+call s; variable v;
+Select s such that Follows(v,s)
+none
+5000
+23 - Invalid Follows, prog_line, variable
+prog_line s; variable v;
+Select s such that Follows(s,v)
+none
+5000
+24 - Invalid Follows, variable, prog_line
+prog_line s; variable v;
+Select s such that Follows(v,s)
+none
+5000
+25 - Invalid Follows, while, variable
+while s; variable v;
+Select s such that Follows(s,v)
+none
+5000
+26 - Invalid Follows, variable, while
+while s; variable v;
+Select s such that Follows(v,s)
+none
+5000
+27 - Invalid Follows, if, variable
+if s; variable v;
+Select s such that Follows(s,v)
+none
+5000
+28 - Invalid Follows, variable, if
+if s; variable v;
+Select s such that Follows(v,s)
+none
+5000
+29 - Invalid Parent, stmt, variable
+stmt s; variable v;
+Select s such that Parent(s,v)
+none
+5000
+30 - Invalid Parent, variable, stmt
+stmt s; variable v;
+Select s such that Parent(v,s)
+none
+5000
+31 - Invalid Parent, assign, variable
+assign s; variable v;
+Select s such that Parent(s,v)
+none
+5000
+32 - Invalid Parent, variable, assign
+assign s; variable v;
+Select s such that Parent(v,s)
+none
+5000
+33 - Invalid Parent, print, variable
+print s; variable v;
+Select s such that Parent(s,v)
+none
+5000
+34 - Invalid Parent, print, variable
+print s; variable v;
+Select s such that Parent(v,s)
+none
+5000
+35 - Invalid Parent, read, variable
+read s; variable v;
+Select s such that Parent(s,v)
+none
+5000
+36 - Invalid Parent, variable, read
+read s; variable v;
+Select s such that Parent(v,s)
+none
+5000
+37 - Invalid Parent, call, variable
+call s; variable v;
+Select s such that Parent(s,v)
+none
+5000
+38 - Invalid Parent, variable, call
+call s; variable v;
+Select s such that Parent(v,s)
+none
+5000
+39 - Invalid Parent, prog_line, variable
+prog_line s; variable v;
+Select s such that Parent(s,v)
+none
+5000
+40 - Invalid Parent, variable, prog_line
+prog_line s; variable v;
+Select s such that Parent(v,s)
+none
+5000
+41 - Invalid Parent, while, variable
+while s; variable v;
+Select s such that Parent(s,v)
+none
+5000
+42 - Invalid Parent, variable, while
+while s; variable v;
+Select s such that Parent(v,s)
+none
+5000
+43 - Invalid Parent, if, variable
+if s; variable v;
+Select s such that Parent(s,v)
+none
+5000
+44 - Invalid Parent, variable, if
+if s; variable v;
+Select s such that Parent(v,s)
+none
+5000
+45 - Invalid Next, stmt, variable
+stmt s; variable v;
+Select s such that Next(s,v)
+none
+5000
+46 - Invalid Next, variable, stmt
+stmt s; variable v;
+Select s such that Next(v,s)
+none
+5000
+47 - Invalid Next, assign, variable
+assign s; variable v;
+Select s such that Next(s,v)
+none
+5000
+48 - Invalid Next, variable, assign
+assign s; variable v;
+Select s such that Next(v,s)
+none
+5000
+49 - Invalid Next, print, variable
+print s; variable v;
+Select s such that Next(s,v)
+none
+5000
+50 - Invalid Next, print, variable
+print s; variable v;
+Select s such that Next(v,s)
+none
+5000
+51 - Invalid Next, read, variable
+read s; variable v;
+Select s such that Next(s,v)
+none
+5000
+52 - Invalid Next, variable, read
+read s; variable v;
+Select s such that Next(v,s)
+none
+5000
+53 - Invalid Next, call, variable
+call s; variable v;
+Select s such that Next(s,v)
+none
+5000
+54 - Invalid Next, variable, call
+call s; variable v;
+Select s such that Next(v,s)
+none
+5000
+55 - Invalid Next, prog_line, variable
+prog_line s; variable v;
+Select s such that Next(s,v)
+none
+5000
+56 - Invalid Next, variable, prog_line
+prog_line s; variable v;
+Select s such that Next(v,s)
+none
+5000
+57 - Invalid Next, while, variable
+while s; variable v;
+Select s such that Next(s,v)
+none
+5000
+58 - Invalid Next, variable, while
+while s; variable v;
+Select s such that Next(v,s)
+none
+5000
+59 - Invalid Next, if, variable
+if s; variable v;
+Select s such that Next(s,v)
+none
+5000
+60 - Invalid Next, variable, if
+if s; variable v;
+Select s such that Next(v,s)
+none
+5000
+61 - Invalid Calls, stmt, variable
+stmt s; variable v;
+Select s such that Calls(s,v)
+none
+5000
+62 - Invalid Calls, variable, stmt
+stmt s; variable v;
+Select s such that Calls(v,s)
+none
+5000
+63 - Invalid Calls, assign, variable
+assign s; variable v;
+Select s such that Calls(s,v)
+none
+5000
+64 - Invalid Calls, variable, assign
+assign s; variable v;
+Select s such that Calls(v,s)
+none
+5000
+65 - Invalid Calls, print, variable
+print s; variable v;
+Select s such that Calls(s,v)
+none
+5000
+66 - Invalid Calls, print, variable
+print s; variable v;
+Select s such that Calls(v,s)
+none
+5000
+67 - Invalid Calls, read, variable
+read s; variable v;
+Select s such that Calls(s,v)
+none
+5000
+68 - Invalid Calls, variable, read
+read s; variable v;
+Select s such that Calls(v,s)
+none
+5000
+69 - Invalid Calls, call, variable
+call s; variable v;
+Select s such that Calls(s,v)
+none
+5000
+70 - Invalid Calls, variable, call
+call s; variable v;
+Select s such that Calls(v,s)
+none
+5000
+71 - Invalid Calls, prog_line, variable
+prog_line s; variable v;
+Select s such that Calls(s,v)
+none
+5000
+72 - Invalid Calls, variable, prog_line
+prog_line s; variable v;
+Select s such that Calls(v,s)
+none
+5000
+73 - Invalid Calls, while, variable
+while s; variable v;
+Select s such that Calls(s,v)
+none
+5000
+74 - Invalid Calls, variable, while
+while s; variable v;
+Select s such that Calls(v,s)
+none
+5000
+75 - Invalid Calls, if, variable
+if s; variable v;
+Select s such that Calls(s,v)
+none
+5000
+76 - Invalid Calls, variable, if
+if s; variable v;
+Select s such that Calls(v,s)
+none
+5000
+77 - Invalid Follows, stmt, constant
+stmt s; constant v;
+Select s such that Follows(s,v)
+none
+5000
+78 - Invalid Follows, constant, stmt
+stmt s; constant v;
+Select s such that Follows(v,s)
+none
+5000
+79 - Invalid Follows, assign, constant
+assign s; constant v;
+Select s such that Follows(s,v)
+none
+5000
+80 - Invalid Follows, constant, assign
+assign s; constant v;
+Select s such that Follows(v,s)
+none
+5000
+81 - Invalid Follows, print, constant
+print s; constant v;
+Select s such that Follows(s,v)
+none
+5000
+82 - Invalid Follows, print, constant
+print s; constant v;
+Select s such that Follows(v,s)
+none
+5000
+83 - Invalid Follows, read, constant
+read s; constant v;
+Select s such that Follows(s,v)
+none
+5000
+84 - Invalid Follows, constant, read
+read s; constant v;
+Select s such that Follows(v,s)
+none
+5000
+85 - Invalid Follows, call, constant
+call s; constant v;
+Select s such that Follows(s,v)
+none
+5000
+86 - Invalid Follows, constant, call
+call s; constant v;
+Select s such that Follows(v,s)
+none
+5000
+87 - Invalid Follows, prog_line, constant
+prog_line s; constant v;
+Select s such that Follows(s,v)
+none
+5000
+88 - Invalid Follows, constant, prog_line
+prog_line s; constant v;
+Select s such that Follows(v,s)
+none
+5000
+89 - Invalid Follows, while, constant
+while s; constant v;
+Select s such that Follows(s,v)
+none
+5000
+90 - Invalid Follows, constant, while
+while s; constant v;
+Select s such that Follows(v,s)
+none
+5000
+91 - Invalid Follows, if, constant
+if s; constant v;
+Select s such that Follows(s,v)
+none
+5000
+92 - Invalid Follows, constant, if
+if s; constant v;
+Select s such that Follows(v,s)
+none
+5000
+93 - Invalid Parent, stmt, constant
+stmt s; constant v;
+Select s such that Parent(s,v)
+none
+5000
+94 - Invalid Parent, constant, stmt
+stmt s; constant v;
+Select s such that Parent(v,s)
+none
+5000
+95 - Invalid Parent, assign, constant
+assign s; constant v;
+Select s such that Parent(s,v)
+none
+5000
+96 - Invalid Parent, constant, assign
+assign s; constant v;
+Select s such that Parent(v,s)
+none
+5000
+97 - Invalid Parent, print, constant
+print s; constant v;
+Select s such that Parent(s,v)
+none
+5000
+98 - Invalid Parent, print, constant
+print s; constant v;
+Select s such that Parent(v,s)
+none
+5000
+99 - Invalid Parent, read, constant
+read s; constant v;
+Select s such that Parent(s,v)
+none
+5000
+100 - Invalid Parent, constant, read
+read s; constant v;
+Select s such that Parent(v,s)
+none
+5000
+101 - Invalid Parent, call, constant
+call s; constant v;
+Select s such that Parent(s,v)
+none
+5000
+102 - Invalid Parent, constant, call
+call s; constant v;
+Select s such that Parent(v,s)
+none
+5000
+103 - Invalid Parent, prog_line, constant
+prog_line s; constant v;
+Select s such that Parent(s,v)
+none
+5000
+104 - Invalid Parent, constant, prog_line
+prog_line s; constant v;
+Select s such that Parent(v,s)
+none
+5000
+105 - Invalid Parent, while, constant
+while s; constant v;
+Select s such that Parent(s,v)
+none
+5000
+106 - Invalid Parent, constant, while
+while s; constant v;
+Select s such that Parent(v,s)
+none
+5000
+107 - Invalid Parent, if, constant
+if s; constant v;
+Select s such that Parent(s,v)
+none
+5000
+108 - Invalid Parent, constant, if
+if s; constant v;
+Select s such that Parent(v,s)
+none
+5000
+109 - Invalid Next, stmt, constant
+stmt s; constant v;
+Select s such that Next(s,v)
+none
+5000
+110 - Invalid Next, constant, stmt
+stmt s; constant v;
+Select s such that Next(v,s)
+none
+5000
+111 - Invalid Next, assign, constant
+assign s; constant v;
+Select s such that Next(s,v)
+none
+5000
+112 - Invalid Next, constant, assign
+assign s; constant v;
+Select s such that Next(v,s)
+none
+5000
+113 - Invalid Next, print, constant
+print s; constant v;
+Select s such that Next(s,v)
+none
+5000
+114 - Invalid Next, print, constant
+print s; constant v;
+Select s such that Next(v,s)
+none
+5000
+115 - Invalid Next, read, constant
+read s; constant v;
+Select s such that Next(s,v)
+none
+5000
+116 - Invalid Next, constant, read
+read s; constant v;
+Select s such that Next(v,s)
+none
+5000
+117 - Invalid Next, call, constant
+call s; constant v;
+Select s such that Next(s,v)
+none
+5000
+118 - Invalid Next, constant, call
+call s; constant v;
+Select s such that Next(v,s)
+none
+5000
+119 - Invalid Next, prog_line, constant
+prog_line s; constant v;
+Select s such that Next(s,v)
+none
+5000
+120 - Invalid Next, constant, prog_line
+prog_line s; constant v;
+Select s such that Next(v,s)
+none
+5000
+121 - Invalid Next, while, constant
+while s; constant v;
+Select s such that Next(s,v)
+none
+5000
+122 - Invalid Next, constant, while
+while s; constant v;
+Select s such that Next(v,s)
+none
+5000
+123 - Invalid Next, if, constant
+if s; constant v;
+Select s such that Next(s,v)
+none
+5000
+124 - Invalid Next, constant, if
+if s; constant v;
+Select s such that Next(v,s)
+none
+5000
+125 - Invalid Calls, stmt, constant
+stmt s; constant v;
+Select s such that Calls(s,v)
+none
+5000
+126 - Invalid Calls, constant, stmt
+stmt s; constant v;
+Select s such that Calls(v,s)
+none
+5000
+127 - Invalid Calls, assign, constant
+assign s; constant v;
+Select s such that Calls(s,v)
+none
+5000
+128 - Invalid Calls, constant, assign
+assign s; constant v;
+Select s such that Calls(v,s)
+none
+5000
+129 - Invalid Calls, print, constant
+print s; constant v;
+Select s such that Calls(s,v)
+none
+5000
+130 - Invalid Calls, print, constant
+print s; constant v;
+Select s such that Calls(v,s)
+none
+5000
+131 - Invalid Calls, read, constant
+read s; constant v;
+Select s such that Calls(s,v)
+none
+5000
+132 - Invalid Calls, constant, read
+read s; constant v;
+Select s such that Calls(v,s)
+none
+5000
+133 - Invalid Calls, call, constant
+call s; constant v;
+Select s such that Calls(s,v)
+none
+5000
+134 - Invalid Calls, constant, call
+call s; constant v;
+Select s such that Calls(v,s)
+none
+5000
+135 - Invalid Calls, prog_line, constant
+prog_line s; constant v;
+Select s such that Calls(s,v)
+none
+5000
+136 - Invalid Calls, constant, prog_line
+prog_line s; constant v;
+Select s such that Calls(v,s)
+none
+5000
+137 - Invalid Calls, while, constant
+while s; constant v;
+Select s such that Calls(s,v)
+none
+5000
+138 - Invalid Calls, constant, while
+while s; constant v;
+Select s such that Calls(v,s)
+none
+5000
+139 - Invalid Calls, if, constant
+if s; constant v;
+Select s such that Calls(s,v)
+none
+5000
+140 - Invalid Calls, constant, if
+if s; constant v;
+Select s such that Calls(v,s)
+none
+5000
+141 - Invalid attribute, stmt, value
+stmt s;
+Select s with s.value = 1
+none
+5000
+142 - Invalid attribute, stmt, varName
+stmt s;
+Select s with s.varName = "a"
+none
+5000
+143 - Invalid attribute, stmt, procName
+stmt s;
+Select s with s.procName = "callOne"
+none
+5000
+144 - Invalid attribute, assign, value
+assign s;
+Select s with s.value = 1
+none
+5000
+145 - Invalid attribute, assign, varName
+assign s;
+Select s with s.varName = "a"
+none
+5000
+146 - Invalid attribute, assign, procName
+assign s;
+Select s with s.procName = "callOne"
+none
+5000
+147 - Invalid attribute, print, value
+print s;
+Select s with s.value = 1
+none
+5000
+148 - Invalid attribute, print, procName
+print s;
+Select s with s.procName = "callOne"
+none
+5000
+149 - Invalid attribute, read, value
+read s;
+Select s with s.value = 1
+none
+5000
+150 - Invalid attribute, read, procName
+read s;
+Select s with s.procName = "callOne"
+none
+5000
+151 - Invalid attribute, while, value
+while s;
+Select s with s.value = 1
+none
+5000
+152 - Invalid attribute, while, varName
+while s;
+Select s with s.varName = "a"
+none
+5000
+153 - Invalid attribute, while, procName
+while s;
+Select s with s.procName = "callOne"
+none
+5000
+154 - Invalid attribute, if, value
+if s;
+Select s with s.value = 1
+none
+5000
+155 - Invalid attribute, if, varName
+if s;
+Select s with s.varName = "a"
+none
+5000
+156 - Invalid attribute, if, procName
+if s;
+Select s with s.procName = "callOne"
+none
+5000
+157 - Invalid attribute, call, value
+call s;
+Select s with s.value = 1
+none
+5000
+158 - Invalid attribute, call, varName
+call s;
+Select s with s.varName = "calling"
+none
+5000
+159 - Undeclared synonym
+stmt s; print p;
+Select s1 such that Follows(1,2)
+none
+5000
+160 - Mixed synonyms
+stmt s,s1;
+Select s such that Follows(s s1, _)
+none
+5000
+161 - Mixed synonyms
+stmt s,s1;
+Select s such that Follows(_, s s1)
+none
+5000

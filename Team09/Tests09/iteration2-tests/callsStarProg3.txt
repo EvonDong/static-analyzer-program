@@ -1,0 +1,280 @@
+1 - select synonym, callsStar wildcard wildcard
+procedure p, q;
+Select p such that Calls*(_, _)
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+2 - select synonym, callsStar wildcard synonym
+procedure p, q;
+Select p such that Calls*(_, p)
+TestA, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+3 - select synonym, callsStar wildcard synonym
+procedure p, q;
+Select q such that Calls*(_, p)
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+4 - select synonym, callsStar wildcard and undeclared synonym
+procedure p, q;
+Select q such that Calls*(_, pq)
+none
+5000
+5 - select synonym, callsStar synonym wildcard
+procedure p, q;
+Select p such that Calls*(p, _)
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, oneCall, transportation
+5000
+6 - select synonym, callsStar synonym wildcard
+procedure p, q;
+Select q such that Calls*(p, _)
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+7 - select synonym, callsStar undeclared synonym and wildcard
+procedure p, q;
+Select q such that Calls*(pq, _)
+none
+5000
+8 - select synonym, callsStar wildcard procName
+procedure p, q;
+Select p such that Calls*(_, "TestB")
+none
+5000
+9 - select synonym, callsStar wildcard procName
+procedure p, q;
+Select p such that Calls*(_, "procedure")
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+10 - select synonym, callsStar wildcard procName
+procedure p, q;
+Select p such that Calls*(_, "colours")
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+11 - select synonym, callsStar wildcard and nonexistent procName
+procedure p, q;
+Select p such that Calls*(_, "hello")
+none
+5000
+12 - select synonym, callsStar procName wildcard
+procedure p, q;
+Select p such that Calls*("Pr0c3dUr3", _)
+none
+5000
+13 - select synonym, callsStar procName wildcard
+procedure p, q;
+Select p such that Calls*("transportation", _)
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+14 - select synonym, callsStar procName wildcard
+procedure p, q;
+Select p such that Calls*("TestB", _)
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+15 - select synonym, callsStar nonexistent procName and wildcard
+procedure p, q;
+Select p such that Calls*("hello", _)
+none
+5000
+16 - select synonym, callsStar synonym procName
+procedure p, q;
+Select p such that Calls*(p, "TestC")
+none
+5000
+17 - select synonym, callsStar synonym procName
+procedure p, q;
+Select q such that Calls*(q, "TestC")
+none
+5000
+18 - select synonym, callsStar synonym procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*(p, "procedure")
+TestA, TestB, TestC
+5000
+19 - select synonym, callsStar synonym procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*(q, "TenWhileLoop")
+transportation, fruits, TestC, TestB, TestA, oneCall, procedure
+5000
+20 - select synonym, callsStar synonym procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*(p, "colours")
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, oneCall, transportation
+5000
+21 - select synonym, callsStar synonym procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*(p, "oneCall")
+TestA, procedure, TestC, fruits, TestB
+5000
+22 - select synonym, callsStar synonym procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*(p, "transportation")
+TestB, TestA, oneCall, TestC, procedure, fruits
+5000
+23 - select synonym, callsStar synonym procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*(p, "country")
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+24 - select synonym, callsStar synonym procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*(p, "fruits")
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+25 - select synonym, callsStar synonym and nonexistent procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*(p, "hello")
+none
+5000
+26 - select synonym, callsStar synonym and procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*(q, "oneCall")
+TestC, procedure, TestA, fruits, TestB
+5000
+27 - select synonym, callsStar synonym and nonexistent procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*(p, "hello")
+none
+5000
+28 - select synonym, callsStar procName synonym
+procedure p, q;
+Select p such that Calls*("colours", p)
+none
+5000
+29 - select synonym, callsStar procName synonym
+procedure p, q;
+Select q such that Calls*("colours", p)
+none
+5000
+30 - select synonym, callsStar procName synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*("TestB", p)
+TestA, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+31 - select synonym, callsStar procName synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*("oneCall", p)
+TenWhileLoop, colours, Pr0c3dUr3, transportation, country
+5000
+32 - select synonym, callsStar procName synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*("fruits", p)
+TenWhileLoop, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+33 - select synonym, callsStar procName synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*("TenWhileLoop", p)
+colours, Pr0c3dUr3, country
+5000
+34 - select synonym, callsStar procName synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*("procedure", p)
+TenWhileLoop, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+35 - select synonym, callsStar procName synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*("TestA", p)
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+36 - select synonym, callsStar procName synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*("transportation", p)
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+37 - select synonym, callsStar nonexistent procName and synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*("hello", p)
+none
+5000
+38 - select synonym, callsStar procName and undeclared synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*("TestA", pq)
+none
+5000
+39 - select synonym, callsStar nonexistent procName and undeclared synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*("hello", pq)
+none
+5000
+40 - select synonym, callsStar procName procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*("TestA", "TestB")
+none
+5000
+41 - select synonym, callsStar procName procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*("fruits", "TestB")
+none
+5000
+42 - select synonym, callsStar procName procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*("TestA", "procedure")
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+43 - select synonym, callsStar procName procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*("transportation", "country")
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+44 - select synonym, callsStar procName and nonexistent procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*("transportation", "hello")
+none
+5000
+45 - select synonym, callsStar nonexistent procName and procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*("hello", "TestA")
+none
+5000
+46 - select synonym, callsStar nonexistent procName and nonexistent procName
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*("hello1", "hello2")
+none
+5000
+47 - select synonym, callsStar synonym synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select p such that Calls*(p, q)
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, oneCall, transportation
+5000
+48 - select synonym, callsStar synonym synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*(p, q)
+TestA, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000
+49 - select synonym, callsStar undeclared synonym and synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*(pq, q)
+none
+5000
+50 - select synonym, callsStar synonym and undeclared synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*(p, pq)
+none
+5000
+51 - select synonym, invalid calls, callsStar synonym and synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls***(p, q)
+none
+5000
+52 - select synonym, invalid callsStar synonym and synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls***(pr, q)
+none
+5000
+53 - select synonym,  callsStar synonym and invalid callsStar synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*(p, re)
+none
+5000
+54 - select synonym, callsStar synonym and invalid callsStar synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Calls*(p, ___)
+none
+5000
+55 - select synonym, invalid calls name,  callsStar synonym and invalid callsStar synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that Callls*(p, ___)
+none
+5000
+56 - select synonym, callsStar procName synonym
+procedure p, q; stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c;
+Select q such that 	Calls*(   "transportation", 		p)
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, oneCall, transportation, country
+5000

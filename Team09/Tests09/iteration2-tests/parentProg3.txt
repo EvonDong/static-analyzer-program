@@ -1,0 +1,160 @@
+1 - select synonym, parent if
+call c;
+Select c such that Parent(8, c)
+10, 11
+5000
+2 - select synonym, parent if
+assign a;
+Select a such that Parent(8, a)
+9, 12
+5000
+3 - select synonym, parent if
+assign a;
+Select a such that Parent(274, a)
+283, 284, 285, 287, 288
+5000
+4 - select synonym, parent if
+while w;
+Select w such that Parent(268, w)
+269, 319
+5000
+5 - select synonym, parent if
+if ifs;
+Select ifs such that Parent(342, ifs)
+347, 367
+5000
+6 - select synonym, parent if
+read r;
+Select r such that Parent(347, r)
+353
+5000
+7 - select synonym, if parent
+if ifs;
+Select ifs such that Parent(ifs, 357)
+none
+5000
+8 - select synonym, if parent
+if ifs;
+Select ifs such that Parent(ifs, 353)
+347
+5000
+9 - select synonym, if parent
+if ifs;
+Select ifs such that Parent(ifs, 361)
+347
+5000
+10 - select synonym, if parent
+if ifs;
+Select ifs such that Parent(ifs, 350)
+347
+5000
+11 - select synonym, if parent
+if ifs;
+Select ifs such that Parent(ifs, 386)
+382
+5000
+12 - select synonym, if parent
+if ifs;
+Select ifs such that Parent(ifs, 379)
+none
+5000
+13 - select synonym, if parent
+if ifs;
+Select ifs such that Parent(ifs, 373)
+370
+5000
+14 - select synonym, while parent
+while w;
+Select w such that Parent(w, 382)
+377
+5000
+15 - select synonym, while parent
+while w;
+Select w such that Parent(w, 372)
+none
+5000
+16 - select synonym, while parent
+while w;
+Select w such that Parent(w, 420)
+417
+5000
+17 - select synonym, parent stmt wildcard
+stmt s;
+Select s such that Parent(s, _)
+8, 15, 26, 28, 30, 33, 40, 42, 52, 54, 56, 60, 74, 76, 81, 95, 97, 101, 107, 108, 112, 114, 120, 123, 124, 128, 131, 133, 142, 156, 157, 160, 161, 162, 163, 165, 168, 170, 171, 172, 173, 176, 194, 198, 202, 209, 216, 222, 233, 234, 242, 245, 259, 268, 269, 274, 275, 289, 291, 294, 319, 321, 326, 332, 335, 342, 347, 354, 358, 362, 367, 370, 373, 377, 382, 391, 394, 399, 406, 410, 417, 420, 429, 437, 440, 444, 451, 453, 460, 462
+5000
+18 - select synonym, parent progLine wildcard
+prog_line n;
+Select n such that Parent(n, _)
+8, 15, 26, 28, 30, 33, 40, 42, 52, 54, 56, 60, 74, 76, 81, 95, 97, 101, 107, 108, 112, 114, 120, 123, 124, 128, 131, 133, 142, 156, 157, 160, 161, 162, 163, 165, 168, 170, 171, 172, 173, 176, 194, 198, 202, 209, 216, 222, 233, 234, 242, 245, 259, 268, 269, 274, 275, 289, 291, 294, 319, 321, 326, 332, 335, 342, 347, 354, 358, 362, 367, 370, 373, 377, 382, 391, 394, 399, 406, 410, 417, 420, 429, 437, 440, 444, 451, 453, 460, 462
+5000
+19 - select synonym, invalid parent
+assign a;
+Select a such that Parent(a, _)
+none
+5000
+20 - select synonym, invalid parent
+read r;
+Select r such that Parent(r, _)
+none
+5000
+21 - select synonym, invalid parent
+print p;
+Select p such that Parent(p, _)
+none
+5000
+22 - select synonym, invalid parent
+call c;
+Select c such that Parent(c, _)
+none
+5000
+23 - select synonym, invalid parent
+procedure p;
+Select p such that Parent(p, _)
+none
+5000
+24 - select synonym, invalid parent
+procedure p;
+Select p such that Parent(_, p)
+none
+5000
+25 - select synonym, invalid parent
+constant c;
+Select c such that Parent(c, _)
+none
+5000
+26 - select synonym, invalid parent
+constant c;
+Select c such that Parent(_, c)
+none
+5000
+27 - select synonym, invalid parent
+variable v;
+Select v such that Parent(v, _)
+none
+5000
+28 - select synonym, invalid parent
+variable v;
+Select v such that Parent(_, v)
+none
+5000
+29 - select synonym, invalid clause
+stmt s;
+Select s such that Part(s, _)
+none
+5000
+30 - select synonym, parent progLine wildcard multiple tabs, spaces
+prog_line n;
+Select n such that 	Parent  (	n,   _  )
+8, 15, 26, 28, 30, 33, 40, 42, 52, 54, 56, 60, 74, 76, 81, 95, 97, 101, 107, 108, 112, 114, 120, 123, 124, 128, 131, 133, 142, 156, 157, 160, 161, 162, 163, 165, 168, 170, 171, 172, 173, 176, 194, 198, 202, 209, 216, 222, 233, 234, 242, 245, 259, 268, 269, 274, 275, 289, 291, 294, 319, 321, 326, 332, 335, 342, 347, 354, 358, 362, 367, 370, 373, 377, 382, 391, 394, 399, 406, 410, 417, 420, 429, 437, 440, 444, 451, 453, 460, 462
+5000
+31 - select synonym, parent invalid identifier
+prog_line n;
+Select n such that Parent("invalid", _)
+none
+5000
+32 - undeclared synonym
+variable v;
+Select v such that Parent(t, _)
+none
+5000

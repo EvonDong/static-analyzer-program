@@ -1,0 +1,5 @@
+procedure main {
+	while (!(((!((procedure > (main * (3 + 6))) && (a < c))) || (!(a + b > 4))) && ((!(true == false)) || (!((!(c < m)) && (!(v >= o))))))) {
+		a = b;
+	}
+}

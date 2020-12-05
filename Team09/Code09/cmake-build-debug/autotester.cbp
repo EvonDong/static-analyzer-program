@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="autotester"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\src\;CMake Files\src\spa\;CMake Files\src\autotester\;CMake Files\src\unit_testing\;CMake Files\src\integration_testing\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="spa">
+				<Option output="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/spa/libspa.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/spa"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/lib"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/adt"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/evaluator"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/parser"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/optimizer"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/spa/Makefile&quot;  VERBOSE=1 spa"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/spa/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/spa/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/spa/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="spa/fast">
+				<Option output="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/spa/libspa.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/spa"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/lib"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/adt"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/evaluator"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/parser"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/optimizer"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/spa/Makefile&quot;  VERBOSE=1 spa/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/spa/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/spa/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/spa/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="autotester">
+				<Option output="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/autotester/autotester" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/autotester"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/lib"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/adt"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/evaluator"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/parser"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/optimizer"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/autotester/Makefile&quot;  VERBOSE=1 autotester"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/autotester/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/autotester/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/autotester/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="autotester/fast">
+				<Option output="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/autotester/autotester" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/autotester"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/lib"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/adt"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/evaluator"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/parser"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/optimizer"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/autotester/Makefile&quot;  VERBOSE=1 autotester/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/autotester/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/autotester/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/autotester/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unit_testing">
+				<Option output="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/unit_testing/unit_testing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/unit_testing"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/lib"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/adt"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/evaluator"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/parser"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/optimizer"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/unit_testing/Makefile&quot;  VERBOSE=1 unit_testing"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/unit_testing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/unit_testing/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/unit_testing/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unit_testing/fast">
+				<Option output="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/unit_testing/unit_testing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/unit_testing"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/lib"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/adt"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/evaluator"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/parser"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/optimizer"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/unit_testing/Makefile&quot;  VERBOSE=1 unit_testing/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/unit_testing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/unit_testing/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/unit_testing/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="integration_testing">
+				<Option output="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/integration_testing/integration_testing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/integration_testing"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/lib"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/adt"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/evaluator"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/parser"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/optimizer"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/integration_testing/Makefile&quot;  VERBOSE=1 integration_testing"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/integration_testing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/integration_testing/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/integration_testing/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="integration_testing/fast">
+				<Option output="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/integration_testing/integration_testing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/integration_testing"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/lib"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/adt"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/evaluator"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/parser"/>
+					<Add directory="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/optimizer"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/integration_testing/Makefile&quot;  VERBOSE=1 integration_testing/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/integration_testing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/integration_testing/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake-build-debug/src/integration_testing/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/autotester/src/TestWrapper.cpp">
+			<Option target="autotester"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/autotester/src/TestWrapper.h">
+			<Option target="autotester"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/integration_testing/src/TestFrontEnd.cpp">
+			<Option target="integration_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/integration_testing/src/main.cpp">
+			<Option target="integration_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/adt/Table.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/adt/Table.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend/CallGraph.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend/CallGraph.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend/DesignExtractor.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend/DesignExtractor.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend/FrontEnd.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend/FrontEnd.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend/Lexer.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend/Lexer.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend/Parser.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend/Parser.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend/SimplifiedAST.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/frontend/SimplifiedAST.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/AffectStorage.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/AffectStorage.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/AffectsBipStorage.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/AffectsBipStorage.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/CallStorage.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/CallStorage.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/FollowStorage.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/FollowStorage.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/GeneralStorage.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/GeneralStorage.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/Hasher.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/ModifyStorage.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/ModifyStorage.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/NextBipStorage.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/NextBipStorage.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/NextStorage.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/NextStorage.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/PKB.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/PKB.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/ParentStorage.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/ParentStorage.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/PatternStorage.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/PatternStorage.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/StatementStruct.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/UseStorage.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/UseStorage.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/constants.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pkb/constants.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/evaluator/QueryEvaluator.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/evaluator/QueryEvaluator.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/optimizer/Optimizer.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/optimizer/Optimizer.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/parser/QueryParser.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/parser/QueryParser.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/parser/QueryParserHelper.cpp">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/src/pql/parser/QueryParserHelper.h">
+			<Option target="spa"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/frontend/ParserTest.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/frontend/TestDesignExtractor.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/frontend/TestLexer.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/frontend/TestSimplifiedAST.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/main.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pkb/TestAffectStorage.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pkb/TestAffectsBipStorage.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pkb/TestCallStorage.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pkb/TestFollowStorage.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pkb/TestGeneralStorage.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pkb/TestModifyStorage.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pkb/TestNextBipStorage.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pkb/TestNextStorage.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pkb/TestPKB.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pkb/TestPKBExtention.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pkb/TestParentStorage.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pkb/TestPatternStorage.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pkb/TestUseStorage.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pql/PatternQueryTest.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pql/QueryParserHelperTest.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pql/QueryParserTest.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pql/SelectClauseTest.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pql/SuchThatQueryTest.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pql/TestOptimizer.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pql/TestQueryEvaluator.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pql/TestQueryEvaluatorPKB.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pql/TestTableAdt.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pql/TestUtility.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pql/TestUtility.h">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/src/pql/WithQueryTest.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/cmake/FindAutotester.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/spa/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\spa\"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/autotester/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\autotester\"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/unit_testing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\unit_testing\"/>
+		</Unit>
+		<Unit filename="/Users/evondong/Documents/workspace/team09-cp-spa-20s1/Team09/Code09/src/integration_testing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\integration_testing\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

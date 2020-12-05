@@ -1,0 +1,36 @@
+procedure main {
+    call procedure;
+    call procedure;
+    call procedure;
+    a = 1;
+    x = 2;
+    if (a == c) then {
+        while (a == c) {
+            if (a == c) then {
+                a = a;
+            } else {
+                call first;}}
+    } else {
+        x = x;  }
+    print a;}
+
+procedure first {
+    call second;
+}
+
+procedure second {
+    read a;
+    a = a + x; }
+
+procedure third {
+    while (x == 2) {
+        a = 2;
+        call second;
+        a = a + a; }
+    normSq = a + b; }
+
+procedure procedure {
+    a = b;
+    b = c;
+    c = d;
+    d = e; }

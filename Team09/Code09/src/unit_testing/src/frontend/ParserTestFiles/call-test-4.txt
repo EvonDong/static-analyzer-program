@@ -1,0 +1,20 @@
+procedure test {
+	call test2;
+	call test3;
+}
+
+procedure test2 {
+	call test3;
+}
+
+procedure test3 {
+	call test4;
+}
+
+procedure test4 {
+	call test5;
+}
+
+procedure test5 {
+	a = b;
+}

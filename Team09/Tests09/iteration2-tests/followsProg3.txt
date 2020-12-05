@@ -1,0 +1,520 @@
+1 - select synonym, follows stmtNumber stmt
+stmt s;
+Select s such that Follows(15, s)
+18
+5000
+2 - select synonym, follows stmtNumber stmt
+stmt s;
+Select s such that Follows(2, s)
+3
+5000
+3 - select synonym, follows stmtNumber stmt
+stmt s;
+Select s such that Follows(18, s)
+none
+5000
+4 - select synonym, follows stmtNumber read
+read r;
+Select r such that Follows(2, r)
+3
+5000
+5 - select synonym, follows stmtNumber read
+read r;
+Select r such that Follows(128, r)
+none
+5000
+6 - select synonym, follows stmtNumber read
+read r;
+Select r such that Follows(124, r)
+140
+5000
+7 - select synonym, follows stmtNumber print
+print p;
+Select p such that Follows(138, p)
+139
+5000
+8 - select synonym, follows stmtNumber print
+print p;
+Select p such that Follows(124, p)
+none
+5000
+9 - select synonym, follows stmtNumber print
+print p;
+Select p such that Follows(120, p)
+148
+5000
+10 - select synonym, follows stmtNumber while
+while w;
+Select w such that Follows(122, w)
+123
+5000
+11 - select synonym, follows stmtNumber while
+while w;
+Select w such that Follows(95, w)
+none
+5000
+12 - select synonym, follows stmtNumber while
+while w;
+Select w such that Follows(124, w)
+none
+5000
+13 - select synonym, follows stmtNumber while
+while w;
+Select w such that Follows(268, w)
+none
+5000
+14 - select synonym, follows stmtNumber if
+if ifs;
+Select ifs such that Follows(39, ifs)
+40
+5000
+15 - select synonym, follows stmtNumber if
+if ifs;
+Select ifs such that Follows(155, ifs)
+none
+5000
+16 - select synonym, follows stmtNumber if
+if ifs;
+Select ifs such that Follows(193, ifs)
+194
+5000
+17 - select synonym, follows stmtNumber if
+if ifs;
+Select ifs such that Follows(267, ifs)
+none
+5000
+18 - select synonym, follows stmtNumber assign
+assign a;
+Select a such that Follows(269, a)
+none
+5000
+19 - select synonym, follows stmtNumber assign
+assign a;
+Select a such that Follows(267, a)
+none
+5000
+20 - select synonym, follows stmtNumber assign
+assign a;
+Select a such that Follows(404, a)
+none
+5000
+21 - select synonym, follows stmtNumber assign
+assign a;
+Select a such that Follows(434, a)
+none
+5000
+22 - select synonym, follows stmtNumber assign
+assign a;
+Select a such that Follows(435, a)
+none
+5000
+23 - select synonym, follows stmtNumber assign
+assign a;
+Select a such that Follows(451, a)
+none
+5000
+24 - select synonym, follows stmtNumber assign
+assign a;
+Select a such that Follows(463, a)
+464
+5000
+25 - select synonym, follows stmtNumber assign
+assign a;
+Select a such that Follows(462, a)
+469
+5000
+26 - select synonym, follows stmtNumber assign
+assign a;
+Select a such that Follows(396, a)
+397
+5000
+27 - select synonym, follows stmtNumber call
+stmt s; call c;
+Select c such that Follows(1, c)
+2
+5000
+28 - select synonym, follows stmtNumber call
+stmt s; call c;
+Select c such that Follows(403, c)
+none
+5000
+29 - select synonym, follows stmtNumber call
+stmt s; call c;
+Select c such that Follows(367, c)
+none
+5000
+30 - select synonym, follows stmtNumber call
+stmt s; call c;
+Select c such that Follows(342, c)
+none
+5000
+31 - select synonym, follows stmtNumber call
+stmt s; call c;
+Select c such that Follows(404, c)
+none
+5000
+32 - select synonym, follows stmtNumber call
+stmt s; call c;
+Select c such that Follows(429, c)
+434
+5000
+33 - select synonym, follows stmtNumber call
+stmt s; call c;
+Select c such that Follows(81, c)
+86
+5000
+34 - select synonym, follows stmtNumber call
+stmt s; call c;
+Select c such that Follows(89, c)
+90
+5000
+35 - select synonym, follows stmtNumber call
+stmt s; call c;
+Select c such that Follows(91, c)
+92
+5000
+36 - select synonym, follows stmtNumber progLine
+prog_line n;
+Select n such that Follows(74, n)
+87
+5000
+37 - select synonym, follows stmtNumber progLine
+prog_line n;
+Select n such that Follows(81, n)
+86
+5000
+38 - select synonym, follows stmtNumber progLine
+prog_line n;
+Select n such that Follows(92, n)
+none
+5000
+39 - select synonym, follows stmtNumber progLine
+prog_line n;
+Select n such that Follows(80, n)
+81
+5000
+40 - select synonym, follows stmtNumber progLine
+prog_line n;
+Select n such that Follows(85, n)
+none
+5000
+41 - select synonym, follows stmtNumber progLine
+prog_line n;
+Select n such that Follows(136, n)
+none
+5000
+42 - select synonym, follows stmtNumber progLine
+prog_line n;
+Select n such that Follows(107, n)
+155
+5000
+43 - select synonym, follows stmtNumber, same stmtNumber
+prog_line n;
+Select n such that Follows(93, 93)
+none
+5000
+44 - select synonym, follows stmtNumber negNumber
+prog_line n;
+Select n such that Follows(107, -108)
+none
+5000
+45 - select synonym, follows stmtNumber nonExistingIdentifier
+prog_line n;
+Select n such that Follows(155, "notExist")
+none
+5000
+46 - select synonym, follows stmtNumber smallerNumber
+prog_line n;
+Select n such that Follows(157, 32)
+none
+5000
+47 - select synonym, follows stmtNumber comma
+prog_line n;
+Select n such that Follows(167, ,)
+none
+5000
+48 - select synonym, follows stmtNumber variable
+prog_line n; variable v;
+Select n such that Follows(404, v)
+none
+5000
+49 - select synonym, follows symbol stmtNumber
+variable v;
+Select v such that Follows(?, 406)
+none
+5000
+50 - select synonym, follows nothing stmtNumber
+variable v;
+Select v such that Follows(, 405)
+none
+5000
+51 - select synonym, follows variable variable
+variable v;
+Select v such that Follows(v, v)
+none
+5000
+52 - select synonym, follows nothing
+variable v;
+Select v such that Follows()
+none
+5000
+53 - select synonym, follows stmtNumber stmtNumber smtNumber
+variable v;
+Select v such that Follows(400, 401, 403)
+none
+5000
+54 - select synonym, follows stmtNumber
+variable v;
+Select v such that Follows(399)
+none
+5000
+55 - select synonym, follows invalidWildcard stmtNumber
+variable v;
+Select v such that Follows(_ _, 429)
+none
+5000
+56 - select synonym, follows stmt stmtNumber
+stmt s;
+Select s such that Follows(s, 410)
+409
+5000
+57 - select synonym, follows stmt stmtNumber
+stmt s;
+Select s such that Follows(s, 406)
+405
+5000
+58 - select synonym, follows stmt stmtNumber
+stmt s;
+Select s such that Follows(s, 429)
+406
+5000
+59 - select synonym, follows stmt stmtNumber
+stmt s;
+Select s such that Follows(s, 428)
+417
+5000
+60 - select synonym, follows stmt stmtNumber
+stmt s;
+Select s such that Follows(s, 404)
+none
+5000
+61 - select synonym, follows stmt stmtNumber
+stmt s;
+Select s such that Follows(s, 405)
+none
+5000
+62 - select synonym, follows read stmtNumber
+read r;
+Select r such that Follows(r, 402)
+401
+5000
+63 - select synonym, follows read stmtNumber
+read r;
+Select r such that Follows(r, 387)
+none
+5000
+64 - select synonym, follows read stmtNumber
+read r;
+Select r such that Follows(r, 357)
+none
+5000
+65 - select synonym, follows read stmtNumber
+read r;
+Select r such that Follows(r, 325)
+324
+5000
+66 - select synonym, follows read stmtNumber
+read r;
+Select r such that Follows(r, 265)
+264
+5000
+67 - select synonym, follows read stmtNumber
+read r;
+Select r such that Follows(r, 94)
+93
+5000
+68 - select synonym, follows read stmtNumber
+read r;
+Select r such that Follows(r, 382)
+381
+5000
+69 - select synonym, follows print stmtNumber
+print p;
+Select p such that Follows(p, 376)
+375
+5000
+70 - select synonym, follows print stmtNumber
+print p;
+Select p such that Follows(p, 375)
+none
+5000
+71 - select synonym, follows print stmtNumber
+print p;
+Select p such that Follows(p, 367)
+366
+5000
+72 - select synonym, follows print stmtNumber
+print p;
+Select p such that Follows(p, 361)
+360
+5000
+73 - select synonym, follows while stmtNumber
+while w;
+Select w such that Follows(w, 404)
+none
+5000
+74 - select synonym, follows while stmtNumber
+while w;
+Select w such that Follows(w, 403)
+399
+5000
+75 - select synonym, follows while stmtNumber
+while w;
+Select w such that Follows(w, 394)
+none
+5000
+76 - select synonym, follows while stmtNumber
+while w;
+Select w such that Follows(w, 364)
+362
+5000
+77 - select synonym, follows while stmtNumber
+while w;
+Select w such that Follows(w, 360)
+354
+5000
+78 - select synonym, follows while stmtNumber
+while w;
+Select w such that Follows(w, 342)
+none
+5000
+79 - select synonym, follows if stmtNumber
+if ifs;
+Select ifs such that Follows(ifs, 362)
+347
+5000
+80 - select synonym, follows if stmtNumber
+if ifs;
+Select ifs such that Follows(ifs, 389)
+none
+5000
+81 - select synonym, follows if stmtNumber
+if ifs;
+Select ifs such that Follows(ifs, 404)
+none
+5000
+82 - select synonym, follows if stmtNumber
+if ifs;
+Select ifs such that Follows(ifs, 69)
+26
+5000
+83 - select synonym, follows if stmtNumber
+if ifs;
+Select ifs such that Follows(ifs, 47)
+28
+5000
+84 - select synonym, follows if stmtNumber
+if ifs;
+Select ifs such that Follows(ifs, 74)
+none
+5000
+85 - select synonym, follows assign stmtNumber
+assign a;
+Select a such that Follows(a, 79)
+78
+5000
+86 - select synonym, follows assign stmtNumber
+assign a;
+Select a such that Follows(a, 267)
+266
+5000
+87 - select synonym, follows assign stmtNumber
+assign a;
+Select a such that Follows(a, 264)
+none
+5000
+88 - select synonym, follows assign stmtNumber
+assign a;
+Select a such that Follows(a, 257)
+256
+5000
+89 - select synonym, follows assign stmtNumber
+assign a;
+Select a such that Follows(a, 246)
+none
+5000
+90 - select synonym, follows call stmtNumber
+call c;
+Select c such that Follows(c, 3)
+2
+5000
+91 - select synonym, follows call stmtNumber
+call c;
+Select c such that Follows(c, 1)
+none
+5000
+92 - select synonym, follows call stmtNumber
+call c;
+Select c such that Follows(c, 404)
+none
+5000
+93 - select synonym, follows call stmtNumber
+call c;
+Select c such that Follows(c, 405)
+none
+5000
+94 - select synonym, follows call stmtNumber
+call c;
+Select c such that Follows(c, 406)
+405
+5000
+95 - select synonym, follows call stmtNumber
+call c;
+Select c such that Follows(c, 12)
+11
+5000
+96 - select synonym, follows call stmtNumber
+call c;
+Select c such that Follows(c, 13)
+none
+5000
+97 - select synonym, follows progLine stmtNumber
+prog_line n;
+Select n such that Follows(n, 1)
+none
+5000
+98 - select synonym, follows progLine stmtNumber
+prog_line n;
+Select n such that Follows(n, 18)
+15
+5000
+99 - select synonym, follows progLine stmtNumber
+prog_line n;
+Select n such that Follows(n, 69)
+26
+5000
+100 - select synonym, follows progLine stmtNumber
+prog_line n;
+Select n such that Follows(n, 70)
+69
+5000
+101 - select synonym, follows progLine stmtNumber
+prog_line n;
+Select n such that Follows(n, 404)
+none
+5000
+102 - select synonym, follows progLine stmtNumber
+prog_line n;
+Select n such that Follows(n, 405)
+none
+5000
+103 - undeclared synonym, follows progLine stmtNumber
+prog_line n;
+Select n such that Follows(nn, 404)
+none
+5000
+104 - select synonym, follows call stmtNumber multiple tabs, spaces
+call c;
+Select c such that 	Follows(	c,     12)
+11
+5000

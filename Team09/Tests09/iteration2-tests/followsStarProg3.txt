@@ -1,0 +1,300 @@
+1 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(1, s)
+2,3,4,5,6,7,8,13,14,15,18
+5000
+2 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(18, s)
+none
+5000
+3 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(8, s)
+13, 14, 15, 18
+5000
+4 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(11, s)
+12
+5000
+5 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(15, s)
+18
+5000
+6 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(30, s)
+none
+5000
+7 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(40, s)
+46
+5000
+8 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(47, s)
+none
+5000
+9 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(57, s)
+58, 59, 60
+5000
+10 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(69, s)
+70
+5000
+11 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(70, s)
+none
+5000
+12 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(74, s)
+87, 88, 89, 90, 91, 92
+5000
+13 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(156, s)
+186, 187, 188, 189, 190, 191, 192, 193, 194
+5000
+14 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(194, s)
+none
+5000
+15 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(197, s)
+none
+5000
+16 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(403, s)
+none
+5000
+17 - select synonym, followsStar stmtNumber stmt
+stmt s;
+Select s such that Follows*(404, s)
+none
+5000
+18 - select synonym, followsStar stmtNumber read
+read r;
+Select r such that Follows*(156, r)
+186, 188
+5000
+19 - select synonym, followsStar stmtNumber read
+read r;
+Select r such that Follows*(210, r)
+214
+5000
+20 - select synonym, followsStar stmtNumber read
+read r;
+Select r such that Follows*(206, r)
+none
+5000
+21 - select synonym, followsStar stmtNumber read
+read r;
+Select r such that Follows*(216, r)
+none
+5000
+22 - select synonym, followsStar stmtNumber read
+read r;
+Select r such that Follows*(233, r)
+264, 265
+5000
+23 - select synonym, followsStar stmtNumber read
+read r;
+Select r such that Follows*(267, r)
+none
+5000
+24 - select synonym, followsStar stmtNumber print
+print p;
+Select p such that Follows*(198, p)
+220, 232, 267
+5000
+25 - select synonym, followsStar stmtNumber print
+print p;
+Select p such that Follows*(258, p)
+none
+5000
+26 - select synonym, followsStar stmtNumber print
+print p;
+Select p such that Follows*(264, p)
+267
+5000
+27 - select synonym, followsStar stmtNumber print
+print p;
+Select p such that Follows*(234, p)
+240
+5000
+28 - select synonym, followsStar stmtNumber print
+print p;
+Select p such that Follows*(242, p)
+none
+5000
+29 - select synonym, followsStar stmtNumber while
+while w;
+Select w such that Follows*(234, w)
+none
+5000
+30 - select synonym, followsStar stmtNumber while
+while w;
+Select w such that Follows*(197, w)
+none
+5000
+31 - select synonym, followsStar stmtNumber while
+while w;
+Select w such that Follows*(198, w)
+none
+5000
+32 - select synonym, followsStar stmtNumber while
+while w;
+Select w such that Follows*(258, w)
+259
+5000
+33 - select synonym, followsStar stmtNumber while
+while w;
+Select w such that Follows*(243, w)
+245
+5000
+34 - select synonym, followsStar stmtNumber while
+while w;
+Select w such that Follows*(373, w)
+none
+5000
+35 - select synonym, followsStar stmtNumber while
+while w;
+Select w such that Follows*(440, w)
+444
+5000
+36 - select synonym, followsStar stmtNumber if
+if ifs;
+Select ifs such that Follows*(438, ifs)
+451
+5000
+37 - select synonym, followsStar stmtNumber if
+if ifs;
+Select ifs such that Follows*(460, ifs)
+none
+5000
+38 - select synonym, followsStar stmtNumber if
+if ifs;
+Select ifs such that Follows*(461, ifs)
+462
+5000
+39 - select synonym, followsStar stmtNumber if
+if ifs;
+Select ifs such that Follows*(435, ifs)
+none
+5000
+40 - select synonym, followsStar stmtNumber if
+if ifs;
+Select ifs such that Follows*(472, ifs)
+none
+5000
+41 - select synonym, followsStar stmtNumber if
+if ifs;
+Select ifs such that Follows*(474, ifs)
+none
+5000
+42 - select synonym, followsStar stmtNumber assign
+assign a;
+Select a such that Follows*(434, a)
+none
+5000
+43 - select synonym, followsStar stmtNumber assign
+assign a;
+Select a such that Follows*(435, a)
+474
+5000
+44 - select synonym, followsStar stmtNumber assign
+assign a;
+Select a such that Follows*(462, a)
+469
+5000
+45 - select synonym, followsStar stmtNumber assign
+assign a;
+Select a such that Follows*(456, a)
+none
+5000
+46 - select synonym, followsStar stmtNumber assign
+assign a;
+Select a such that Follows*(454, a)
+none
+5000
+47 - select synonym, followsStar stmtNumber assign
+assign a;
+Select a such that Follows*(453, a)
+455
+5000
+48 - select synonym, followsStar stmtNumber call
+stmt s; call c;
+Select c such that Follows*(1, c)
+2, 14
+5000
+49 - select synonym, followsStar stmtNumber call
+stmt s; call c;
+Select c such that Follows*(9, c)
+10
+5000
+50 - select synonym, followsStar stmtNumber call
+stmt s; call c;
+Select c such that Follows*(16, c)
+none
+5000
+51 - select synonym, followsStar stmtNumber call
+stmt s; call c;
+Select c such that Follows*(27, c)
+none
+5000
+52 - select synonym, followsStar stmtNumber call
+stmt s; call c;
+Select c such that Follows*(26, c)
+69
+5000
+53 - select synonym, followsStar stmtNumber call
+stmt s; call c;
+Select c such that Follows*(69, c)
+none
+5000
+54 - select synonym, followsStar stmtNumber progLine
+prog_line n;
+Select n such that Follows*(70, n)
+none
+5000
+55 - select synonym, followsStar stmtNumber progLine
+prog_line n;
+Select n such that Follows*(403, n)
+none
+5000
+56 - select synonym, followsStar stmtNumber progLine
+prog_line n;
+Select n such that Follows*(404, n)
+none
+5000
+57 - select synonym, followsStar stmtNumber progLine
+prog_line n;
+Select n such that Follows*(76, n)
+none
+5000
+58 - select synonym, followsStar stmtNumber progLine
+prog_line n;
+Select n such that Follows*(107, n)
+155
+5000
+58 - undeclared synonym, followsStar stmtNumber progLine
+prog_line n;
+Select n such that Follows*(107, n2)
+none
+5000
+58 - select synonym, followsStar stmtNumber progLine multiple tabs, spaces
+prog_line n;
+Select n such that 		Follows*( 107,	 n)
+155
+5000

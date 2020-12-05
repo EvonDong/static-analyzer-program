@@ -1,0 +1,55 @@
+procedure main {
+	count = 0;
+	cenX = 0;
+	cenY = 0;
+	while ((x != 0) && (y != 0)) {
+		count = count + 1;
+		if (cenX == cenY) then {
+			print count;
+		} else {
+			a = 1;
+			count = a;
+			while (cenX < cenY) {
+				read cenX;
+				read cenY;
+				cenX = cenX + 1;
+			}
+			count = count + 1;
+		}
+	}
+	if (count == 0) then {
+		flag = 1;
+	} else {
+		cenX = cenX / count;
+		cenY = cenY / count;
+	}
+	normSq = cenX * cenX + cenY * cenY;
+	print normSq;
+    call first;
+}
+	
+procedure printResults {
+	print flag;
+	print count;
+}
+
+procedure first {
+    while (count == 1) {
+        call second;
+    }
+}
+procedure second {
+    x = c + d;
+}
+procedure affect {
+    while (a == c) {
+        normSq = a;
+        a = b;
+        while (a == c) {
+            b = c;
+            while (a == c) {
+                cenX = normSq;
+                c = d;
+                d = e;
+                e = f;        }} }
+    cenY = cenX;   }

@@ -1,0 +1,335 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>autotester</name><parsing_time_taken>2057.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" With="1" CondNum="5" RelNum="1" comment="comment">35</id><querystr><![CDATA[call c; procedure p,p1;assign a; prog_line pl;variable v; Select <c,c.procName> such that Calls("D",p) with c.procName = p.procName]]></querystr>
+<stuans></stuans>
+<correct>40 F,49 F</correct>
+<time_taken>226.000000</time_taken>
+<failed>
+<missing>40 F,49 F</missing>
+<additional></additional>
+<summary>
+<expected>2</expected>
+<matched>0</matched>
+<missing>2</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" Modifies="1" Parent="2" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="8" RelNum="5" comment="comment">41</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a; prog_line pl;variable v;while w; if ifs;stmt s,s1,s2; Select<s1,s2> such that Parent(s,s1) and Parent(s,s2) and Modifies(s1,v) and Uses(s2,v) and Follows*(s1,s2)]]></querystr>
+<stuans>12 13,14 18,16 17,22 23,32 40,47 49,48 49,51 52,82 83,83 94,78 79,78 80,79 80,86 92,89 91</stuans>
+<correct>12 13,14 18,16 17,22 23,32 40,47 49,48 49,51 52,78 79,78 80,79 80,82 83,89 91,83 94,86 92</correct>
+<time_taken>4440.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" Uses="1" SuchThat="2" With="1" CondNum="7" RelNum="2" comment="comment">43</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a; prog_line pl;variable v;while w; if ifs;stmt s,s1,s2; Select <p,v> such that Uses(p,v) with p.procName = p1.procName such that Calls(p1,"A")]]></querystr>
+<stuans></stuans>
+<correct>G a,G b,G d,G f,G r,G w,G x,G y,G z,G e,G i,G t,G h,G j,G g,G o,G p,G m,G s,G result,G O,G c,G out,G v,G q,G some,G abc,G n</correct>
+<time_taken>134.000000</time_taken>
+<failed>
+<missing>G O,G a,G abc,G b,G c,G d,G e,G f,G g,G h,G i,G j,G m,G n,G o,G out,G p,G q,G r,G result,G s,G some,G t,G v,G w,G x,G y,G z</missing>
+<additional></additional>
+<summary>
+<expected>28</expected>
+<matched>0</matched>
+<missing>28</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Next="1" Parentstar="3" UnnamedVar="2" SuchThat="2" With="1" CondNum="11" RelNum="5" comment="comment">51</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a; prog_line pl;variable v;while w; if ifs;stmt s,s1,s2; Select <s,s1> such that Parent*(s,c) and Parent*(s1,c) and Parent*(s,s1) and Calls(_,p) with c.procName=p.procName such that Next(c,s1)]]></querystr>
+<stuans></stuans>
+<correct>45 46</correct>
+<time_taken>726.000000</time_taken>
+<failed>
+<missing>45 46</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Modifies="1" Next="1" Parentstar="3" UnnamedVar="3" Pattern="1" SuchThat="3" With="1" CondNum="15" RelNum="6" comment="comment">52</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a; prog_line pl;variable v;while w; if ifs;stmt s,s1,s2; Select <s,s1,a> such that Parent*(s,c) and Parent*(s1,c) and Parent*(s,s1) and Calls(_,p) with c.procName=p.procName such that Next(c,s1) pattern a(v, _"a%b*c"_) such that Modifies(p1, v)]]></querystr>
+<stuans></stuans>
+<correct>45 46 52</correct>
+<time_taken>754.000000</time_taken>
+<failed>
+<missing>45 46 52</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Calls="2" Modifies="1" Next="1" Parentstar="3" UnnamedVar="3" Pattern="1" SuchThat="3" With="2" CondNum="17" RelNum="7" comment="comment">53</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a; prog_line pl;variable v;while w; if ifs;stmt s,s1,s2; Select <s,s1,a> such that Parent*(s,c) and Parent*(s1,c) and Parent*(s,s1) and Calls(_,p) with c.procName=p.procName such that Next(c,s1) pattern a(v, _"a%b*c"_) such that Modifies(p1, v) and Calls(p2, p1) with p2.procName = "B"]]></querystr>
+<stuans></stuans>
+<correct>45 46 52</correct>
+<time_taken>833.000000</time_taken>
+<failed>
+<missing>45 46 52</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Modifies="1" UnnamedVar="1" Uses="2" SuchThat="3" With="1" CondNum="10" RelNum="4" comment="comment">57</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a; prog_line pl;variable v;while w; if ifs;stmt s,s1,s2; Select <p,v> such that Uses(p,v) with p.procName = p1.procName such that Calls(p1,"A") such that Uses(p1, v) and Modifies(s, v)]]></querystr>
+<stuans></stuans>
+<correct>G a,G b,G c,G d,G e,G g,G i,G q,G r,G result,G some,G t,G w,G x,G y</correct>
+<time_taken>208.000000</time_taken>
+<failed>
+<missing>G a,G b,G c,G d,G e,G g,G i,G q,G r,G result,G some,G t,G w,G x,G y</missing>
+<additional></additional>
+<summary>
+<expected>15</expected>
+<matched>0</matched>
+<missing>15</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Modifies="1" Parentstar="1" UnnamedVar="1" Uses="2" SuchThat="4" With="2" CondNum="13" RelNum="5" comment="comment">58</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a; prog_line pl;variable v;while w; if ifs;stmt s,s1,s2; constant cons; Select <p,v,s1> such that Uses(p,v) with p.procName = p1.procName such that Calls(p1,"A") such that Uses(p1, v) and Modifies(s, v) with s1.stmt# = cons.value such that Parent*(ifs, s1)]]></querystr>
+<stuans></stuans>
+<correct>G a 16,G a 4,G a 5,G a 6,G a 7,G b 16,G b 4,G b 5,G b 6,G b 7,G c 16,G c 4,G c 5,G c 6,G c 7,G d 16,G d 4,G d 5,G d 6,G d 7,G e 16,G e 4,G e 5,G e 6,G e 7,G g 16,G g 4,G g 5,G g 6,G g 7,G i 16,G i 4,G i 5,G i 6,G i 7,G q 16,G q 4,G q 5,G q 6,G q 7,G r 16,G r 4,G r 5,G r 6,G r 7,G result 16,G result 4,G result 5,G result 6,G result 7,G some 16,G some 4,G some 5,G some 6,G some 7,G t 16,G t 4,G t 5,G t 6,G t 7,G w 16,G w 4,G w 5,G w 6,G w 7,G x 16,G x 4,G x 5,G x 6,G x 7,G y 16,G y 4,G y 5,G y 6,G y 7</correct>
+<time_taken>220.000000</time_taken>
+<failed>
+<missing>G a 16,G a 4,G a 5,G a 6,G a 7,G b 16,G b 4,G b 5,G b 6,G b 7,G c 16,G c 4,G c 5,G c 6,G c 7,G d 16,G d 4,G d 5,G d 6,G d 7,G e 16,G e 4,G e 5,G e 6,G e 7,G g 16,G g 4,G g 5,G g 6,G g 7,G i 16,G i 4,G i 5,G i 6,G i 7,G q 16,G q 4,G q 5,G q 6,G q 7,G r 16,G r 4,G r 5,G r 6,G r 7,G result 16,G result 4,G result 5,G result 6,G result 7,G some 16,G some 4,G some 5,G some 6,G some 7,G t 16,G t 4,G t 5,G t 6,G t 7,G w 16,G w 4,G w 5,G w 6,G w 7,G x 16,G x 4,G x 5,G x 6,G x 7,G y 16,G y 4,G y 5,G y 6,G y 7</missing>
+<additional></additional>
+<summary>
+<expected>75</expected>
+<matched>0</matched>
+<missing>75</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Follows="1" Modifies="1" Parent="2" Parentstar="1" UnnamedVar="4" Uses="2" Pattern="1" SuchThat="5" With="3" CondNum="22" RelNum="8" comment="comment">59</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a; prog_line pl;variable v, v1;while w; if ifs, ifs2;stmt s,s1,s2; constant cons; Select <p,v,s1, s2> such that Uses(p,v) with p.procName = p1.procName such that Calls(p1,"A") such that Uses(p1, v) and Modifies(s, v) with s1.stmt# = cons.value such that Parent*(ifs, s1) such that Parent(w,s2) and Follows(s2,_) and Parent(s2,_) with s2.stmt# = ifs2.stmt# pattern ifs2(v1,_,_)]]></querystr>
+<stuans></stuans>
+<correct>G a 16 14,G a 16 86,G a 4 14,G a 4 86,G a 5 14,G a 5 86,G a 6 14,G a 6 86,G a 7 14,G a 7 86,G b 16 14,G b 16 86,G b 4 14,G b 4 86,G b 5 14,G b 5 86,G b 6 14,G b 6 86,G b 7 14,G b 7 86,G c 16 14,G c 16 86,G c 4 14,G c 4 86,G c 5 14,G c 5 86,G c 6 14,G c 6 86,G c 7 14,G c 7 86,G d 16 14,G d 16 86,G d 4 14,G d 4 86,G d 5 14,G d 5 86,G d 6 14,G d 6 86,G d 7 14,G d 7 86,G e 16 14,G e 16 86,G e 4 14,G e 4 86,G e 5 14,G e 5 86,G e 6 14,G e 6 86,G e 7 14,G e 7 86,G g 16 14,G g 16 86,G g 4 14,G g 4 86,G g 5 14,G g 5 86,G g 6 14,G g 6 86,G g 7 14,G g 7 86,G i 16 14,G i 16 86,G i 4 14,G i 4 86,G i 5 14,G i 5 86,G i 6 14,G i 6 86,G i 7 14,G i 7 86,G q 16 14,G q 16 86,G q 4 14,G q 4 86,G q 5 14,G q 5 86,G q 6 14,G q 6 86,G q 7 14,G q 7 86,G r 16 14,G r 16 86,G r 4 14,G r 4 86,G r 5 14,G r 5 86,G r 6 14,G r 6 86,G r 7 14,G r 7 86,G result 16 14,G result 16 86,G result 4 14,G result 4 86,G result 5 14,G result 5 86,G result 6 14,G result 6 86,G result 7 14,G result 7 86,G some 16 14,G some 16 86,G some 4 14,G some 4 86,G some 5 14,G some 5 86,G some 6 14,G some 6 86,G some 7 14,G some 7 86,G t 16 14,G t 16 86,G t 4 14,G t 4 86,G t 5 14,G t 5 86,G t 6 14,G t 6 86,G t 7 14,G t 7 86,G w 16 14,G w 16 86,G w 4 14,G w 4 86,G w 5 14,G w 5 86,G w 6 14,G w 6 86,G w 7 14,G w 7 86,G x 16 14,G x 16 86,G x 4 14,G x 4 86,G x 5 14,G x 5 86,G x 6 14,G x 6 86,G x 7 14,G x 7 86,G y 16 14,G y 16 86,G y 4 14,G y 4 86,G y 5 14,G y 5 86,G y 6 14,G y 6 86,G y 7 14,G y 7 86</correct>
+<time_taken>295.000000</time_taken>
+<failed>
+<missing>G a 16 14,G a 16 86,G a 4 14,G a 4 86,G a 5 14,G a 5 86,G a 6 14,G a 6 86,G a 7 14,G a 7 86,G b 16 14,G b 16 86,G b 4 14,G b 4 86,G b 5 14,G b 5 86,G b 6 14,G b 6 86,G b 7 14,G b 7 86,G c 16 14,G c 16 86,G c 4 14,G c 4 86,G c 5 14,G c 5 86,G c 6 14,G c 6 86,G c 7 14,G c 7 86,G d 16 14,G d 16 86,G d 4 14,G d 4 86,G d 5 14,G d 5 86,G d 6 14,G d 6 86,G d 7 14,G d 7 86,G e 16 14,G e 16 86,G e 4 14,G e 4 86,G e 5 14,G e 5 86,G e 6 14,G e 6 86,G e 7 14,G e 7 86,G g 16 14,G g 16 86,G g 4 14,G g 4 86,G g 5 14,G g 5 86,G g 6 14,G g 6 86,G g 7 14,G g 7 86,G i 16 14,G i 16 86,G i 4 14,G i 4 86,G i 5 14,G i 5 86,G i 6 14,G i 6 86,G i 7 14,G i 7 86,G q 16 14,G q 16 86,G q 4 14,G q 4 86,G q 5 14,G q 5 86,G q 6 14,G q 6 86,G q 7 14,G q 7 86,G r 16 14,G r 16 86,G r 4 14,G r 4 86,G r 5 14,G r 5 86,G r 6 14,G r 6 86,G r 7 14,G r 7 86,G result 16 14,G result 16 86,G result 4 14,G result 4 86,G result 5 14,G result 5 86,G result 6 14,G result 6 86,G result 7 14,G result 7 86,G some 16 14,G some 16 86,G some 4 14,G some 4 86,G some 5 14,G some 5 86,G some 6 14,G some 6 86,G some 7 14,G some 7 86,G t 16 14,G t 16 86,G t 4 14,G t 4 86,G t 5 14,G t 5 86,G t 6 14,G t 6 86,G t 7 14,G t 7 86,G w 16 14,G w 16 86,G w 4 14,G w 4 86,G w 5 14,G w 5 86,G w 6 14,G w 6 86,G w 7 14,G w 7 86,G x 16 14,G x 16 86,G x 4 14,G x 4 86,G x 5 14,G x 5 86,G x 6 14,G x 6 86,G x 7 14,G x 7 86,G y 16 14,G y 16 86,G y 4 14,G y 4 86,G y 5 14,G y 5 86,G y 6 14,G y 6 86,G y 7 14,G y 7 86</missing>
+<additional></additional>
+<summary>
+<expected>150</expected>
+<matched>0</matched>
+<missing>150</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Follows="1" Modifies="2" Parent="2" Parentstar="1" UnnamedVar="4" Uses="2" Pattern="1" SuchThat="6" With="4" CondNum="25" RelNum="9" comment="comment">60</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a; prog_line pl;variable v, v1, v2;while w; if ifs, ifs2;stmt s,s1,s2; constant cons; Select <p,v,s1, s2, v2> such that Uses(p,v) with p.procName = p1.procName such that Calls(p1,"A") such that Uses(p1, v) and Modifies(s, v) with s1.stmt# = cons.value such that Parent*(ifs, s1) such that Parent(w,s2) and Follows(s2,_) and Parent(s2,_) with s2.stmt# = ifs2.stmt# pattern ifs2(v1,_,_) with v1.varName = v2.varName such that Modifies("G", v2)]]></querystr>
+<stuans></stuans>
+<correct>G a 16 14 d,G a 16 14 r,G a 16 86 a,G a 16 86 t,G a 4 14 d,G a 4 14 r,G a 4 86 a,G a 4 86 t,G a 5 14 d,G a 5 14 r,G a 5 86 a,G a 5 86 t,G a 6 14 d,G a 6 14 r,G a 6 86 a,G a 6 86 t,G a 7 14 d,G a 7 14 r,G a 7 86 a,G a 7 86 t,G b 16 14 d,G b 16 14 r,G b 16 86 a,G b 16 86 t,G b 4 14 d,G b 4 14 r,G b 4 86 a,G b 4 86 t,G b 5 14 d,G b 5 14 r,G b 5 86 a,G b 5 86 t,G b 6 14 d,G b 6 14 r,G b 6 86 a,G b 6 86 t,G b 7 14 d,G b 7 14 r,G b 7 86 a,G b 7 86 t,G c 16 14 d,G c 16 14 r,G c 16 86 a,G c 16 86 t,G c 4 14 d,G c 4 14 r,G c 4 86 a,G c 4 86 t,G c 5 14 d,G c 5 14 r,G c 5 86 a,G c 5 86 t,G c 6 14 d,G c 6 14 r,G c 6 86 a,G c 6 86 t,G c 7 14 d,G c 7 14 r,G c 7 86 a,G c 7 86 t,G d 16 14 d,G d 16 14 r,G d 16 86 a,G d 16 86 t,G d 4 14 d,G d 4 14 r,G d 4 86 a,G d 4 86 t,G d 5 14 d,G d 5 14 r,G d 5 86 a,G d 5 86 t,G d 6 14 d,G d 6 14 r,G d 6 86 a,G d 6 86 t,G d 7 14 d,G d 7 14 r,G d 7 86 a,G d 7 86 t,G e 16 14 d,G e 16 14 r,G e 16 86 a,G e 16 86 t,G e 4 14 d,G e 4 14 r,G e 4 86 a,G e 4 86 t,G e 5 14 d,G e 5 14 r,G e 5 86 a,G e 5 86 t,G e 6 14 d,G e 6 14 r,G e 6 86 a,G e 6 86 t,G e 7 14 d,G e 7 14 r,G e 7 86 a,G e 7 86 t,G g 16 14 d,G g 16 14 r,G g 16 86 a,G g 16 86 t,G g 4 14 d,G g 4 14 r,G g 4 86 a,G g 4 86 t,G g 5 14 d,G g 5 14 r,G g 5 86 a,G g 5 86 t,G g 6 14 d,G g 6 14 r,G g 6 86 a,G g 6 86 t,G g 7 14 d,G g 7 14 r,G g 7 86 a,G g 7 86 t,G i 16 14 d,G i 16 14 r,G i 16 86 a,G i 16 86 t,G i 4 14 d,G i 4 14 r,G i 4 86 a,G i 4 86 t,G i 5 14 d,G i 5 14 r,G i 5 86 a,G i 5 86 t,G i 6 14 d,G i 6 14 r,G i 6 86 a,G i 6 86 t,G i 7 14 d,G i 7 14 r,G i 7 86 a,G i 7 86 t,G q 16 14 d,G q 16 14 r,G q 16 86 a,G q 16 86 t,G q 4 14 d,G q 4 14 r,G q 4 86 a,G q 4 86 t,G q 5 14 d,G q 5 14 r,G q 5 86 a,G q 5 86 t,G q 6 14 d,G q 6 14 r,G q 6 86 a,G q 6 86 t,G q 7 14 d,G q 7 14 r,G q 7 86 a,G q 7 86 t,G r 16 14 d,G r 16 14 r,G r 16 86 a,G r 16 86 t,G r 4 14 d,G r 4 14 r,G r 4 86 a,G r 4 86 t,G r 5 14 d,G r 5 14 r,G r 5 86 a,G r 5 86 t,G r 6 14 d,G r 6 14 r,G r 6 86 a,G r 6 86 t,G r 7 14 d,G r 7 14 r,G r 7 86 a,G r 7 86 t,G result 16 14 d,G result 16 14 r,G result 16 86 a,G result 16 86 t,G result 4 14 d,G result 4 14 r,G result 4 86 a,G result 4 86 t,G result 5 14 d,G result 5 14 r,G result 5 86 a,G result 5 86 t,G result 6 14 d,G result 6 14 r,G result 6 86 a,G result 6 86 t,G result 7 14 d,G result 7 14 r,G result 7 86 a,G result 7 86 t,G some 16 14 d,G some 16 14 r,G some 16 86 a,G some 16 86 t,G some 4 14 d,G some 4 14 r,G some 4 86 a,G some 4 86 t,G some 5 14 d,G some 5 14 r,G some 5 86 a,G some 5 86 t,G some 6 14 d,G some 6 14 r,G some 6 86 a,G some 6 86 t,G some 7 14 d,G some 7 14 r,G some 7 86 a,G some 7 86 t,G t 16 14 d,G t 16 14 r,G t 16 86 a,G t 16 86 t,G t 4 14 d,G t 4 14 r,G t 4 86 a,G t 4 86 t,G t 5 14 d,G t 5 14 r,G t 5 86 a,G t 5 86 t,G t 6 14 d,G t 6 14 r,G t 6 86 a,G t 6 86 t,G t 7 14 d,G t 7 14 r,G t 7 86 a,G t 7 86 t,G w 16 14 d,G w 16 14 r,G w 16 86 a,G w 16 86 t,G w 4 14 d,G w 4 14 r,G w 4 86 a,G w 4 86 t,G w 5 14 d,G w 5 14 r,G w 5 86 a,G w 5 86 t,G w 6 14 d,G w 6 14 r,G w 6 86 a,G w 6 86 t,G w 7 14 d,G w 7 14 r,G w 7 86 a,G w 7 86 t,G x 16 14 d,G x 16 14 r,G x 16 86 a,G x 16 86 t,G x 4 14 d,G x 4 14 r,G x 4 86 a,G x 4 86 t,G x 5 14 d,G x 5 14 r,G x 5 86 a,G x 5 86 t,G x 6 14 d,G x 6 14 r,G x 6 86 a,G x 6 86 t,G x 7 14 d,G x 7 14 r,G x 7 86 a,G x 7 86 t,G y 16 14 d,G y 16 14 r,G y 16 86 a,G y 16 86 t,G y 4 14 d,G y 4 14 r,G y 4 86 a,G y 4 86 t,G y 5 14 d,G y 5 14 r,G y 5 86 a,G y 5 86 t,G y 6 14 d,G y 6 14 r,G y 6 86 a,G y 6 86 t,G y 7 14 d,G y 7 14 r,G y 7 86 a,G y 7 86 t</correct>
+<time_taken>264.000000</time_taken>
+<failed>
+<missing>G a 16 14 d,G a 16 14 r,G a 16 86 a,G a 16 86 t,G a 4 14 d,G a 4 14 r,G a 4 86 a,G a 4 86 t,G a 5 14 d,G a 5 14 r,G a 5 86 a,G a 5 86 t,G a 6 14 d,G a 6 14 r,G a 6 86 a,G a 6 86 t,G a 7 14 d,G a 7 14 r,G a 7 86 a,G a 7 86 t,G b 16 14 d,G b 16 14 r,G b 16 86 a,G b 16 86 t,G b 4 14 d,G b 4 14 r,G b 4 86 a,G b 4 86 t,G b 5 14 d,G b 5 14 r,G b 5 86 a,G b 5 86 t,G b 6 14 d,G b 6 14 r,G b 6 86 a,G b 6 86 t,G b 7 14 d,G b 7 14 r,G b 7 86 a,G b 7 86 t,G c 16 14 d,G c 16 14 r,G c 16 86 a,G c 16 86 t,G c 4 14 d,G c 4 14 r,G c 4 86 a,G c 4 86 t,G c 5 14 d,G c 5 14 r,G c 5 86 a,G c 5 86 t,G c 6 14 d,G c 6 14 r,G c 6 86 a,G c 6 86 t,G c 7 14 d,G c 7 14 r,G c 7 86 a,G c 7 86 t,G d 16 14 d,G d 16 14 r,G d 16 86 a,G d 16 86 t,G d 4 14 d,G d 4 14 r,G d 4 86 a,G d 4 86 t,G d 5 14 d,G d 5 14 r,G d 5 86 a,G d 5 86 t,G d 6 14 d,G d 6 14 r,G d 6 86 a,G d 6 86 t,G d 7 14 d,G d 7 14 r,G d 7 86 a,G d 7 86 t,G e 16 14 d,G e 16 14 r,G e 16 86 a,G e 16 86 t,G e 4 14 d,G e 4 14 r,G e 4 86 a,G e 4 86 t,G e 5 14 d,G e 5 14 r,G e 5 86 a,G e 5 86 t,G e 6 14 d,G e 6 14 r,G e 6 86 a,G e 6 86 t,G e 7 14 d,G e 7 14 r,G e 7 86 a,G e 7 86 t,G g 16 14 d,G g 16 14 r,G g 16 86 a,G g 16 86 t,G g 4 14 d,G g 4 14 r,G g 4 86 a,G g 4 86 t,G g 5 14 d,G g 5 14 r,G g 5 86 a,G g 5 86 t,G g 6 14 d,G g 6 14 r,G g 6 86 a,G g 6 86 t,G g 7 14 d,G g 7 14 r,G g 7 86 a,G g 7 86 t,G i 16 14 d,G i 16 14 r,G i 16 86 a,G i 16 86 t,G i 4 14 d,G i 4 14 r,G i 4 86 a,G i 4 86 t,G i 5 14 d,G i 5 14 r,G i 5 86 a,G i 5 86 t,G i 6 14 d,G i 6 14 r,G i 6 86 a,G i 6 86 t,G i 7 14 d,G i 7 14 r,G i 7 86 a,G i 7 86 t,G q 16 14 d,G q 16 14 r,G q 16 86 a,G q 16 86 t,G q 4 14 d,G q 4 14 r,G q 4 86 a,G q 4 86 t,G q 5 14 d,G q 5 14 r,G q 5 86 a,G q 5 86 t,G q 6 14 d,G q 6 14 r,G q 6 86 a,G q 6 86 t,G q 7 14 d,G q 7 14 r,G q 7 86 a,G q 7 86 t,G r 16 14 d,G r 16 14 r,G r 16 86 a,G r 16 86 t,G r 4 14 d,G r 4 14 r,G r 4 86 a,G r 4 86 t,G r 5 14 d,G r 5 14 r,G r 5 86 a,G r 5 86 t,G r 6 14 d,G r 6 14 r,G r 6 86 a,G r 6 86 t,G r 7 14 d,G r 7 14 r,G r 7 86 a,G r 7 86 t,G result 16 14 d,G result 16 14 r,G result 16 86 a,G result 16 86 t,G result 4 14 d,G result 4 14 r,G result 4 86 a,G result 4 86 t,G result 5 14 d,G result 5 14 r,G result 5 86 a,G result 5 86 t,G result 6 14 d,G result 6 14 r,G result 6 86 a,G result 6 86 t,G result 7 14 d,G result 7 14 r,G result 7 86 a,G result 7 86 t,G some 16 14 d,G some 16 14 r,G some 16 86 a,G some 16 86 t,G some 4 14 d,G some 4 14 r,G some 4 86 a,G some 4 86 t,G some 5 14 d,G some 5 14 r,G some 5 86 a,G some 5 86 t,G some 6 14 d,G some 6 14 r,G some 6 86 a,G some 6 86 t,G some 7 14 d,G some 7 14 r,G some 7 86 a,G some 7 86 t,G t 16 14 d,G t 16 14 r,G t 16 86 a,G t 16 86 t,G t 4 14 d,G t 4 14 r,G t 4 86 a,G t 4 86 t,G t 5 14 d,G t 5 14 r,G t 5 86 a,G t 5 86 t,G t 6 14 d,G t 6 14 r,G t 6 86 a,G t 6 86 t,G t 7 14 d,G t 7 14 r,G t 7 86 a,G t 7 86 t,G w 16 14 d,G w 16 14 r,G w 16 86 a,G w 16 86 t,G w 4 14 d,G w 4 14 r,G w 4 86 a,G w 4 86 t,G w 5 14 d,G w 5 14 r,G w 5 86 a,G w 5 86 t,G w 6 14 d,G w 6 14 r,G w 6 86 a,G w 6 86 t,G w 7 14 d,G w 7 14 r,G w 7 86 a,G w 7 86 t,G x 16 14 d,G x 16 14 r,G x 16 86 a,G x 16 86 t,G x 4 14 d,G x 4 14 r,G x 4 86 a,G x 4 86 t,G x 5 14 d,G x 5 14 r,G x 5 86 a,G x 5 86 t,G x 6 14 d,G x 6 14 r,G x 6 86 a,G x 6 86 t,G x 7 14 d,G x 7 14 r,G x 7 86 a,G x 7 86 t,G y 16 14 d,G y 16 14 r,G y 16 86 a,G y 16 86 t,G y 4 14 d,G y 4 14 r,G y 4 86 a,G y 4 86 t,G y 5 14 d,G y 5 14 r,G y 5 86 a,G y 5 86 t,G y 6 14 d,G y 6 14 r,G y 6 86 a,G y 6 86 t,G y 7 14 d,G y 7 14 r,G y 7 86 a,G y 7 86 t</missing>
+<additional></additional>
+<summary>
+<expected>300</expected>
+<matched>0</matched>
+<missing>300</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="comment">81</id><querystr><![CDATA[stmt s,s1; assign a; Select BOOLEAN such that Modifies(a1, "a1")]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>254.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="comment">90</id><querystr><![CDATA[stmt s,s1; assign a; Select BOOLEAN with a.stmt# = s]]></querystr>
+<stuans>TRUE</stuans>
+<correct>FALSE</correct>
+<time_taken>370.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional>TRUE</additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" Parent="1" SuchThat="1" CondNum="3" RelNum="1" comment="comment">97</id><querystr><![CDATA[stmt s,s1; assign a; procedure p; while w; Select BOOLEAN such that Parent(w, "a")]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>180.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="comment">98</id><querystr><![CDATA[stmt s,s1; assign a; procedure p; while w; Select BOOLEAN such that Calls(5, "a")]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>238.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="comment">100</id><querystr><![CDATA[stmt s,s1; assign a; procedure p; while w; Select BOOLEAN pattern s(_,_)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>131.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" Calls="1" Follows="1" Modifies="2" Parent="2" Parentstar="1" UnnamedVar="5" Uses="2" Pattern="1" SuchThat="6" With="4" CondNum="27" RelNum="10" comment="comment">108</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a; prog_line pl;variable v, v1, v2;while w; if ifs, ifs2;stmt s,s1,s2; constant cons; Select <p,v,s1, s2, v2> such that Uses(p,v) with p.procName = p1.procName such that Calls(p1,"A") such that Uses(p1, v) and Modifies(s, v) with s1.stmt# = cons.value such that Parent*(ifs, s1) such that Parent(w,s2) and Follows(s2,_) and Parent(s2,_) with s2.stmt# = ifs2.stmt# pattern ifs2(v1,_,_) with v1.varName = v2.varName such that Modifies("G", v2) and Affects*(_,_)]]></querystr>
+<stuans></stuans>
+<correct>G a 16 14 d,G a 16 14 r,G a 16 86 a,G a 16 86 t,G a 4 14 d,G a 4 14 r,G a 4 86 a,G a 4 86 t,G a 5 14 d,G a 5 14 r,G a 5 86 a,G a 5 86 t,G a 6 14 d,G a 6 14 r,G a 6 86 a,G a 6 86 t,G a 7 14 d,G a 7 14 r,G a 7 86 a,G a 7 86 t,G b 16 14 d,G b 16 14 r,G b 16 86 a,G b 16 86 t,G b 4 14 d,G b 4 14 r,G b 4 86 a,G b 4 86 t,G b 5 14 d,G b 5 14 r,G b 5 86 a,G b 5 86 t,G b 6 14 d,G b 6 14 r,G b 6 86 a,G b 6 86 t,G b 7 14 d,G b 7 14 r,G b 7 86 a,G b 7 86 t,G c 16 14 d,G c 16 14 r,G c 16 86 a,G c 16 86 t,G c 4 14 d,G c 4 14 r,G c 4 86 a,G c 4 86 t,G c 5 14 d,G c 5 14 r,G c 5 86 a,G c 5 86 t,G c 6 14 d,G c 6 14 r,G c 6 86 a,G c 6 86 t,G c 7 14 d,G c 7 14 r,G c 7 86 a,G c 7 86 t,G d 16 14 d,G d 16 14 r,G d 16 86 a,G d 16 86 t,G d 4 14 d,G d 4 14 r,G d 4 86 a,G d 4 86 t,G d 5 14 d,G d 5 14 r,G d 5 86 a,G d 5 86 t,G d 6 14 d,G d 6 14 r,G d 6 86 a,G d 6 86 t,G d 7 14 d,G d 7 14 r,G d 7 86 a,G d 7 86 t,G e 16 14 d,G e 16 14 r,G e 16 86 a,G e 16 86 t,G e 4 14 d,G e 4 14 r,G e 4 86 a,G e 4 86 t,G e 5 14 d,G e 5 14 r,G e 5 86 a,G e 5 86 t,G e 6 14 d,G e 6 14 r,G e 6 86 a,G e 6 86 t,G e 7 14 d,G e 7 14 r,G e 7 86 a,G e 7 86 t,G g 16 14 d,G g 16 14 r,G g 16 86 a,G g 16 86 t,G g 4 14 d,G g 4 14 r,G g 4 86 a,G g 4 86 t,G g 5 14 d,G g 5 14 r,G g 5 86 a,G g 5 86 t,G g 6 14 d,G g 6 14 r,G g 6 86 a,G g 6 86 t,G g 7 14 d,G g 7 14 r,G g 7 86 a,G g 7 86 t,G i 16 14 d,G i 16 14 r,G i 16 86 a,G i 16 86 t,G i 4 14 d,G i 4 14 r,G i 4 86 a,G i 4 86 t,G i 5 14 d,G i 5 14 r,G i 5 86 a,G i 5 86 t,G i 6 14 d,G i 6 14 r,G i 6 86 a,G i 6 86 t,G i 7 14 d,G i 7 14 r,G i 7 86 a,G i 7 86 t,G q 16 14 d,G q 16 14 r,G q 16 86 a,G q 16 86 t,G q 4 14 d,G q 4 14 r,G q 4 86 a,G q 4 86 t,G q 5 14 d,G q 5 14 r,G q 5 86 a,G q 5 86 t,G q 6 14 d,G q 6 14 r,G q 6 86 a,G q 6 86 t,G q 7 14 d,G q 7 14 r,G q 7 86 a,G q 7 86 t,G r 16 14 d,G r 16 14 r,G r 16 86 a,G r 16 86 t,G r 4 14 d,G r 4 14 r,G r 4 86 a,G r 4 86 t,G r 5 14 d,G r 5 14 r,G r 5 86 a,G r 5 86 t,G r 6 14 d,G r 6 14 r,G r 6 86 a,G r 6 86 t,G r 7 14 d,G r 7 14 r,G r 7 86 a,G r 7 86 t,G result 16 14 d,G result 16 14 r,G result 16 86 a,G result 16 86 t,G result 4 14 d,G result 4 14 r,G result 4 86 a,G result 4 86 t,G result 5 14 d,G result 5 14 r,G result 5 86 a,G result 5 86 t,G result 6 14 d,G result 6 14 r,G result 6 86 a,G result 6 86 t,G result 7 14 d,G result 7 14 r,G result 7 86 a,G result 7 86 t,G some 16 14 d,G some 16 14 r,G some 16 86 a,G some 16 86 t,G some 4 14 d,G some 4 14 r,G some 4 86 a,G some 4 86 t,G some 5 14 d,G some 5 14 r,G some 5 86 a,G some 5 86 t,G some 6 14 d,G some 6 14 r,G some 6 86 a,G some 6 86 t,G some 7 14 d,G some 7 14 r,G some 7 86 a,G some 7 86 t,G t 16 14 d,G t 16 14 r,G t 16 86 a,G t 16 86 t,G t 4 14 d,G t 4 14 r,G t 4 86 a,G t 4 86 t,G t 5 14 d,G t 5 14 r,G t 5 86 a,G t 5 86 t,G t 6 14 d,G t 6 14 r,G t 6 86 a,G t 6 86 t,G t 7 14 d,G t 7 14 r,G t 7 86 a,G t 7 86 t,G w 16 14 d,G w 16 14 r,G w 16 86 a,G w 16 86 t,G w 4 14 d,G w 4 14 r,G w 4 86 a,G w 4 86 t,G w 5 14 d,G w 5 14 r,G w 5 86 a,G w 5 86 t,G w 6 14 d,G w 6 14 r,G w 6 86 a,G w 6 86 t,G w 7 14 d,G w 7 14 r,G w 7 86 a,G w 7 86 t,G x 16 14 d,G x 16 14 r,G x 16 86 a,G x 16 86 t,G x 4 14 d,G x 4 14 r,G x 4 86 a,G x 4 86 t,G x 5 14 d,G x 5 14 r,G x 5 86 a,G x 5 86 t,G x 6 14 d,G x 6 14 r,G x 6 86 a,G x 6 86 t,G x 7 14 d,G x 7 14 r,G x 7 86 a,G x 7 86 t,G y 16 14 d,G y 16 14 r,G y 16 86 a,G y 16 86 t,G y 4 14 d,G y 4 14 r,G y 4 86 a,G y 4 86 t,G y 5 14 d,G y 5 14 r,G y 5 86 a,G y 5 86 t,G y 6 14 d,G y 6 14 r,G y 6 86 a,G y 6 86 t,G y 7 14 d,G y 7 14 r,G y 7 86 a,G y 7 86 t</correct>
+<time_taken>362.000000</time_taken>
+<failed>
+<missing>G a 16 14 d,G a 16 14 r,G a 16 86 a,G a 16 86 t,G a 4 14 d,G a 4 14 r,G a 4 86 a,G a 4 86 t,G a 5 14 d,G a 5 14 r,G a 5 86 a,G a 5 86 t,G a 6 14 d,G a 6 14 r,G a 6 86 a,G a 6 86 t,G a 7 14 d,G a 7 14 r,G a 7 86 a,G a 7 86 t,G b 16 14 d,G b 16 14 r,G b 16 86 a,G b 16 86 t,G b 4 14 d,G b 4 14 r,G b 4 86 a,G b 4 86 t,G b 5 14 d,G b 5 14 r,G b 5 86 a,G b 5 86 t,G b 6 14 d,G b 6 14 r,G b 6 86 a,G b 6 86 t,G b 7 14 d,G b 7 14 r,G b 7 86 a,G b 7 86 t,G c 16 14 d,G c 16 14 r,G c 16 86 a,G c 16 86 t,G c 4 14 d,G c 4 14 r,G c 4 86 a,G c 4 86 t,G c 5 14 d,G c 5 14 r,G c 5 86 a,G c 5 86 t,G c 6 14 d,G c 6 14 r,G c 6 86 a,G c 6 86 t,G c 7 14 d,G c 7 14 r,G c 7 86 a,G c 7 86 t,G d 16 14 d,G d 16 14 r,G d 16 86 a,G d 16 86 t,G d 4 14 d,G d 4 14 r,G d 4 86 a,G d 4 86 t,G d 5 14 d,G d 5 14 r,G d 5 86 a,G d 5 86 t,G d 6 14 d,G d 6 14 r,G d 6 86 a,G d 6 86 t,G d 7 14 d,G d 7 14 r,G d 7 86 a,G d 7 86 t,G e 16 14 d,G e 16 14 r,G e 16 86 a,G e 16 86 t,G e 4 14 d,G e 4 14 r,G e 4 86 a,G e 4 86 t,G e 5 14 d,G e 5 14 r,G e 5 86 a,G e 5 86 t,G e 6 14 d,G e 6 14 r,G e 6 86 a,G e 6 86 t,G e 7 14 d,G e 7 14 r,G e 7 86 a,G e 7 86 t,G g 16 14 d,G g 16 14 r,G g 16 86 a,G g 16 86 t,G g 4 14 d,G g 4 14 r,G g 4 86 a,G g 4 86 t,G g 5 14 d,G g 5 14 r,G g 5 86 a,G g 5 86 t,G g 6 14 d,G g 6 14 r,G g 6 86 a,G g 6 86 t,G g 7 14 d,G g 7 14 r,G g 7 86 a,G g 7 86 t,G i 16 14 d,G i 16 14 r,G i 16 86 a,G i 16 86 t,G i 4 14 d,G i 4 14 r,G i 4 86 a,G i 4 86 t,G i 5 14 d,G i 5 14 r,G i 5 86 a,G i 5 86 t,G i 6 14 d,G i 6 14 r,G i 6 86 a,G i 6 86 t,G i 7 14 d,G i 7 14 r,G i 7 86 a,G i 7 86 t,G q 16 14 d,G q 16 14 r,G q 16 86 a,G q 16 86 t,G q 4 14 d,G q 4 14 r,G q 4 86 a,G q 4 86 t,G q 5 14 d,G q 5 14 r,G q 5 86 a,G q 5 86 t,G q 6 14 d,G q 6 14 r,G q 6 86 a,G q 6 86 t,G q 7 14 d,G q 7 14 r,G q 7 86 a,G q 7 86 t,G r 16 14 d,G r 16 14 r,G r 16 86 a,G r 16 86 t,G r 4 14 d,G r 4 14 r,G r 4 86 a,G r 4 86 t,G r 5 14 d,G r 5 14 r,G r 5 86 a,G r 5 86 t,G r 6 14 d,G r 6 14 r,G r 6 86 a,G r 6 86 t,G r 7 14 d,G r 7 14 r,G r 7 86 a,G r 7 86 t,G result 16 14 d,G result 16 14 r,G result 16 86 a,G result 16 86 t,G result 4 14 d,G result 4 14 r,G result 4 86 a,G result 4 86 t,G result 5 14 d,G result 5 14 r,G result 5 86 a,G result 5 86 t,G result 6 14 d,G result 6 14 r,G result 6 86 a,G result 6 86 t,G result 7 14 d,G result 7 14 r,G result 7 86 a,G result 7 86 t,G some 16 14 d,G some 16 14 r,G some 16 86 a,G some 16 86 t,G some 4 14 d,G some 4 14 r,G some 4 86 a,G some 4 86 t,G some 5 14 d,G some 5 14 r,G some 5 86 a,G some 5 86 t,G some 6 14 d,G some 6 14 r,G some 6 86 a,G some 6 86 t,G some 7 14 d,G some 7 14 r,G some 7 86 a,G some 7 86 t,G t 16 14 d,G t 16 14 r,G t 16 86 a,G t 16 86 t,G t 4 14 d,G t 4 14 r,G t 4 86 a,G t 4 86 t,G t 5 14 d,G t 5 14 r,G t 5 86 a,G t 5 86 t,G t 6 14 d,G t 6 14 r,G t 6 86 a,G t 6 86 t,G t 7 14 d,G t 7 14 r,G t 7 86 a,G t 7 86 t,G w 16 14 d,G w 16 14 r,G w 16 86 a,G w 16 86 t,G w 4 14 d,G w 4 14 r,G w 4 86 a,G w 4 86 t,G w 5 14 d,G w 5 14 r,G w 5 86 a,G w 5 86 t,G w 6 14 d,G w 6 14 r,G w 6 86 a,G w 6 86 t,G w 7 14 d,G w 7 14 r,G w 7 86 a,G w 7 86 t,G x 16 14 d,G x 16 14 r,G x 16 86 a,G x 16 86 t,G x 4 14 d,G x 4 14 r,G x 4 86 a,G x 4 86 t,G x 5 14 d,G x 5 14 r,G x 5 86 a,G x 5 86 t,G x 6 14 d,G x 6 14 r,G x 6 86 a,G x 6 86 t,G x 7 14 d,G x 7 14 r,G x 7 86 a,G x 7 86 t,G y 16 14 d,G y 16 14 r,G y 16 86 a,G y 16 86 t,G y 4 14 d,G y 4 14 r,G y 4 86 a,G y 4 86 t,G y 5 14 d,G y 5 14 r,G y 5 86 a,G y 5 86 t,G y 6 14 d,G y 6 14 r,G y 6 86 a,G y 6 86 t,G y 7 14 d,G y 7 14 r,G y 7 86 a,G y 7 86 t</missing>
+<additional></additional>
+<summary>
+<expected>300</expected>
+<matched>0</matched>
+<missing>300</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" Calls="1" Follows="1" Modifies="2" Parent="2" Parentstar="1" UnnamedVar="5" Uses="2" Pattern="1" SuchThat="6" With="4" CondNum="27" RelNum="10" comment="comment">109</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a; prog_line pl;variable v, v1, v2;while w; if ifs, ifs2;stmt s,s1,s2; constant cons; Select <p,v,s1, s2, v2> such that Uses(p,v) with p.procName = p1.procName such that Calls(p1,"A") such that Uses(p1, v) and Modifies(s, v) with s1.stmt# = cons.value such that Parent*(ifs, s1) such that Parent(w,s2) and Follows(s2,_) and Parent(s2,_) with s2.stmt# = ifs2.stmt# pattern ifs2(v1,_,_) with v1.varName = v2.varName such that Modifies("G", v2) and Affects*(_,s1)]]></querystr>
+<stuans></stuans>
+<correct>G a 6 14 d,G a 6 14 r,G a 6 86 a,G a 6 86 t,G b 6 14 d,G b 6 14 r,G b 6 86 a,G b 6 86 t,G c 6 14 d,G c 6 14 r,G c 6 86 a,G c 6 86 t,G d 6 14 d,G d 6 14 r,G d 6 86 a,G d 6 86 t,G e 6 14 d,G e 6 14 r,G e 6 86 a,G e 6 86 t,G g 6 14 d,G g 6 14 r,G g 6 86 a,G g 6 86 t,G i 6 14 d,G i 6 14 r,G i 6 86 a,G i 6 86 t,G q 6 14 d,G q 6 14 r,G q 6 86 a,G q 6 86 t,G r 6 14 d,G r 6 14 r,G r 6 86 a,G r 6 86 t,G result 6 14 d,G result 6 14 r,G result 6 86 a,G result 6 86 t,G some 6 14 d,G some 6 14 r,G some 6 86 a,G some 6 86 t,G t 6 14 d,G t 6 14 r,G t 6 86 a,G t 6 86 t,G w 6 14 d,G w 6 14 r,G w 6 86 a,G w 6 86 t,G x 6 14 d,G x 6 14 r,G x 6 86 a,G x 6 86 t,G y 6 14 d,G y 6 14 r,G y 6 86 a,G y 6 86 t</correct>
+<time_taken>537.000000</time_taken>
+<failed>
+<missing>G a 6 14 d,G a 6 14 r,G a 6 86 a,G a 6 86 t,G b 6 14 d,G b 6 14 r,G b 6 86 a,G b 6 86 t,G c 6 14 d,G c 6 14 r,G c 6 86 a,G c 6 86 t,G d 6 14 d,G d 6 14 r,G d 6 86 a,G d 6 86 t,G e 6 14 d,G e 6 14 r,G e 6 86 a,G e 6 86 t,G g 6 14 d,G g 6 14 r,G g 6 86 a,G g 6 86 t,G i 6 14 d,G i 6 14 r,G i 6 86 a,G i 6 86 t,G q 6 14 d,G q 6 14 r,G q 6 86 a,G q 6 86 t,G r 6 14 d,G r 6 14 r,G r 6 86 a,G r 6 86 t,G result 6 14 d,G result 6 14 r,G result 6 86 a,G result 6 86 t,G some 6 14 d,G some 6 14 r,G some 6 86 a,G some 6 86 t,G t 6 14 d,G t 6 14 r,G t 6 86 a,G t 6 86 t,G w 6 14 d,G w 6 14 r,G w 6 86 a,G w 6 86 t,G x 6 14 d,G x 6 14 r,G x 6 86 a,G x 6 86 t,G y 6 14 d,G y 6 14 r,G y 6 86 a,G y 6 86 t</missing>
+<additional></additional>
+<summary>
+<expected>60</expected>
+<matched>0</matched>
+<missing>60</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" Calls="1" Follows="1" Modifies="2" Nextstar="1" Parent="2" Parentstar="1" UnnamedVar="5" Uses="2" Pattern="1" SuchThat="6" With="4" CondNum="28" RelNum="11" comment="comment">111</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a; prog_line pl;variable v, v1, v2;while w; if ifs, ifs2;stmt s,s1,s2; constant cons; Select <p,v,s1, s2, v2> such that Uses(p,v) with p.procName = p1.procName such that Calls(p1,"A") such that Uses(p1, v) and Modifies(s, v) with s1.stmt# = cons.value such that Parent*(ifs, s1) such that Parent(w,s2) and Follows(s2,_) and Parent(s2,_) with s2.stmt# = ifs2.stmt# pattern ifs2(v1,_,_) with v1.varName = v2.varName such that Modifies("G", v2) and Affects*(_,_) and Next*(s1, s2)]]></querystr>
+<stuans></stuans>
+<correct>G a 16 14 d,G a 16 14 r,G b 16 14 d,G b 16 14 r,G c 16 14 d,G c 16 14 r,G d 16 14 d,G d 16 14 r,G e 16 14 d,G e 16 14 r,G g 16 14 d,G g 16 14 r,G i 16 14 d,G i 16 14 r,G q 16 14 d,G q 16 14 r,G r 16 14 d,G r 16 14 r,G result 16 14 d,G result 16 14 r,G some 16 14 d,G some 16 14 r,G t 16 14 d,G t 16 14 r,G w 16 14 d,G w 16 14 r,G x 16 14 d,G x 16 14 r,G y 16 14 d,G y 16 14 r</correct>
+<time_taken>299.000000</time_taken>
+<failed>
+<missing>G a 16 14 d,G a 16 14 r,G b 16 14 d,G b 16 14 r,G c 16 14 d,G c 16 14 r,G d 16 14 d,G d 16 14 r,G e 16 14 d,G e 16 14 r,G g 16 14 d,G g 16 14 r,G i 16 14 d,G i 16 14 r,G q 16 14 d,G q 16 14 r,G r 16 14 d,G r 16 14 r,G result 16 14 d,G result 16 14 r,G some 16 14 d,G some 16 14 r,G t 16 14 d,G t 16 14 r,G w 16 14 d,G w 16 14 r,G x 16 14 d,G x 16 14 r,G y 16 14 d,G y 16 14 r</missing>
+<additional></additional>
+<summary>
+<expected>30</expected>
+<matched>0</matched>
+<missing>30</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" Affectsstar="1" Calls="1" Follows="1" Modifies="2" Next="1" Nextstar="1" Parent="2" Parentstar="1" UnnamedVar="5" Uses="2" Pattern="1" SuchThat="6" With="4" CondNum="30" RelNum="13" comment="comment">112</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a, a1; prog_line pl;variable v, v1, v2;while w; if ifs, ifs2;stmt s,s1,s2; constant cons; Select <p,v,s1, s2, v2, a, a1> such that Uses(p,v) with p.procName = p1.procName such that Calls(p1,"A") such that Uses(p1, v) and Modifies(s, v) with s1.stmt# = cons.value such that Parent*(ifs, s1) such that Parent(w,s2) and Follows(s2,_) and Parent(s2,_) with s2.stmt# = ifs2.stmt# pattern ifs2(v1,_,_) with v1.varName = v2.varName such that Modifies("G", v2) and Affects*(_,_) and Next*(s1, s2) and Affects(a, a1) and Next(a1,a)]]></querystr>
+<stuans></stuans>
+<correct>G a 16 14 d 36 35,G a 16 14 r 36 35,G b 16 14 d 36 35,G b 16 14 r 36 35,G c 16 14 d 36 35,G c 16 14 r 36 35,G d 16 14 d 36 35,G d 16 14 r 36 35,G e 16 14 d 36 35,G e 16 14 r 36 35,G g 16 14 d 36 35,G g 16 14 r 36 35,G i 16 14 d 36 35,G i 16 14 r 36 35,G q 16 14 d 36 35,G q 16 14 r 36 35,G r 16 14 d 36 35,G r 16 14 r 36 35,G result 16 14 d 36 35,G result 16 14 r 36 35,G some 16 14 d 36 35,G some 16 14 r 36 35,G t 16 14 d 36 35,G t 16 14 r 36 35,G w 16 14 d 36 35,G w 16 14 r 36 35,G x 16 14 d 36 35,G x 16 14 r 36 35,G y 16 14 d 36 35,G y 16 14 r 36 35</correct>
+<time_taken>299.000000</time_taken>
+<failed>
+<missing>G a 16 14 d 36 35,G a 16 14 r 36 35,G b 16 14 d 36 35,G b 16 14 r 36 35,G c 16 14 d 36 35,G c 16 14 r 36 35,G d 16 14 d 36 35,G d 16 14 r 36 35,G e 16 14 d 36 35,G e 16 14 r 36 35,G g 16 14 d 36 35,G g 16 14 r 36 35,G i 16 14 d 36 35,G i 16 14 r 36 35,G q 16 14 d 36 35,G q 16 14 r 36 35,G r 16 14 d 36 35,G r 16 14 r 36 35,G result 16 14 d 36 35,G result 16 14 r 36 35,G some 16 14 d 36 35,G some 16 14 r 36 35,G t 16 14 d 36 35,G t 16 14 r 36 35,G w 16 14 d 36 35,G w 16 14 r 36 35,G x 16 14 d 36 35,G x 16 14 r 36 35,G y 16 14 d 36 35,G y 16 14 r 36 35</missing>
+<additional></additional>
+<summary>
+<expected>30</expected>
+<matched>0</matched>
+<missing>30</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" Affectsstar="1" Calls="1" Follows="1" Modifies="2" Next="1" Nextstar="1" Parent="2" Parentstar="1" UnnamedVar="7" Uses="2" Pattern="2" SuchThat="6" With="5" CondNum="34" RelNum="13" comment="comment">113</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a, a1; prog_line pl;variable v, v1, v2, v3;while w; if ifs, ifs2;stmt s,s1,s2; constant cons; Select <p,v,s1, s2, v2, a, a1> such that Uses(p,v) with p.procName = p1.procName such that Calls(p1,"A") such that Uses(p1, v) and Modifies(s, v) with s1.stmt# = cons.value such that Parent*(ifs, s1) such that Parent(w,s2) and Follows(s2,_) and Parent(s2,_) with s2.stmt# = ifs2.stmt# pattern ifs2(v1,_,_) with v1.varName = v2.varName such that Modifies("G", v2) and Affects*(_,_) and Next*(s1, s2) and Affects(a, a1) and Next(a1,a) pattern a("y", _"c+2"_) and a1(v3, _"y/z"_) with v3.varName = "x"]]></querystr>
+<stuans></stuans>
+<correct>G a 16 14 d 36 35,G a 16 14 r 36 35,G b 16 14 d 36 35,G b 16 14 r 36 35,G c 16 14 d 36 35,G c 16 14 r 36 35,G d 16 14 d 36 35,G d 16 14 r 36 35,G e 16 14 d 36 35,G e 16 14 r 36 35,G g 16 14 d 36 35,G g 16 14 r 36 35,G i 16 14 d 36 35,G i 16 14 r 36 35,G q 16 14 d 36 35,G q 16 14 r 36 35,G r 16 14 d 36 35,G r 16 14 r 36 35,G result 16 14 d 36 35,G result 16 14 r 36 35,G some 16 14 d 36 35,G some 16 14 r 36 35,G t 16 14 d 36 35,G t 16 14 r 36 35,G w 16 14 d 36 35,G w 16 14 r 36 35,G x 16 14 d 36 35,G x 16 14 r 36 35,G y 16 14 d 36 35,G y 16 14 r 36 35</correct>
+<time_taken>310.000000</time_taken>
+<failed>
+<missing>G a 16 14 d 36 35,G a 16 14 r 36 35,G b 16 14 d 36 35,G b 16 14 r 36 35,G c 16 14 d 36 35,G c 16 14 r 36 35,G d 16 14 d 36 35,G d 16 14 r 36 35,G e 16 14 d 36 35,G e 16 14 r 36 35,G g 16 14 d 36 35,G g 16 14 r 36 35,G i 16 14 d 36 35,G i 16 14 r 36 35,G q 16 14 d 36 35,G q 16 14 r 36 35,G r 16 14 d 36 35,G r 16 14 r 36 35,G result 16 14 d 36 35,G result 16 14 r 36 35,G some 16 14 d 36 35,G some 16 14 r 36 35,G t 16 14 d 36 35,G t 16 14 r 36 35,G w 16 14 d 36 35,G w 16 14 r 36 35,G x 16 14 d 36 35,G x 16 14 r 36 35,G y 16 14 d 36 35,G y 16 14 r 36 35</missing>
+<additional></additional>
+<summary>
+<expected>30</expected>
+<matched>0</matched>
+<missing>30</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Affectsstar="1" Calls="1" Follows="1" Modifies="2" Parent="2" Parentstar="1" UnnamedVar="5" Uses="2" Pattern="1" SuchThat="6" With="4" CondNum="27" RelNum="10" comment="comment">128</id><querystr><![CDATA[call c; procedure p,p1,p2;assign a; prog_line pl;variable v, v1, v2;while w; if ifs, ifs2;stmt s,s1,s2; constant cons; Select <p.procName,v.varName,s1, s2.stmt#, v2> such that Uses(p,v) with p.procName = p1.procName such that Calls(p1,"A") such that Uses(p1, v) and Modifies(s, v) with s1.stmt# = cons.value such that Parent*(ifs, s1) such that Parent(w,s2) and Follows(s2,_) and Parent(s2,_) with s2.stmt# = ifs2.stmt# pattern ifs2(v1,_,_) with v1.varName = v2.varName such that Modifies("G", v2) and Affects*(_,_)]]></querystr>
+<stuans></stuans>
+<correct>G a 16 14 d,G a 16 14 r,G a 16 86 a,G a 16 86 t,G a 4 14 d,G a 4 14 r,G a 4 86 a,G a 4 86 t,G a 5 14 d,G a 5 14 r,G a 5 86 a,G a 5 86 t,G a 6 14 d,G a 6 14 r,G a 6 86 a,G a 6 86 t,G a 7 14 d,G a 7 14 r,G a 7 86 a,G a 7 86 t,G b 16 14 d,G b 16 14 r,G b 16 86 a,G b 16 86 t,G b 4 14 d,G b 4 14 r,G b 4 86 a,G b 4 86 t,G b 5 14 d,G b 5 14 r,G b 5 86 a,G b 5 86 t,G b 6 14 d,G b 6 14 r,G b 6 86 a,G b 6 86 t,G b 7 14 d,G b 7 14 r,G b 7 86 a,G b 7 86 t,G c 16 14 d,G c 16 14 r,G c 16 86 a,G c 16 86 t,G c 4 14 d,G c 4 14 r,G c 4 86 a,G c 4 86 t,G c 5 14 d,G c 5 14 r,G c 5 86 a,G c 5 86 t,G c 6 14 d,G c 6 14 r,G c 6 86 a,G c 6 86 t,G c 7 14 d,G c 7 14 r,G c 7 86 a,G c 7 86 t,G d 16 14 d,G d 16 14 r,G d 16 86 a,G d 16 86 t,G d 4 14 d,G d 4 14 r,G d 4 86 a,G d 4 86 t,G d 5 14 d,G d 5 14 r,G d 5 86 a,G d 5 86 t,G d 6 14 d,G d 6 14 r,G d 6 86 a,G d 6 86 t,G d 7 14 d,G d 7 14 r,G d 7 86 a,G d 7 86 t,G e 16 14 d,G e 16 14 r,G e 16 86 a,G e 16 86 t,G e 4 14 d,G e 4 14 r,G e 4 86 a,G e 4 86 t,G e 5 14 d,G e 5 14 r,G e 5 86 a,G e 5 86 t,G e 6 14 d,G e 6 14 r,G e 6 86 a,G e 6 86 t,G e 7 14 d,G e 7 14 r,G e 7 86 a,G e 7 86 t,G g 16 14 d,G g 16 14 r,G g 16 86 a,G g 16 86 t,G g 4 14 d,G g 4 14 r,G g 4 86 a,G g 4 86 t,G g 5 14 d,G g 5 14 r,G g 5 86 a,G g 5 86 t,G g 6 14 d,G g 6 14 r,G g 6 86 a,G g 6 86 t,G g 7 14 d,G g 7 14 r,G g 7 86 a,G g 7 86 t,G i 16 14 d,G i 16 14 r,G i 16 86 a,G i 16 86 t,G i 4 14 d,G i 4 14 r,G i 4 86 a,G i 4 86 t,G i 5 14 d,G i 5 14 r,G i 5 86 a,G i 5 86 t,G i 6 14 d,G i 6 14 r,G i 6 86 a,G i 6 86 t,G i 7 14 d,G i 7 14 r,G i 7 86 a,G i 7 86 t,G q 16 14 d,G q 16 14 r,G q 16 86 a,G q 16 86 t,G q 4 14 d,G q 4 14 r,G q 4 86 a,G q 4 86 t,G q 5 14 d,G q 5 14 r,G q 5 86 a,G q 5 86 t,G q 6 14 d,G q 6 14 r,G q 6 86 a,G q 6 86 t,G q 7 14 d,G q 7 14 r,G q 7 86 a,G q 7 86 t,G r 16 14 d,G r 16 14 r,G r 16 86 a,G r 16 86 t,G r 4 14 d,G r 4 14 r,G r 4 86 a,G r 4 86 t,G r 5 14 d,G r 5 14 r,G r 5 86 a,G r 5 86 t,G r 6 14 d,G r 6 14 r,G r 6 86 a,G r 6 86 t,G r 7 14 d,G r 7 14 r,G r 7 86 a,G r 7 86 t,G result 16 14 d,G result 16 14 r,G result 16 86 a,G result 16 86 t,G result 4 14 d,G result 4 14 r,G result 4 86 a,G result 4 86 t,G result 5 14 d,G result 5 14 r,G result 5 86 a,G result 5 86 t,G result 6 14 d,G result 6 14 r,G result 6 86 a,G result 6 86 t,G result 7 14 d,G result 7 14 r,G result 7 86 a,G result 7 86 t,G some 16 14 d,G some 16 14 r,G some 16 86 a,G some 16 86 t,G some 4 14 d,G some 4 14 r,G some 4 86 a,G some 4 86 t,G some 5 14 d,G some 5 14 r,G some 5 86 a,G some 5 86 t,G some 6 14 d,G some 6 14 r,G some 6 86 a,G some 6 86 t,G some 7 14 d,G some 7 14 r,G some 7 86 a,G some 7 86 t,G t 16 14 d,G t 16 14 r,G t 16 86 a,G t 16 86 t,G t 4 14 d,G t 4 14 r,G t 4 86 a,G t 4 86 t,G t 5 14 d,G t 5 14 r,G t 5 86 a,G t 5 86 t,G t 6 14 d,G t 6 14 r,G t 6 86 a,G t 6 86 t,G t 7 14 d,G t 7 14 r,G t 7 86 a,G t 7 86 t,G w 16 14 d,G w 16 14 r,G w 16 86 a,G w 16 86 t,G w 4 14 d,G w 4 14 r,G w 4 86 a,G w 4 86 t,G w 5 14 d,G w 5 14 r,G w 5 86 a,G w 5 86 t,G w 6 14 d,G w 6 14 r,G w 6 86 a,G w 6 86 t,G w 7 14 d,G w 7 14 r,G w 7 86 a,G w 7 86 t,G x 16 14 d,G x 16 14 r,G x 16 86 a,G x 16 86 t,G x 4 14 d,G x 4 14 r,G x 4 86 a,G x 4 86 t,G x 5 14 d,G x 5 14 r,G x 5 86 a,G x 5 86 t,G x 6 14 d,G x 6 14 r,G x 6 86 a,G x 6 86 t,G x 7 14 d,G x 7 14 r,G x 7 86 a,G x 7 86 t,G y 16 14 d,G y 16 14 r,G y 16 86 a,G y 16 86 t,G y 4 14 d,G y 4 14 r,G y 4 86 a,G y 4 86 t,G y 5 14 d,G y 5 14 r,G y 5 86 a,G y 5 86 t,G y 6 14 d,G y 6 14 r,G y 6 86 a,G y 6 86 t,G y 7 14 d,G y 7 14 r,G y 7 86 a,G y 7 86 t</correct>
+<time_taken>436.000000</time_taken>
+<failed>
+<missing>G a 16 14 d,G a 16 14 r,G a 16 86 a,G a 16 86 t,G a 4 14 d,G a 4 14 r,G a 4 86 a,G a 4 86 t,G a 5 14 d,G a 5 14 r,G a 5 86 a,G a 5 86 t,G a 6 14 d,G a 6 14 r,G a 6 86 a,G a 6 86 t,G a 7 14 d,G a 7 14 r,G a 7 86 a,G a 7 86 t,G b 16 14 d,G b 16 14 r,G b 16 86 a,G b 16 86 t,G b 4 14 d,G b 4 14 r,G b 4 86 a,G b 4 86 t,G b 5 14 d,G b 5 14 r,G b 5 86 a,G b 5 86 t,G b 6 14 d,G b 6 14 r,G b 6 86 a,G b 6 86 t,G b 7 14 d,G b 7 14 r,G b 7 86 a,G b 7 86 t,G c 16 14 d,G c 16 14 r,G c 16 86 a,G c 16 86 t,G c 4 14 d,G c 4 14 r,G c 4 86 a,G c 4 86 t,G c 5 14 d,G c 5 14 r,G c 5 86 a,G c 5 86 t,G c 6 14 d,G c 6 14 r,G c 6 86 a,G c 6 86 t,G c 7 14 d,G c 7 14 r,G c 7 86 a,G c 7 86 t,G d 16 14 d,G d 16 14 r,G d 16 86 a,G d 16 86 t,G d 4 14 d,G d 4 14 r,G d 4 86 a,G d 4 86 t,G d 5 14 d,G d 5 14 r,G d 5 86 a,G d 5 86 t,G d 6 14 d,G d 6 14 r,G d 6 86 a,G d 6 86 t,G d 7 14 d,G d 7 14 r,G d 7 86 a,G d 7 86 t,G e 16 14 d,G e 16 14 r,G e 16 86 a,G e 16 86 t,G e 4 14 d,G e 4 14 r,G e 4 86 a,G e 4 86 t,G e 5 14 d,G e 5 14 r,G e 5 86 a,G e 5 86 t,G e 6 14 d,G e 6 14 r,G e 6 86 a,G e 6 86 t,G e 7 14 d,G e 7 14 r,G e 7 86 a,G e 7 86 t,G g 16 14 d,G g 16 14 r,G g 16 86 a,G g 16 86 t,G g 4 14 d,G g 4 14 r,G g 4 86 a,G g 4 86 t,G g 5 14 d,G g 5 14 r,G g 5 86 a,G g 5 86 t,G g 6 14 d,G g 6 14 r,G g 6 86 a,G g 6 86 t,G g 7 14 d,G g 7 14 r,G g 7 86 a,G g 7 86 t,G i 16 14 d,G i 16 14 r,G i 16 86 a,G i 16 86 t,G i 4 14 d,G i 4 14 r,G i 4 86 a,G i 4 86 t,G i 5 14 d,G i 5 14 r,G i 5 86 a,G i 5 86 t,G i 6 14 d,G i 6 14 r,G i 6 86 a,G i 6 86 t,G i 7 14 d,G i 7 14 r,G i 7 86 a,G i 7 86 t,G q 16 14 d,G q 16 14 r,G q 16 86 a,G q 16 86 t,G q 4 14 d,G q 4 14 r,G q 4 86 a,G q 4 86 t,G q 5 14 d,G q 5 14 r,G q 5 86 a,G q 5 86 t,G q 6 14 d,G q 6 14 r,G q 6 86 a,G q 6 86 t,G q 7 14 d,G q 7 14 r,G q 7 86 a,G q 7 86 t,G r 16 14 d,G r 16 14 r,G r 16 86 a,G r 16 86 t,G r 4 14 d,G r 4 14 r,G r 4 86 a,G r 4 86 t,G r 5 14 d,G r 5 14 r,G r 5 86 a,G r 5 86 t,G r 6 14 d,G r 6 14 r,G r 6 86 a,G r 6 86 t,G r 7 14 d,G r 7 14 r,G r 7 86 a,G r 7 86 t,G result 16 14 d,G result 16 14 r,G result 16 86 a,G result 16 86 t,G result 4 14 d,G result 4 14 r,G result 4 86 a,G result 4 86 t,G result 5 14 d,G result 5 14 r,G result 5 86 a,G result 5 86 t,G result 6 14 d,G result 6 14 r,G result 6 86 a,G result 6 86 t,G result 7 14 d,G result 7 14 r,G result 7 86 a,G result 7 86 t,G some 16 14 d,G some 16 14 r,G some 16 86 a,G some 16 86 t,G some 4 14 d,G some 4 14 r,G some 4 86 a,G some 4 86 t,G some 5 14 d,G some 5 14 r,G some 5 86 a,G some 5 86 t,G some 6 14 d,G some 6 14 r,G some 6 86 a,G some 6 86 t,G some 7 14 d,G some 7 14 r,G some 7 86 a,G some 7 86 t,G t 16 14 d,G t 16 14 r,G t 16 86 a,G t 16 86 t,G t 4 14 d,G t 4 14 r,G t 4 86 a,G t 4 86 t,G t 5 14 d,G t 5 14 r,G t 5 86 a,G t 5 86 t,G t 6 14 d,G t 6 14 r,G t 6 86 a,G t 6 86 t,G t 7 14 d,G t 7 14 r,G t 7 86 a,G t 7 86 t,G w 16 14 d,G w 16 14 r,G w 16 86 a,G w 16 86 t,G w 4 14 d,G w 4 14 r,G w 4 86 a,G w 4 86 t,G w 5 14 d,G w 5 14 r,G w 5 86 a,G w 5 86 t,G w 6 14 d,G w 6 14 r,G w 6 86 a,G w 6 86 t,G w 7 14 d,G w 7 14 r,G w 7 86 a,G w 7 86 t,G x 16 14 d,G x 16 14 r,G x 16 86 a,G x 16 86 t,G x 4 14 d,G x 4 14 r,G x 4 86 a,G x 4 86 t,G x 5 14 d,G x 5 14 r,G x 5 86 a,G x 5 86 t,G x 6 14 d,G x 6 14 r,G x 6 86 a,G x 6 86 t,G x 7 14 d,G x 7 14 r,G x 7 86 a,G x 7 86 t,G y 16 14 d,G y 16 14 r,G y 16 86 a,G y 16 86 t,G y 4 14 d,G y 4 14 r,G y 4 86 a,G y 4 86 t,G y 5 14 d,G y 5 14 r,G y 5 86 a,G y 5 86 t,G y 6 14 d,G y 6 14 r,G y 6 86 a,G y 6 86 t,G y 7 14 d,G y 7 14 r,G y 7 86 a,G y 7 86 t</missing>
+<additional></additional>
+<summary>
+<expected>300</expected>
+<matched>0</matched>
+<missing>300</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+</queries>
+</test_results>

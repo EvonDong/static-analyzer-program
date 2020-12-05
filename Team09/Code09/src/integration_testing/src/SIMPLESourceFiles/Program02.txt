@@ -1,0 +1,28 @@
+procedure raymarch {
+    ro = 13;
+    rd = 19;
+    read depth; 
+    while (count < steps) {
+        print depth;
+        po = ro + rd * depth;
+        while ((a == b) || (c == d)) {
+            a = (depth + (c - (d * ( e ) ) ) + 2 - ( 3 ) + b) ;
+            while (2 == 2) {
+                read cba;
+                print abc;
+            }
+            b = rd;
+        }
+    }
+    print depth;
+    if (dist < epsilon) then {
+        done = depth;
+    } else {
+        depth = depth + dist;
+    } 
+    count = count + 1; }
+
+procedure spheresdf {
+    dist = x * x + y * y + z * z + 2 - 3;
+    print z;
+}

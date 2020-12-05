@@ -1,0 +1,820 @@
+1 - Modifies for stmt, stmt
+stmt s, s1;
+Select s such that Modifies (s, s1)
+none
+5000
+2- Modifies for stmt, assign
+stmt s; assign s1;
+Select s1 such that Modifies (s, s1)
+none
+5000
+3 - Modifies for stmt, print
+stmt s; print s1;
+Select s1 such that Modifies (s, s1)
+none
+5000
+4 - Modifies for stmt, read
+stmt s; read s1;
+Select s1 such that Modifies (s, s1)
+none
+5000
+5 - Modifies for stmt, while, while loop
+stmt s; while s1;
+Select s1 such that Modifies (s, s1) 
+none
+5000
+6 - Modifies for stmt, if
+stmt s; if s1;
+Select s1 such that Modifies (s, s1)
+none
+5000
+7 - Modifies for stmt, call
+stmt s; call s1;
+Select s such that Modifies (s, s1)
+none
+5000
+8 - Modifies for stmt, prog_line
+stmt s; prog_line s1;
+Select s such that Modifies (s, s1)
+none
+5000
+10 - Modifies for wildcard, stmt
+stmt s, s1;
+Select s1 such that Modifies(_, s1)
+none
+5000
+11 - Modifies for assign, stmt
+assign s; stmt s1;
+Select s such that Modifies (s, s1)
+none
+5000
+12 - Modifies for assign, assign
+assign s, s1;
+Select s such that Modifies (s, s1)
+none
+5000
+13 - Modifies for assign, print
+assign s; print s1;
+Select s such that Modifies (s, s1)
+none
+5000
+14 - Modifies for assign, read
+assign s; read s1;
+Select s such that Modifies (s, s1)
+none
+5000
+15 - Modifies for assign, while
+assign s; while s1;
+Select s such that Modifies (s, s1)
+none
+5000
+16 - Modifies for assign, if
+assign s; if s1;
+Select s such that Modifies (s, s1)
+none
+5000
+17 - Modifies for assign, call
+assign s; call s1;
+Select s such that Modifies (s, s1)
+none
+5000
+18 - Modifies for assign, prog_line
+assign s; prog_line s1;
+Select s such that Modifies (s, s1)
+none
+5000
+20 - Modifies for wildcard, assign
+assign s, s1;
+Select s1 such that Modifies(_, s1)
+none
+5000
+21 - Modifies for print, stmt
+print s; stmt s1;
+Select s such that Modifies (s, s1)
+none
+5000
+22 - Modifies for print, assign
+print s; assign s1;
+Select s such that Modifies (s, s1)
+none
+5000
+23 - Modifies for print, print
+print s, s1;
+Select s such that Modifies (s, s1)
+none
+5000
+24 - Modifies for print, read
+print s; read s1;
+Select s such that Modifies (s, s1)
+none
+5000
+25 - Modifies for print, while
+print s; while s1;
+Select s such that Modifies (s, s1)
+none
+5000
+26 - Modifies for print, if
+print s; if s1;
+Select s such that Modifies (s, s1)
+none
+5000
+27 - Modifies for print, call
+print s; call s1;
+Select s such that Modifies (s, s1)
+none
+5000
+28 - Modifies for print, prog_line
+print s; prog_line s1;
+Select s such that Modifies (s, s1)
+none
+5000
+30 - Modifies for wildcard, print
+print s, s1;
+Select s1 such that Modifies(_, s1)
+none
+5000
+31 - Modifies for read, stmt
+read s; stmt s1;
+Select s such that Modifies (s, s1)
+none
+5000
+32 - Modifies for read, assign
+read s; assign s1;
+Select s such that Modifies (s, s1)
+none
+5000
+33 - Modifies for read, print
+read s; print s1;
+Select s such that Modifies (s, s1)
+none
+5000
+34 - Modifies for read, read
+read s, s1;
+Select s such that Modifies (s, s1)
+none
+5000
+35 - Modifies for read, while
+read s; while s1;
+Select s such that Modifies (s, s1)
+none
+5000
+36 - Modifies for read, if
+read s; if s1;
+Select s such that Modifies (s, s1)
+none
+5000
+37 - Modifies for read, call
+read s; call s1;
+Select s such that Modifies (s, s1)
+none
+5000
+38 - Modifies for read, prog_line
+read s; prog_line s1;
+Select s such that Modifies (s, s1)
+none
+5000
+40 - Modifies for wildcard, read
+read s, s1;
+Select s1 such that Modifies(_, s1)
+none
+5000
+41 - Modifies for while, stmt
+while s; stmt s1;
+Select s such that Modifies (s, s1)
+none
+5000
+42 - Modifies for while, assign
+while s; assign s1;
+Select s such that Modifies (s, s1)
+none
+5000
+43 - Modifies for while, print
+while s; print s1;
+Select s such that Modifies (s, s1)
+none
+5000
+44 - Modifies for while, read
+while s; read s1;
+Select s such that Modifies (s, s1)
+none
+5000
+45 - Modifies for while, while
+while s, s1;
+Select s such that Modifies (s, s1)
+none
+5000
+46 - Modifies for while, if
+while s; if s1;
+Select s such that Modifies (s, s1)
+none
+5000
+47 - Modifies for while, call
+while s; call s1;
+Select s such that Modifies (s, s1)
+none
+5000
+48 - Modifies for while, prog_line
+while s; prog_line s1;
+Select s such that Modifies (s, s1)
+none
+5000
+50 - Modifies for wildcard, while
+while s, s1;
+Select s1 such that Modifies(_, s1)
+none
+5000
+51 - Modifies for if, stmt
+if s; stmt s1;
+Select s such that Modifies (s, s1)
+none
+5000
+52 - Modifies for if, assign
+if s; assign s1;
+Select s such that Modifies (s, s1)
+none
+5000
+53 - Modifies for if, print
+if s; print s1;
+Select s such that Modifies (s, s1)
+none
+5000
+54 - Modifies for if, read
+if s; read s1;
+Select s such that Modifies (s, s1)
+none
+5000
+55 - Modifies for if, while
+if s; while s1;
+Select s such that Modifies (s, s1)
+none
+5000
+56 - Modifies for if, if
+if s, s1;
+Select s such that Modifies (s, s1)
+none
+5000
+57 - Modifies for if, call
+if s; call s1;
+Select s such that Modifies (s, s1)
+none
+5000
+58 - Modifies for if, prog_line
+if s; prog_line s1;
+Select s such that Modifies (s, s1)
+none
+5000
+60 - Modifies for wildcard, if
+if s, s1;
+Select s1 such that Modifies(_, s1)
+none
+5000
+61 - Modifies for call, stmt
+call s; stmt s1;
+Select s1 such that Modifies (s, s1)
+none
+5000
+62 - Modifies for call, assign
+call s; assign s1;
+Select s such that Modifies (s, s1)
+none
+5000
+63 - Modifies for call, print
+call s; print s1;
+Select s such that Modifies (s, s1)
+none
+5000
+64 - Modifies for call, read
+call s; read s1;
+Select s such that Modifies (s, s1)
+none
+5000
+65 - Modifies for call, while
+call s; while s1;
+Select s such that Modifies (s, s1)
+none
+5000
+66 - Modifies for call, if
+call s; if s1;
+Select s such that Modifies (s, s1)
+none
+5000
+67 - Modifies for call, call
+call s, s1;
+Select s such that Modifies (s, s1)
+none
+5000
+68 - Modifies for call, prog_line
+call s; prog_line s1;
+Select s such that Modifies (s, s1)
+none
+5000
+70 - Modifies for wildcard, call
+call s, s1;
+Select s1 such that Modifies(_, s1)
+none
+5000
+71 - Modifies for prog_line, stmt
+prog_line s, s1;
+Select s such that Modifies (s, s1)
+none
+5000
+72- Modifies for prog_line, assign
+prog_line s; assign s1;
+Select s1 such that Modifies (s, s1)
+none
+5000
+73 - Modifies for prog_line, print
+prog_line s; print s1;
+Select s such that Modifies (s, s1)
+none
+5000
+74 - Modifies for prog_line, read
+prog_line s; read s1;
+Select s such that Modifies (s, s1)
+none
+5000
+75 - Modifies for prog_line, while, while loop
+prog_line s; while s1;
+Select s such that Modifies (s, s1)
+none
+5000
+76 - Modifies for prog_line, if
+prog_line s; if s1;
+Select s such that Modifies (s, s1)
+none
+5000
+77 - Modifies for prog_line, call
+stmt s; call s1;
+Select s such that Modifies (s, s1)
+none
+5000
+78 - Modifies for prog_line, prog_line
+prog_line s, s1;
+Select s such that Modifies (s, s1)
+none
+5000
+80 - Modifies for wildcard, prog_line
+prog_line s, s1;
+Select s1 such that Modifies(_, s1)
+none
+5000
+81 - Modifies for wildcard, wildcard
+stmt s, s1;
+Select s1 such that Modifies(_, _)
+none
+5000
+82 - Modifies, wrong attribute
+stmt s; variable v;
+Select s such that Modifies(s,v) with v.stmt# = 1
+none
+5000
+83 - Modifies, wrong attribute
+stmt s; variable v;
+Select s such that Modifies(s,v) with v.procName = "callOne"
+none
+5000
+83 - Modifies, wrong attribute
+stmt s; variable v;
+Select s such that Modifies(s,v) with v.value = 1
+none
+5000
+82 - Modifies, wrong attribute
+stmt s; constant v;
+Select s such that Modifies(s,v) with v.stmt# = 1
+none
+5000
+83 - Modifies, wrong attribute
+stmt s; constant v;
+Select s such that Modifies(s,v) with v.procName = "callOne"
+none
+5000
+83 - Modifies, wrong attribute
+stmt s; constant v;
+Select s such that Modifies(s,v) with v.varName = "1"
+none
+5000
+84 - Uses for stmt, stmt
+stmt s, s1;
+Select s such that Uses (s, s1)
+none
+5000
+85- Uses for stmt, assign
+stmt s; assign s1;
+Select s1 such that Uses (s, s1)
+none
+5000
+86 - Uses for stmt, print
+stmt s; print s1;
+Select s1 such that Uses (s, s1)
+none
+5000
+87 - Uses for stmt, read
+stmt s; read s1;
+Select s1 such that Uses (s, s1)
+none
+5000
+88 - Uses for stmt, while, while loop
+stmt s; while s1;
+Select s1 such that Uses (s, s1) 
+none
+5000
+89 - Uses for stmt, if
+stmt s; if s1;
+Select s1 such that Uses (s, s1)
+none
+5000
+90 - Uses for stmt, call
+stmt s; call s1;
+Select s such that Uses (s, s1)
+none
+5000
+91 - Uses for stmt, prog_line
+stmt s; prog_line s1;
+Select s such that Uses (s, s1)
+none
+5000
+93 - Uses for wildcard, stmt
+stmt s, s1;
+Select s1 such that Uses(_, s1)
+none
+5000
+94 - Uses for assign, stmt
+assign s; stmt s1;
+Select s such that Uses (s, s1)
+none
+5000
+95 - Uses for assign, assign
+assign s, s1;
+Select s such that Uses (s, s1)
+none
+5000
+96 - Uses for assign, print
+assign s; print s1;
+Select s such that Uses (s, s1)
+none
+5000
+97 - Uses for assign, read
+assign s; read s1;
+Select s such that Uses (s, s1)
+none
+5000
+98 - Uses for assign, while
+assign s; while s1;
+Select s such that Uses (s, s1)
+none
+5000
+99 - Uses for assign, if
+assign s; if s1;
+Select s such that Uses (s, s1)
+none
+5000
+100 - Uses for assign, call
+assign s; call s1;
+Select s such that Uses (s, s1)
+none
+5000
+101 - Uses for assign, prog_line
+assign s; prog_line s1;
+Select s such that Uses (s, s1)
+none
+5000
+103 - Uses for wildcard, assign
+assign s, s1;
+Select s1 such that Uses(_, s1)
+none
+5000
+104 - Uses for print, stmt
+print s; stmt s1;
+Select s such that Uses (s, s1)
+none
+5000
+105 - Uses for print, assign
+print s; assign s1;
+Select s such that Uses (s, s1)
+none
+5000
+106 - Uses for print, print
+print s, s1;
+Select s such that Uses (s, s1)
+none
+5000
+107 - Uses for print, read
+print s; read s1;
+Select s such that Uses (s, s1)
+none
+5000
+108 - Uses for print, while
+print s; while s1;
+Select s such that Uses (s, s1)
+none
+5000
+109 - Uses for print, if
+print s; if s1;
+Select s such that Uses (s, s1)
+none
+5000
+110 - Uses for print, call
+print s; call s1;
+Select s such that Uses (s, s1)
+none
+5000
+111 - Uses for print, prog_line
+print s; prog_line s1;
+Select s such that Uses (s, s1)
+none
+5000
+113 - Uses for wildcard, print
+print s, s1;
+Select s1 such that Uses(_, s1)
+none
+5000
+114 - Uses for read, stmt
+read s; stmt s1;
+Select s such that Uses (s, s1)
+none
+5000
+115 - Uses for read, assign
+read s; assign s1;
+Select s such that Uses (s, s1)
+none
+5000
+116 - Uses for read, print
+read s; print s1;
+Select s such that Uses (s, s1)
+none
+5000
+117 - Uses for read, read
+read s, s1;
+Select s such that Uses (s, s1)
+none
+5000
+118 - Uses for read, while
+read s; while s1;
+Select s such that Uses (s, s1)
+none
+5000
+119 - Uses for read, if
+read s; if s1;
+Select s such that Uses (s, s1)
+none
+5000
+120 - Uses for read, call
+read s; call s1;
+Select s such that Uses (s, s1)
+none
+5000
+121 - Uses for read, prog_line
+read s; prog_line s1;
+Select s such that Uses (s, s1)
+none
+5000
+123 - Uses for wildcard, read
+read s, s1;
+Select s1 such that Uses(_, s1)
+none
+5000
+124 - Uses for while, stmt
+while s; stmt s1;
+Select s such that Uses (s, s1)
+none
+5000
+125 - Uses for while, assign
+while s; assign s1;
+Select s such that Uses (s, s1)
+none
+5000
+126 - Uses for while, print
+while s; print s1;
+Select s such that Uses (s, s1)
+none
+5000
+127 - Uses for while, read
+while s; read s1;
+Select s such that Uses (s, s1)
+none
+5000
+128 - Uses for while, while
+while s, s1;
+Select s such that Uses (s, s1)
+none
+5000
+129 - Uses for while, if
+while s; if s1;
+Select s such that Uses (s, s1)
+none
+5000
+130 - Uses for while, call
+while s; call s1;
+Select s such that Uses (s, s1)
+none
+5000
+131 - Uses for while, prog_line
+while s; prog_line s1;
+Select s such that Uses (s, s1)
+none
+5000
+133 - Uses for wildcard, while
+while s, s1;
+Select s1 such that Uses(_, s1)
+none
+5000
+134 - Uses for if, stmt
+if s; stmt s1;
+Select s such that Uses (s, s1)
+none
+5000
+135 - Uses for if, assign
+if s; assign s1;
+Select s such that Uses (s, s1)
+none
+5000
+136 - Uses for if, print
+if s; print s1;
+Select s such that Uses (s, s1)
+none
+5000
+137 - Uses for if, read
+if s; read s1;
+Select s such that Uses (s, s1)
+none
+5000
+138 - Uses for if, while
+if s; while s1;
+Select s such that Uses (s, s1)
+none
+5000
+139 - Uses for if, if
+if s, s1;
+Select s such that Uses (s, s1)
+none
+5000
+140 - Uses for if, call
+if s; call s1;
+Select s such that Uses (s, s1)
+none
+5000
+141 - Uses for if, prog_line
+if s; prog_line s1;
+Select s such that Uses (s, s1)
+none
+5000
+143 - Uses for wildcard, if
+if s, s1;
+Select s1 such that Uses(_, s1)
+none
+5000
+144 - Uses for call, stmt
+call s; stmt s1;
+Select s1 such that Uses (s, s1)
+none
+5000
+145 - Uses for call, assign
+call s; assign s1;
+Select s such that Uses (s, s1)
+none
+5000
+146 - Uses for call, print
+call s; print s1;
+Select s such that Uses (s, s1)
+none
+5000
+147 - Uses for call, read
+call s; read s1;
+Select s such that Uses (s, s1)
+none
+5000
+148 - Uses for call, while
+call s; while s1;
+Select s such that Uses (s, s1)
+none
+5000
+149 - Uses for call, if
+call s; if s1;
+Select s such that Uses (s, s1)
+none
+5000
+150 - Uses for call, call
+call s, s1;
+Select s such that Uses (s, s1)
+none
+5000
+151 - Uses for call, prog_line
+call s; prog_line s1;
+Select s such that Uses (s, s1)
+none
+5000
+153 - Uses for wildcard, call
+call s, s1;
+Select s1 such that Uses(_, s1)
+none
+5000
+154 - Uses for prog_line, stmt
+prog_line s, s1;
+Select s such that Uses (s, s1)
+none
+5000
+155- Uses for prog_line, assign
+prog_line s; assign s1;
+Select s1 such that Uses (s, s1)
+none
+5000
+156 - Uses for prog_line, print
+prog_line s; print s1;
+Select s such that Uses (s, s1)
+none
+5000
+157 - Uses for prog_line, read
+prog_line s; read s1;
+Select s such that Uses (s, s1)
+none
+5000
+158 - Uses for prog_line, while, while loop
+prog_line s; while s1;
+Select s such that Uses (s, s1)
+none
+5000
+159 - Uses for prog_line, if
+prog_line s; if s1;
+Select s such that Uses (s, s1)
+none
+5000
+160 - Uses for prog_line, call
+stmt s; call s1;
+Select s such that Uses (s, s1)
+none
+5000
+161 - Uses for prog_line, prog_line
+prog_line s, s1;
+Select s such that Uses (s, s1)
+none
+5000
+163 - Uses for wildcard, prog_line
+prog_line s, s1;
+Select s1 such that Uses(_, s1)
+none
+5000
+164 - Uses for wildcard, wildcard
+stmt s, s1;
+Select s1 such that Uses(_, _)
+none
+5000
+165 - Uses, wrong attribute
+stmt s; variable v;
+Select s such that Uses(s,v) with v.stmt# = 1
+none
+5000
+166 - Uses, wrong attribute
+stmt s; variable v;
+Select s such that Uses(s,v) with v.procName = "callOne"
+none
+5000
+167 - Uses, wrong attribute
+stmt s; variable v;
+Select s such that Uses(s,v) with v.value = 1
+none
+5000
+168 - Uses, wrong attribute
+stmt s; constant v;
+Select s such that Uses(s,v) with v.stmt# = 1
+none
+5000
+169 - Uses, wrong attribute
+stmt s; constant v;
+Select s such that Uses(s,v) with v.procName = "callOne"
+none
+5000
+170 - Uses, wrong attribute
+stmt s; constant v;
+Select s such that Uses(s,v) with v.varName = "1"
+none
+5000
+171 - Modifies constant
+stmt s; constant c;
+Select s such that Modifies(s,c)
+none
+5000
+172 - Modifies wildcard
+variable v;
+Select v such that Modifies(_, v)
+none
+5000
+173 - Uses wildcard
+variable v;
+Select v such that Modifies(_, v)
+none
+5000
+174 - Uses wildcard constant
+constant c;
+Select c such that Modifies(_, c)
+none
+5000
+175 - Modifies, print
+print p; variable v;
+Select p such that Modifies(p, v)
+none
+5000
+176 - Uses, read
+read r; variable v;
+Select r such that Uses(r, v)
+none
+5000

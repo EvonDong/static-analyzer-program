@@ -1,0 +1,7 @@
+procedure main {
+	if ((x == y) && (z == 3)) then {
+		read var;
+	} else {
+		a = c;
+	}
+}

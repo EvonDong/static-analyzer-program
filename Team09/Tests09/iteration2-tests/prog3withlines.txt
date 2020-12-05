@@ -1,0 +1,626 @@
+procedure TestA {
+	read a;									//1
+	call transportation;					//2
+	read b;									//3
+	sum = a + b;							//4
+	print sum;								//5
+	minus1 = a - b;							//6
+	minus2 = b - a;							//7
+	if (minus1 == minus2) then {			//8
+		sum = sum + minus1;					//9
+		call transportation;				//10
+	} else {
+		call oneCall;						//11
+		minus1 = minus1 / minus2; 			//12
+	}
+	minus2 = sum - 2 * minus2;				//13
+	call procedure;							//14
+	while (sum > minus2) {					//15
+		call oneCall;						//16
+		sum = sum - 1;						//17
+	}
+	print sum;								//18
+} 
+
+procedure TestB {
+	read a;											//19
+	call TestA;										//20
+	read b;											//21
+	sum = a + b;									//22
+	minus = a - b;									//23
+	times = a * b;									//24
+	div = b / a;									//25
+	if( minus == times  )  then{					//26
+		c = sum + times * a * b - divide * minus;	//27
+		if  (a==b)then  {							//28
+			b = sum + divide;						//29
+			while(b<=times){						//30
+				a = a - sum;						//31			
+				call transportation;				//32
+				if(((!(a > div + 2 / (a + 2))) || (a <= div)) || ((!((a / div >= 2) && (a + div < 2))) && ((a - div) != (a * (div + a) - (div - a)/2 + a % div))))then { //33
+					div = 2;						//34
+					call procedure;					//35
+					sum = times * a;				//36
+				} else {
+					call country;					//37
+					a = times;						//38
+				}
+			}
+		}else{
+			a = div / 2;							//39
+			if(a>=div)then{							//40
+				a = a;								//41
+			} else {
+				while (b != div) {					//42
+					call procedure;					//43
+					times = times * div + minus * sum;	//44
+					b = b + 1;						//45
+				}
+			}
+			print times;							//46
+		}
+		d = sum / a - times + divide * b / minus;	//47
+	} else {
+		c = sum - 2 * minus;						//48
+		call procedure;								//49
+		minus = b - a;								//50
+		d = times * sum + divide;					//51
+		while  (sum > minus)  {						//52
+			sum = sum - 1;							//53
+			if(a  ==b)then{							//54
+				b = sum + divide;					//55
+				while (b <= times) {				//56
+					a = a - sum;					//57
+					call TestA;						//58
+					call country;					//59
+					if (a == div) then {			//60
+						div = 2;					//61
+						sum = times * a;			//62
+					} else {
+						a = div * 5;				//63
+						call procedure;				//64
+						div = a * 5;				//65
+					}
+				}
+			} else {
+				call TenWhileLoop;					//66
+				a = sum + 6;						//67
+			}
+			a = b + div;							//68
+		}
+	}
+	call transportation;							//69
+	print sum;										//70
+} 
+
+procedure TestC {
+	read x;											//71
+	call fruits;									//72
+	call procedure;									//73
+	if (b < 15) then {								//74
+		call fruits;								//75
+		while (c <= x) {							//76
+			x = x + a;								//77
+			c = 16;									//78
+			call fruits;							//79
+		}
+	} else {
+		call transportation;						//80
+		while (b >= c) {							//81
+			c = 7 * (a - b);						//82
+			call TestA;								//83
+			a = b + c;								//84
+			call TenWhileLoop;						//85
+		}
+		call fruits;								//86
+	}
+	x = c;											//87
+	call fruits;									//88
+	k = x + a - b + a * a;							//89
+	call oneCall;									//90
+	print k;										//91
+	call TenWhileLoop;								//92
+}
+
+procedure TenWhileLoop {
+	read x;											//93
+	call country;									//94
+	if(b<15)then {									//95
+		call colours;								//96
+		while    (c   <=    x){						//97
+			x = x + a + b + a + a + b + a + c;		//98
+			c = 123456789;						//99
+			call Pr0c3dUr3;							//100
+		}
+	} else {			
+		while ((((b>=c) && (b>a)) && ((a==1) && (a!=2))) && (a != ((0+(0*0)/4)%1))) {	//101
+			c = 7*(a - b);							//102
+			call Pr0c3dUr3;							//103
+			a = b+c;								//104
+		}
+	}
+	x = c;											//105
+	k = x+   a-b  +a* a;							//106
+	while (b < 10) {								//107
+		while (b < 9) {								//108
+			call colours;							//109
+			c = c + d;								//110
+			print c;								//111
+			while (b < 8) {							//112
+				call colours;						//113
+				while (b < 7) {						//114
+					z = x + 5;						//115
+					read r;							//116
+					x = 6 + m;						//117
+					print m;						//118
+					call colours;					//119
+					while (b < 6) {					//120
+						b = b + c;					//121
+						call colours;				//122
+						while (b < 5) {				//123
+							while (b < 4) {			//124
+								print b;			//125
+								read b;				//126
+								b = b + 6;			//127
+								while (b < 3) {		//128
+									read c;			//129
+									call country;	//130
+									while (b < 2) {				//131
+										call Pr0c3dUr3;			//132
+										while (b < 1) {			//133
+											b = 1;				//134
+											call colours;		//135
+										}
+										b = 2;					//136
+									}
+								}
+								call Pr0c3dUr3;		//137
+								b = 3;				//138
+								print b;			//139
+							}
+							read r;					//140
+							b = print + r;			//141
+						}
+						while ( c == c) {			//142
+							c = c + 1;				//143
+							print c;				//144
+							call country;			//145
+						}
+						call country;				//146
+						d = d + 5;					//147
+					}
+					print b;						//148
+					call country;					//149
+					b = b % 7;						//150
+				}
+			}
+			print b;								//151
+			call Pr0c3dUr3;							//152
+			c = c + b;								//153
+			read c;									//154
+		}
+	}
+	read s;											//155
+}
+
+procedure procedure {
+	if(a == a) then {								//156
+		while (a > 0) {								//157
+			read a;									//158
+		}
+	} else {
+		call fruits;								//159
+		while (a != 0) {							//160
+			if (b>c) then {							//161
+				if ( (b == c) && (b>=9) ) then {	//162
+					while ( (d < a) || (c != a) ) {	//163
+						call fruits;				//164
+						while (!(c == 4)) {			//165
+							print a;				//166
+						}
+					}
+					call fruits;					//167
+				} else {
+					if (f != g) then {				//168
+						call oneCall;				//169
+						while (g >= (a + b * k)) {	//170
+							while ((c * g / d % f - c) != a) {		//171
+								while ((b- a)==(a -b)) {			//172
+									if (i < j) then {				//173
+										read i;						//174
+										call oneCall;				//175
+									} else { 
+										while (1 == 1){				//176
+											print j;				//177
+										}
+									}
+								}
+								call oneCall;						//178
+							}
+						}
+					} else {
+						read p;										//179
+						print q;									//180
+					}
+				}
+			} else {
+				a=b+c-d*e/f%g;										//181
+				d = b * ((g*k)/f);									//182
+				call oneCall;										//183
+				j = ((k * e)+h) / e;								//184
+				m = j + (h - (i* (j - k)/(f % a)-k)+m) * d;			//185
+			}
+		}
+	}
+	read f;											//186
+	call fruits;									//187
+	read read;										//188
+	print l;										//189
+	a = h*k + d *(k);								//190
+	print x;										//191
+	j = while*1;									//192
+	procedure = 341242 * if + 8248;					//193
+	if((!((procedure > statement)||((read < print )&&(print >= call)))) && (while <= ((if - (k) % (7)) * 0)) )then{	//194
+		then = read;								//195
+		print = call * k +h-h%j;					//196
+	} else{
+		print print;								//197
+	}
+}
+
+procedure fruits {
+	while (apple > banana) {						//198
+		apple = 1;									//199
+		read pear;									//200
+		call Pr0c3dUr3;								//201
+		if (banana == pear) then {						//202
+			banana = banana - banana;				//203
+			banana = banana * 12345;				//204
+			print pear;								//205
+		} else {
+			read banana;							//206
+			banana = banana;						//207
+			pear = banana;							//208
+			while (banana != 1) {					//209
+				pear = banana;						//210
+				banana = banana + 0;				//211
+				pear = pear % 0;					//212
+				pear = pear / 1;					//213
+				read pear;							//214
+			}
+		}
+		read grape;																	//215
+		while ( 	((apple > grape) && (grape > apple)) || (call > print)) {		//216
+			read grape;																//217
+			call country;															//218
+			grape = grape + banana * 1 * 100 - apple * pear;						//219
+		}
+	}
+	print grape;									//220
+	grape = orange;									//221
+	if ((grape >= banana) && (grape != pear)) then {		//222
+		orange = grape + 670;						//223
+		call TenWhileLoop;							//224
+		pear = banana + orange * grape;				//225
+		read orange;								//226
+	} else {
+		read avocado;								//227
+		avocado = 0 + cherry / 0 * cherry;			//228
+		print cherry;								//229
+		cherry = cherry + cherry;					//230
+	}
+	avocado = cherry * cherry;						//231
+	print avocado;									//233
+	if (((avocado >= cherry) && (banana > avocado)) || (((banana + 1) % 2) > 0)) then {	//233
+		while (grape == orange) {					//234
+			orange = orange + 1;					//235
+			banana = orange;						//236
+			call colours;							//237
+			read grape;								//238
+			orange = pear + 123 * pear;				//239
+		}
+		print grape;								//240
+		grape = grape * orange / orange * 123 + 15;	//241
+		if (kiwi == kiwi) then {							//242
+			kiwi = kiwi + 5;								//243
+			orange = orange + kiwi;					//244
+			while ((kiwi > 67) && (orange > (pear * 3 % 2 + banana))) {				//245
+				kiwi = orange * pear;				//246
+				pear = orange;						//247
+				pear = pear + 1;					//248
+				orange = orange + banana;			//249
+				banana = orange + banana;			//250
+				call oneCall;						//251
+				read kiwi;							//252
+			}
+		} else {
+			read avocado;							//253
+			avocado = 0 + cherry / 0 * cherry;		//254
+			print cherry;							//255
+			avocado = banana * 12 + banana / banana;//256
+			banana = banana;						//257
+		}
+	} else {
+		read cherry;								//258
+		while (orange == 1) {						//259
+			orange = 1;								//260
+			banana = orange;						//261
+			read grape;								//262
+			orange = pear + 123 * pear;				//263
+		}
+	}
+	read banana;									//264
+	read kiwi;										//265
+	orange = orange + grape;						//266
+	print orange;									//267
+}
+
+procedure colours{
+	if ((red >= blue) && (((blue % 3) > green) || (yellow == pink))) then {	//268
+		while (pink != 3) {												//269
+			pink = pink + purple;										//270
+			read purple;												//271
+			purple = green * 15 + (green % 17) - ((((green - 1) * 7) % 6) + 123) * (blue % 6) + blue + blue + pink * yellow;	//272
+			print yellow;												//273
+			if (yellow > 8) then {											//274
+				while (yellow == pink) {								//275
+					read pink;											//276
+					pink = red + red;									//277
+					red = pink;											//278
+					yellow = yellow + 1;								//279
+					blue = blue - 127;									//280
+				}
+				print blue;												//281
+				read red;												//282
+				red = yellow + black;									//283
+			} else {
+				green = green + 2;										//284
+				pink = brown * purple;									//285
+				read brown;												//286
+				purple = purple / purple * blue;						//287
+				pink = blue / blue;										//288
+				while (blue != 1) {										//289
+					blue = blue;										//290
+				}
+				while (green > yellow) {								//291
+					yellow = green;										//292
+					green = green + 5;									//293
+					while (yellow > green) {							//294
+						green = green + black + 1 * black + (black % 6);//295
+						white = white;									//296
+						print white;									//297
+						read red;										//298
+						print red;										//299
+					}
+					print red;											//300
+				}
+			}
+			read black;													//301
+			black = black + black * 156 + 1 * black + (black % 6) + ((black / black) % white + black + 8);	//302
+			print black;												//303
+		}
+		print black;													//304
+		read pink;														//305
+		pink = black + 123;												//306
+		pink = pink + pink + pink + pink + pink + red + red + red + red + red + (red % 126) + red * blue + green / yellow - yellow;	//307
+		yellow = yellow * 1;							//308
+		yellow = yellow / 1;							//309
+		yellow = yellow + 1;							//310
+		yellow = yellow;								//311
+	} else {
+		print black;									//312
+		read blue;										//313
+		pink = purple + 123;							//314
+		yellow = yellow * 1;							//315
+		yellow = yellow / 1;							//316
+		yellow = yellow + 1;							//317
+		yellow = yellow;								//318
+		while (yellow > blue) {							//319
+			yellow = yellow - 1;						//320
+			while (blue == 1) {							//321
+				blue = blue + 5;						//322
+				red = blue;								//323
+				read red;								//324
+				print yellow;							//325
+				while (yellow != 1) {					//326
+					print yellow;						//327
+				}
+				red = red + 6;							//328
+			}
+			blue = red + pink + red + (red % 0) + blue * blue + yellow / yellow - yellow * purple + (purple % 0 + pink);	//329
+		}
+	}
+	print red;											//330
+	red = red;											//331
+	while (yellow != blue) {							//332
+		print grey;										//333
+		grey = grey * blue * green;						//334
+		while (green == green) {						//335
+			yellow = yellow;							//336
+			red = red + 1;								//337
+			red = blue;									//338
+			print red;									//339
+			read red;									//340
+		}
+		read green;										//341
+	}
+}
+
+procedure Pr0c3dUr3 {
+	while (if == while) {								//342
+		while = while + 1;								//343
+		read while;										//344
+		if = 123 + 567 + 8 * 9 / 1;						//345
+		print if;										//346
+		if (while  !=    if) then {							//347
+			while = while + while;						//348
+			if = 1;										//349
+			if = 2;										//350
+			read = print;								//351
+			print = read + read + print;				//352
+		} else {
+			read print;									//353
+			while (print != ((print % 1) + print)) {	//354
+				print read;								//355
+				read = while + else;					//356
+				else = 1;								//357
+				while (else > while) {					//358
+					if = 1;								//359
+				}
+			}
+			print read;									//360
+			while = else;								//361
+		}
+		while (read > 0) {								//362
+			read = read;								//363
+		}
+		print print;									//364
+		print = print + 12 / 6 * read + 67;				//365
+		print read;										//366
+		if (if != if) then {									//367
+			if = 12345;									//368
+			print = read * 12 * 12;						//369
+			if (print > while) then {						//370
+				while = print;							//371
+				print while;							//372
+				while (while == while) {				//373
+					print = print;						//374
+					print print;						//375
+					read = read % 17;					//376
+					while (while == while) {			//377
+						read while;						//378
+						while = while + 123;			//379
+						else = else;					//380
+						read read;						//381
+						if (while == 123) then {				//382
+							read while;					//383
+							while = print;				//384
+							print = print * print;		//385
+							print print;				//386
+						} else {
+							read print;					//387
+							read = read % 0;			//388
+						}
+					}
+				}
+			} else {
+				while = print + 1 + print * print / while / if;		//389
+				else = else / print + print;			//390
+				while (print != print) {				//391
+					print while;						//392
+					while = 1;							//393
+				}
+			}
+		} else {
+			if (while > print) then {						//394
+				print = while;							//395
+				while = while + while;					//396
+				while = 1;								//397
+				read read;								//398
+			} else {
+				while (while > while) {					//399
+					print while;						//400
+					read print;							//401
+					else = else + if;					//402
+				}
+				else = else + 1;						//403
+			}
+		}
+	}
+}
+
+procedure oneCall {
+	call transportation;								//404
+}
+
+procedure transportation {
+	call country;										//405
+	if (bus > (taxi - 1)) then {								//406
+		read bus;										//407
+		bus = taxi + motorcycle;						//408
+		mrt = mrt;										//409
+		while (mrt == mrt) {							//410
+			mrt = 1 + mrt;								//411
+			motorcycle = 1 * 9 % 9 / motorcycle;		//412
+		}
+		bike = car + grab;								//413
+		gojek = gojek;									//414
+	} else {
+		read gojek;										//415
+		print grab;										//416
+		while (grab != gojek) {							//417
+			bike = gojek;								//418
+			bike = bike + 1;							//419
+			if ((uber != gojek) || (gojek > grab)) then {	//420
+				grab = grab * 0 + gojek / 123 * 9 - 2 + 6 + (2 + 5 + 9 / 0);	//421
+				grab = grab;							//422
+				print train;							//423
+			} else {
+				mrt = 1;								//424
+				print gojek;							//425
+				grab = bike;							//426
+				read bus;								//427
+			}
+		}
+		print uber;										//428
+	}
+	while (uber > 0) {									//429
+		bus = 1;										//430
+		car = car % train;								//431
+		read train;										//432
+		train = train;									//433
+	}
+	call TenWhileLoop;									//434
+}
+
+procedure country {
+	uk = uk + 5;										//435
+	print uk;											//436
+	while (france > uk) {								//437
+		uk = france + usa;								//438
+		usa = germany;									//439
+		while (germany == 1) {							//440
+			spain = germany;							//441
+			print spain;								//442
+			spain = spain * 0;							//443
+		}
+		while (russia > 0) {							//444
+			russia = 0;									//445
+			read brazil;								//446
+			brazil = 9;									//447
+			read spain;									//448
+			brazil = brazil + india + singapore + malaysia + indonesia;		//449
+			read malaysia;								//450
+		}
+		if (thailand > indonesia) then {						//451
+			malaysia = 1;								//452
+			while (malaysia > spain) {					//453
+				spain = spain;							//454
+			}
+			thailand = thailand + thailand * malaysia;	//455
+		} else {
+			japan = japan + 7;							//456
+			print japan;								//457
+			read india;									//458
+			read singapore;								//459
+			while (laos > vietnam) {					//460
+				print laos;								//461
+				if (((vietnam != brazil) && ((indonesia == 1) || (6 > malaysia))) || ((china - 1) == japan)) then {	//462
+					vietnam = vietnam + brazil * indonesia - laos;		//463
+					laos = laos + brazil;				//464
+					uk = uk / uk;						//465
+				} else {
+					usa = uk + usa;						//466
+					print uk;							//467
+					read usa;							//468
+				}
+				uk = japan;								//469
+			}
+			read malaysia;								//470
+			print brazil;								//471
+		}
+	}
+	print usa;											//472
+	read japan;											//473
+	japan = japan + 1;									//474
+}

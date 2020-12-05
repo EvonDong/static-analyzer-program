@@ -1,0 +1,48 @@
+procedure main {
+	call test;
+	a = a + b;
+	while (a != b) {
+		read a;
+		if (a == b) then {
+			a = b + c;
+			call test1;
+		} else {
+			print b;
+			call test2;
+		}
+	}
+	while (c != d) {
+		print b;
+		call test3;
+	}
+}
+
+procedure test {
+	while (a == b) {
+		call test1;
+		a = b;
+	}
+}
+
+procedure test1 {
+	while (a == b) {
+		if (a == b) then {
+			call test2;
+			print b;
+		} else {
+			print b;
+			call test3;
+		}
+	}
+}
+
+procedure test2 {
+	while (a == b) {
+		call test3;
+	}
+	a = b;
+}
+
+procedure test3 {
+	print a;
+}

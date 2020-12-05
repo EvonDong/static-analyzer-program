@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="835b6128-9bdd-49bb-9e29-96b345827ad8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="clangTidyViaClangd" value="false" />
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1gtxV0XkxM1gfA3EcDtev1607ke" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.advertisement.text.has.clang-format" value="true" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="pyconsole" />
+  </component>
+  <component name="RunManager" selected="Catch.All in QueryParserTest.cpp">
+    <configuration name="All in PatternQueryTest.cpp" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="unit_testing" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="unit_testing" TEST_PATTERN="[#PatternQueryTest]" TEST_MODE="PATTERN">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in QueryParserTest.cpp" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="unit_testing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="unit_testing" TEST_PATTERN="[#QueryParserTest]" TEST_MODE="PATTERN">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in SelectClauseTest.cpp" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="unit_testing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="unit_testing" TEST_PATTERN="[#SelectClauseTest]" TEST_MODE="PATTERN">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in SuchThatQueryTest.cpp" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="unit_testing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="unit_testing" TEST_PATTERN="[#SuchThatQueryTest]" TEST_MODE="PATTERN">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in WithQueryTest.cpp" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="unit_testing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="unit_testing" TEST_PATTERN="[#WithQueryTest]" TEST_MODE="PATTERN">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Catch.All in QueryParserTest.cpp" />
+      <item itemvalue="Catch.All in SelectClauseTest.cpp" />
+      <item itemvalue="Catch.All in SuchThatQueryTest.cpp" />
+      <item itemvalue="Catch.All in WithQueryTest.cpp" />
+      <item itemvalue="Catch.All in PatternQueryTest.cpp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Catch.All in QueryParserTest.cpp" />
+        <item itemvalue="Catch.All in PatternQueryTest.cpp" />
+        <item itemvalue="Catch.All in WithQueryTest.cpp" />
+        <item itemvalue="Catch.All in SuchThatQueryTest.cpp" />
+        <item itemvalue="Catch.All in SelectClauseTest.cpp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="835b6128-9bdd-49bb-9e29-96b345827ad8" name="Default Changelist" comment="" />
+      <created>1598947710498</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598947710498</updated>
+      <workItem from="1598947711848" duration="40126000" />
+      <workItem from="1599048880583" duration="3611000" />
+      <workItem from="1599191285022" duration="2093000" />
+      <workItem from="1599193432425" duration="2484000" />
+      <workItem from="1599204079440" duration="4032000" />
+      <workItem from="1599209529881" duration="700000" />
+      <workItem from="1599212030862" duration="94000" />
+      <workItem from="1599212418035" duration="2650000" />
+      <workItem from="1599235673352" duration="12665000" />
+      <workItem from="1599285275371" duration="54520000" />
+      <workItem from="1599724650740" duration="1265000" />
+      <workItem from="1599755041837" duration="18680000" />
+      <workItem from="1599966266870" duration="9841000" />
+      <workItem from="1600349233358" duration="998000" />
+      <workItem from="1600484471595" duration="133045000" />
+      <workItem from="1600928818874" duration="258000" />
+      <workItem from="1600960909715" duration="34000" />
+      <workItem from="1601635106278" duration="26849000" />
+      <workItem from="1601743461331" duration="2651000" />
+      <workItem from="1601782544691" duration="588000" />
+      <workItem from="1601792156278" duration="325000" />
+      <workItem from="1601800994706" duration="4794000" />
+      <workItem from="1601806454358" duration="25122000" />
+      <workItem from="1601952361862" duration="2172000" />
+      <workItem from="1601960050291" duration="14559000" />
+      <workItem from="1602078702386" duration="6655000" />
+      <workItem from="1602089932465" duration="621000" />
+      <workItem from="1602133550068" duration="10000" />
+      <workItem from="1602153579308" duration="6006000" />
+      <workItem from="1602245943941" duration="139000" />
+      <workItem from="1602312842207" duration="293000" />
+      <workItem from="1602334450586" duration="10762000" />
+      <workItem from="1602386488701" duration="95000" />
+      <workItem from="1602401026415" duration="1482000" />
+      <workItem from="1602555591057" duration="2741000" />
+      <workItem from="1602637143403" duration="31000" />
+      <workItem from="1602910773754" duration="5750000" />
+      <workItem from="1603038463123" duration="634000" />
+      <workItem from="1603078800525" duration="626000" />
+      <workItem from="1603079838065" duration="23668000" />
+      <workItem from="1603179211872" duration="301000" />
+      <workItem from="1603183919691" duration="26780000" />
+      <workItem from="1603251607471" duration="18184000" />
+      <workItem from="1603332453082" duration="1083000" />
+      <workItem from="1603643853389" duration="1300000" />
+      <workItem from="1603803227691" duration="12751000" />
+      <workItem from="1603889643664" duration="636000" />
+      <workItem from="1603936553645" duration="2773000" />
+      <workItem from="1603962464773" duration="600000" />
+      <workItem from="1604069191677" duration="14082000" />
+      <workItem from="1604488367478" duration="3610000" />
+      <workItem from="1604495130844" duration="6291000" />
+      <workItem from="1604578253408" duration="965000" />
+      <workItem from="1604725323512" duration="267000" />
+      <workItem from="1604726386668" duration="4293000" />
+      <workItem from="1604811595465" duration="4749000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="354" y="135" key="#Inspections" timestamp="1603268549431">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="354" y="135" key="#Inspections/0.0.1440.900@0.0.1440.900" timestamp="1603268549431" />
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599792107192">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1599792107192" />
+    <state x="453" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600793030064">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="453" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1600793030064" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600500528883">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1600500528883" />
+    <state width="1398" height="88" key="GridCell.Tab.0.bottom" timestamp="1604844614603">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="88" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604844614603" />
+    <state width="1398" height="88" key="GridCell.Tab.0.bottom/0.23.1440.824@0.23.1440.824" timestamp="1604811272447" />
+    <state width="1398" height="88" key="GridCell.Tab.0.center" timestamp="1604844614601">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="88" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1604844614601" />
+    <state width="1398" height="88" key="GridCell.Tab.0.center/0.23.1440.824@0.23.1440.824" timestamp="1604811272447" />
+    <state width="1398" height="88" key="GridCell.Tab.0.left" timestamp="1604844614596">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="88" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1604844614592" />
+    <state width="1398" height="88" key="GridCell.Tab.0.left/0.23.1440.824@0.23.1440.824" timestamp="1604811272446" />
+    <state width="1398" height="225" key="GridCell.Tab.0.left/0.23.1440.826@0.0.1440.849" timestamp="1599386273680" />
+    <state width="1398" height="88" key="GridCell.Tab.0.right" timestamp="1604844614602">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="88" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1604844614602" />
+    <state width="1398" height="88" key="GridCell.Tab.0.right/0.23.1440.824@0.23.1440.824" timestamp="1604811272447" />
+    <state width="1398" height="204" key="GridCell.Tab.1.bottom" timestamp="1604829222092">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="204" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604829222092" />
+    <state width="1398" height="204" key="GridCell.Tab.1.center" timestamp="1604829222091">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="204" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1604829222091" />
+    <state width="1398" height="204" key="GridCell.Tab.1.left" timestamp="1604829222090">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="204" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1604829222090" />
+    <state width="1398" height="204" key="GridCell.Tab.1.right" timestamp="1604829222092">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="204" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1604829222092" />
+    <state x="284" y="261" key="Registry" timestamp="1600756327786">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="284" y="261" key="Registry/0.0.1440.900@0.0.1440.900" timestamp="1600756327786" />
+    <state x="229" y="89" key="SettingsEditor" timestamp="1600688848826">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1600688848826" />
+    <state x="521" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601962945830">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="521" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1601962945830" />
+    <state x="608" y="200" width="598" height="490" key="find.popup" timestamp="1602911523102">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="608" y="200" width="598" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1602911523102" />
+    <state x="608" y="200" width="598" height="490" key="find.popup/0.23.1440.824@0.23.1440.824" timestamp="1602911484777" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1604301123392">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1604301123392" />
+    <state x="156" y="213" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1601646037040">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="156" y="213" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1440.900@0.0.1440.900" timestamp="1601646037040" />
+  </component>
+</project>

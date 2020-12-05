@@ -1,0 +1,1090 @@
+procedure callOne {
+1	x = 1;
+2	call callTwo;
+3	a = x; 
+}
+
+procedure callTwo {
+4	if (i!=2) then {
+5		x = a + 1;
+	} else {
+6		a = b; 
+	}
+}
+
+procedure while {
+7	while (a != b) {
+8		a = b + c;
+9		b = a + c;
+	}
+}
+
+procedure ifelse {
+10	x = 1;
+11	if (i!=2) then {
+12		x = a + 1;
+	} else {
+13		a = b; 
+	}
+14	a = x; 
+}
+
+procedure basicAffectsStar {
+15    x=a;
+16    v=x;
+17    z=v;
+}
+
+procedure moreAffectsStar {
+18	x=a;
+19	v=x;
+20	z=v;
+21	y=z;
+22	p=y;
+}
+
+procedure crossProcedure {
+23	a=b;
+24	call crossProcedure2;
+}
+
+procedure crossProcedure2 {
+25	b=a;
+}
+
+procedure ifElseSep {
+26	a=b;
+27	if (c == d) then {
+28		c=a;
+29		d=c;
+	} else {
+30		e=d;
+31		f=e;
+	}
+32	b=a;
+}
+
+procedure whileLoop {
+33	a=b;
+34	while (c == d) {
+35		b=a;
+36		c=b;
+37		d=c;
+38		e=d;
+39		while (d != c) {
+40			d=e;
+41			c=d;
+42			b=c;
+43			a=b;
+		}
+	}
+44	b=a;
+}
+
+procedure read {
+45	a=b;
+46	read a;
+47	b=a;
+}
+
+procedure dualPattern {
+48	x = 3;
+49	while (c != d) {
+50		while (b != 6) {
+51			x = x + 1;
+		}
+	}
+}
+
+procedure print {
+52	a=b;
+53	print a;
+54	b=a;
+}
+
+procedure whileIfElse{
+55	o=f;
+56	n=o;
+57	f=n;
+58	while (a == b) {
+59		if (c == d) then {
+60			o=f;
+		} else {
+61			n=o;
+62			f=n;
+		}
+	}
+63	o=f;
+}
+
+procedure whileOne {
+64	while (a == b) {
+65		a=b;
+	}
+}
+
+procedure whileTwoIfElse {
+66	o=f;
+67	n=o;
+68	while (a == b) {
+69		while (c == d) {
+70			if (n == f) then {
+71				f=n;
+72				print f;
+73				o=f;
+74				n=o;
+			} else {
+75				f=n;
+76				read f;
+77				o=f;
+78				n=o;
+			}
+		}
+79		f=n;
+	}
+80	f=n;
+}
+
+procedure wilyWhile {
+81	while (a == c) {
+82		while (c == a) {
+83			while (a == c) {
+84				while (c == a) {
+85					a=c;
+				}
+			}
+		}
+	}
+}
+
+procedure ifStack {
+86	if (a==b) then {
+87		while (c==d) {
+88			if (a==b) then {
+89				c=d;
+			} else {
+90				f=c;
+			}
+		}
+	} else {
+91		while (c==d) {
+92			e=f;
+		}
+	}
+}
+
+procedure moreIfs {
+93	if (o==n) then {
+94		while (m==k) {
+95			if (m!=k) then {
+96				while (mk==1) {
+97					o=f;
+98					n=o;
+99					f=n;
+				}
+100				o=f;
+101				n=o;
+102				f=n;
+			} else {
+103				while (1==1) {
+104					o=f;
+105					n=o;
+106					f=n;
+				}
+			}
+		}
+	} else {
+107		while (2==1) {
+108			o=f;
+109			n=o;
+110			f=n;
+		}
+	}
+111	o=f;
+112	n=o;
+113	f=n;
+}
+
+procedure you {
+114	c=e;
+115	o=c;
+116	m=o;
+117	print m;
+118	l=m;
+119	e=l;
+120	t=e;
+121	e=t;
+}
+
+procedure me {
+122	e=m;
+123	m=e;
+124	m=e;
+125	m=e;
+126	m=e;
+127	m=e;
+128	m=e;
+}
+
+procedure readPrintChooseYourOwnAdventure {
+129	m=k;
+130	k=m;
+131	if (m==k) then {
+132		print k;
+133		while (k==m) {
+134			m=k;
+135			if (m==k) then {
+136				read k;
+137				k=m;
+138				if (m==k) then {
+139					read k;
+140					k=m;
+				} else {
+141					print k;
+142					m=k;
+				}
+			} else {
+143				print k;
+144				k=m;
+145				if (m==k) then {
+146					read k;
+147					m=k;
+				} else {
+148					print k;
+149					m=k;
+				}
+			}		
+		}
+	} else {
+150		read k;
+151		while (k==m) {
+152			m=k;
+153			if (m==k) then {
+154				read k;
+155				m=k;
+156				if (m==k) then {
+157					read k;
+158					m=k;
+				} else {
+159					print k;
+160					m=k;
+				}
+			} else {
+161				print k;
+162				m=k;
+163				if (m==k) then {
+164					read k;
+165					m=k;
+				} else {
+166					print k;
+167					m=k;
+				}
+			}		
+		}
+	}
+}
+
+procedure unRelatedRead {
+168	m=k;
+169	read k;
+170	k=m;
+}
+
+procedure affectsBip1 {
+171	a=x;
+172	call affectsBip2;
+}
+
+procedure affectsBip2 {
+173	x=a;
+}
+
+procedure affectsBip3 {
+174	while (a==b) {
+175		a=x;
+176		call affectsBip4;
+	}
+}
+
+procedure affectsBip4 {
+177	call affectsBip5;
+}
+
+procedure affectsBip5 {
+178	x=a;
+}
+
+procedure affectsBip6 {
+179	call affectsBip7;
+180	x=a;
+}
+
+procedure affectsBip7 {
+181	a=x;
+}
+
+procedure affectsBip8 {
+182	a=x;
+183	m=k;
+184	call affectsBip9;
+185	u=r;
+186	o=p;
+}
+
+procedure affectsBip9 {
+187	x=a;
+188	k=b;
+189	call affectsBip10;
+190	y=u;
+191	t=o;
+}
+
+procedure affectsBip10 {
+192	a=t;
+193	b=y;
+}
+
+procedure start {
+194	a=x;
+195	call call;
+196	x=a;
+}
+
+procedure call {
+197	call call1;
+}
+
+procedure call1 {
+198	call call2;
+}
+
+procedure call2 {
+199	call call3;	
+}
+
+procedure call3 {
+200	call call4;
+}
+
+procedure call4 {
+201	a=x;
+}
+
+procedure start2 {
+202	a=x;
+203	call call5;
+204	x=a;
+}
+
+procedure call5 {
+205	b=c;
+}
+
+procedure deer {
+206	ramen=pasta;
+207	if (a==b) then {
+208		while (c==d) {
+209			pasta=ramen;
+210			naengmyeon=pasta;
+211			ramen = naengmyeon;
+		}
+	} else {
+212		while (c==d) {
+213			if (a>4) then {
+214				rice=white;
+215				red=rice;
+216				hair=red;
+217				white=hair;
+			} else {
+218				rice=white;
+			}
+		}
+	}
+219	red=hair;
+}
+
+procedure shark {
+220	z=u;
+221	y=u;
+222	t=o;
+223	u=z;
+}
+
+procedure dog {
+224	maltese=chihuahua;
+225	while (maltese != dog) {
+226		if (chihuahua < bulldog) then {
+227			chi=huahua;
+228			read dog;
+		} else {
+229			while (dog==small) {
+230				chihuahua=maltese;
+			}
+		}
+231		chihuahua=pomeranian;
+	}
+}
+
+procedure gorilla {
+232	z=u;
+233	y=u;
+234	t=o;
+235	k=z;
+236	e=i;
+237	c=h;
+238	a=n;
+239	m=k;
+}
+
+procedure cat {
+240	while (cat == dog) {
+241		while (m==m) {
+242			while (siamese==tabby) {
+243				while (siamese==stray) {
+244					while (stray < dog) {
+245						m=m;
+					}
+				}
+			}
+		}
+	}
+}
+
+procedure bread {
+246	if (bread==butter) then {
+247		if (butter < cheese) then {
+248			if (croissant != 3) then {
+249				read bread;
+			} else {
+250				print bread;
+			}
+		} else {
+251			if (3 != d) then {
+252				if (c < o) then {
+253					bread=butter;
+				} else {
+254					butter=bread;
+				}
+			} else {
+255				bread=butter;
+			}
+		}
+	} else {
+256		if (bread <= bread) then {
+257			croissant=dairy;
+		} else {
+258			read dairy;
+259			read diary;
+260			dairy=croissant;
+		}
+	}
+}
+
+procedure chooseYourOwnAdventurePart2 {
+261	if (m==k) then {
+262		while (m==k) {
+263			if (k==m) then {
+264				while (k==m) {
+265					if (m==k) then {
+266						m=k;
+					} else {
+267						a=p;
+					}
+				}
+			} else {
+268				while (m==k) {
+269					if (k==m) then {
+270						k=m;
+					} else {
+271						p=a;
+					}
+				}
+			}
+		}
+	} else {
+272		while (m==k) {
+273			if (m==k) then {
+274				while (m==k) {
+275					if (m==k) then {
+276						k=m;
+					} else {
+277						p=a;
+					}
+				}
+			} else {
+278				while (k==m) {
+279					if (m==k) then {
+280						m=k;
+					} else {
+281						a=p;
+					}
+				}
+			}
+		}
+	}
+}
+
+procedure calling {
+282	k=m;
+}
+
+procedure gnillac {
+283	k=m;
+284	call calling;
+285	m=k;
+}
+
+procedure circuit {
+286	if (m==k) then {
+287		while (k==m) {
+288			while (m==k) {
+289				while (k==m) {
+290					while (m==k) {
+291						while (k==m) {
+292							while (m==k) {
+293								fuse=fuse;
+							}
+						}
+					}
+				}
+			}
+		}
+	} else {
+294		line=straight;
+	}
+}
+
+procedure moreMs {
+295	if (m==k) then {
+296		m=k;
+297		a=p;
+298		m=k;
+299		a=p;
+300		m=k;
+301		a=p;
+302		m=k;
+	} else {
+303		a=p;
+304		m=k;
+305		a=p;
+306		m=k;
+307		a=p;
+308		m=k;
+309		a=p;
+	}
+}
+
+procedure longAssign {
+310	a=b+c+d+e+f+g+h;
+311	m=i+j+k+l+a+n+o;
+312	o=p+q+r+s+m+t+u;
+313	n=v+w+x+y+o+z+a;
+314	f=b+c+d+e+n+g+h;
+}
+
+procedure longAssign2 {
+315	a=b+c+d+e+f+g+h;
+316	y=c+f+g+e+t+b+j;
+317	u=e+d+w+b+g+q+l;
+318	t=s+w+r+t+b+k+i;
+319	m=i+j+k+l+a+n+o;
+320	y=c+f+g+e+t+b+j;
+321	u=e+d+w+b+g+q+l;
+322	t=s+w+r+t+b+k+i;
+323	o=p+q+r+s+m+t+u;
+324	y=c+f+g+e+t+b+j;
+325	u=e+d+w+b+g+q+l;
+326	t=s+w+r+t+b+k+i;
+327	n=v+w+x+y+o+z+a;
+328	y=c+f+g+e+t+b+j;
+329	u=e+d+w+b+g+q+l;
+330	t=s+w+r+t+b+k+i;
+331	f=b+c+d+e+n+g+h;
+}
+
+procedure longAssign3 {
+332	a=b+c+d+e+f+g+h;
+333	if (m==k) then {
+334		while (k==m) {
+335			m=i+j+k+l+a+n+o;
+336			while (m==k) {
+337				o=p+q+r+s+m+t+u;
+338				while (k==m) {
+339					n=v+w+x+y+o+z+a;
+340					while (m==k) {
+341						f=b+c+d+e+n+g+h;
+					}
+				}
+			}
+		}
+	} else {
+342		if (m==k) then {
+343			m=i+j+k+l+a+n+o;
+344			o=p+q+r+s+m+t+u;
+		} else {
+345			n=v+w+x+y+o+z+a;
+346			f=b+c+d+e+n+g+h;
+		}
+	}
+}
+
+procedure recharge {
+347	if (battery==dead) then {
+348		a=x;
+349		read print;
+350		print read;
+351		read x;
+352		print x;
+353		x=a;
+	} else {
+354		a=x;
+355		read print;
+356		print read;
+357		read a;
+358		print a;
+359		x=a;
+	}
+}
+
+procedure alphabetMaze {
+360	if (m==k) then {
+361		if (k==m) then {
+362			while (m==k) {
+363				a=b+c+d+e;
+			}
+364			a = q+w+e+r+t+y;
+		} else {
+365			while (m==k) {
+366				print a;
+367				b=s+f+B+H+t+d+C+e;
+368				f=l+t+r+v+h+j+u+R;
+369				while (k==m) {
+370					m=p+V+N+h+d+c+s;
+371					if (m==k) then {
+372						print m;
+					} else {
+373						read m;
+374						while (m==k) {
+375							k=m+v+e+h+j+K;
+						}
+					}
+376					a=s+v+n+J+y+w+c+v;
+				}
+377				print b;
+			}
+378			n=c+d+g+N+j+t+e+g+b;
+379			read a;
+		}
+	} else {
+380		while (m==k) {
+381			a=b+c+V+d+e+G+H+f;
+		}
+	}
+382	a=m+n+b+v+c+x+z;
+383	if (k==m) then {
+384		while (m==k) {
+385			while (k==m) {
+386				m=a+x+C+B+f+h+j+t+f;
+			}
+		}
+	} else {
+387		if (m==k) then {
+388			a=v+b+h+T+f+g+h+f;
+		} else {
+389			m=d+v+h+m+y+d+g+n+h;
+		}
+	}
+}
+
+procedure notTheSame {
+390	while (1==1) {
+391		a=A;
+	}
+}
+
+procedure same {
+392	while (1==1) {
+393		a=a;
+	}
+}
+
+procedure notTheSameAgain {
+394	while (1==1) {
+395		a=B+c;
+396		b=A+c;
+	}
+}
+
+procedure sameAgain {
+397	while (1==1) {
+398		a=b+c;
+399		b=a+c;
+	}
+}
+
+procedure violin {
+400	a=c+v+B+n+m+j+h+g+f+k;
+401	if (m==k) then {
+402		read a;
+403		m=a;
+404		while (k==m) {
+405			print a;
+406			if (m==k) then {
+407				while (k==m) {
+408					a=m;
+				}
+			} else {
+409				read a;
+410				while (k==m) {
+411					a=m;
+				}
+			}
+		}
+	} else {
+412		print a;
+413		m=a;
+414		while (k==m) {
+415			read a;
+416			if (m==k) then {
+417				while (k==m) {
+418					a=m;
+				}
+			} else {
+419				read a;
+420				while (k==m) {
+421					a=m;
+				}
+			}
+		}
+	}
+
+422	if (m==k) then {
+423		while (k==m) {
+424			print a;
+425			print a;
+426			if (m==k) then {
+427				while (k==m) {
+428					a=m;
+429					m=k;
+				}
+			} else {
+430				while (k==m) {
+431					k=p;
+432					p=n;
+				}
+			}
+		}
+	} else {
+433		read a;
+434		while (k==m) {
+435			print a;
+436			if (m==k) then {
+437				while (k==m) {
+438					a=m;
+439					m=k;
+				}
+			} else {
+440				while (k==m) {
+441					m=k;
+442					a=m;
+				}
+			}
+		}
+	}
+}
+
+procedure rain {		
+443	while(rain==go) {
+444		while(rain==its) {
+445			if (raining < its) then {
+446				read raining;
+447				print read;
+448				read print;
+449				call = call;
+450				read = call;
+451				read call;
+452				call = print;
+453				print = read;
+454				print call;
+			} else {
+455				read rain;
+456				while (raining == true) {
+457					o=a;
+458					o=w;
+459					o=a;
+				}
+460				if (a==b) then {
+461					print rain;
+462					a=b+c+F+T+h+y+o;
+463					m=c+v+n+h+j+i+n;
+				} else {
+464					m=c;
+465					while (rain==drops) {
+466						read p;
+					}
+				}
+467				m=c+v+g+t+n+J+g+a;
+			}
+		}
+468		if (ifs < w) then {
+469			ifs = w;
+		} else {
+470			w = ifs;
+		}
+	}
+471	if (spain == madrid) then {
+472		moscow=moscow;
+473		while (p==2) {
+474			m=k;
+		}
+	} else {
+475		u=t;
+	}
+}
+
+procedure the {
+476	end=near;
+477	if (m==k) then {
+478		m=s+f+V+H+T+h+J+b+g;
+479		a=v+g+r+N+d+f+B+g+x;
+480		print = print;
+481		read = print;
+482		call = d+c+b+f+r+b+H;
+	} else {
+483		while (k==m) {
+484			read print;
+485			print m;
+486			if (m==k) then {
+487				while (k==m) {
+488					m=a;
+				}
+			} else {
+489				a=m;
+490				while (m==k) {
+491					if (m==k) then {
+492						k=m+F+V+b+g+T+x+v;
+493						read k;
+494						print k;
+495						read = call;
+					} else {
+496						call = read;
+497						print = call;
+498						read = print;
+499						ten = read;
+					}
+				}
+500				call = read;
+			}
+		}
+	}
+}
+
+procedure whileWhile {
+501	print a;
+502	read a;
+503	while (m==k) {
+504		a=p;
+505		read a;
+506		p=a;
+507		print p;
+508		call next;
+509		a=p;
+	}
+510	while (k==m) {
+511		a=p;
+512		print a;
+513		p=a;
+514		read p;
+515		call next;
+516		a=p;
+	}
+517	read a;
+}
+
+procedure next {
+518	a=p;
+}
+
+procedure affectsBipSplit {
+519	m=k;
+520	if (m==k) then {
+521		call affectsBipOne;
+522		k=m;
+	} else {
+523		call affectsBipTwo;
+524		k=m;
+	}
+525	k=m;
+}
+
+procedure affectsBipOne {
+526	m=k;
+}
+
+procedure affectsBipTwo {
+527	k=m;
+}
+
+procedure affectsBipWhile {
+528	m=k;
+529	while (m==k) {
+530		k=m;
+	}
+}
+
+procedure affectsOne {
+531	m=k;
+532	call affectsTwo;
+}
+
+procedure affectsTwo {
+533	call affectsThree;
+534	k=m;
+}
+
+procedure affectsThree {
+535	k=m;
+536	call affectsFour;
+}
+
+procedure affectsFour {
+537	m=k;
+}
+
+procedure back {
+538	k=m;
+}
+
+procedure backwardsCall {
+539	m=k;
+540	call back;
+541 m=k;
+}
+
+procedure affectsBip0 {
+542	a = b;
+543	call test;
+544	a = a + b;
+545	while (a != b) {
+546		read a;
+547		if (a == b) then {
+548			a = b + c;
+549			call test1;
+		} else {
+550			read b;
+551			call test2;
+		}
+	}
+552	while (c != d) {
+553		read b;
+554		call test3;
+	}
+}
+
+procedure test {
+555	while (a == b) {
+556		call test1;
+557		b = a;
+	}
+}
+
+procedure test1 {
+558	while (a == b) {
+559		if (a == b) then {
+560			call test2;
+561			read a;
+		} else {
+562			read b;
+563			call test3;
+		}
+	}
+}
+
+procedure test2 {
+564	while (a == b) {
+565		call test3;
+	}
+566	b = a;
+}
+
+procedure test3 {
+567	print a;
+}
+
+procedure affectsBipStart {
+568	a = b;
+569	m = k;
+570	if (m==k) then {
+571		while (k==m) {
+572			if (m==k) then {
+573				a = a;
+574				k = m;
+			} else {
+575				call first;
+			}
+576			b = a;
+577			k = m;
+		}
+	} else {
+578		m = k;
+579		call common;
+	}
+}
+
+procedure first {
+580	call second;
+}
+
+procedure second {
+581	b = a;
+582	m = k;
+}
+
+procedure common {
+583	b = a;
+}
+
+procedure branch1 {
+584	a = b;
+585	call common;
+}
+
+procedure branch2 {
+586	b = a;
+587	call common;
+}
+
+procedure common2 {
+588	x = a;
+}
+
+procedure common3 {
+589	call common2;
+}
+
+procedure branch3 {
+590	a = x;
+591	call common3;
+592	x = a;
+}
+
+procedure branch4 {
+593	x = a;
+594	call common3;
+595	x = a;
+}
+
+procedure affectsBipWhileIfElse {
+596	while (a==b) {
+597		if (b==a) then {
+598			m = k;
+		} else {
+599			k = m;
+		}
+	}
+600	if (b==a) then {
+601		m = k;
+	} else {
+602		k = m;
+	}
+}

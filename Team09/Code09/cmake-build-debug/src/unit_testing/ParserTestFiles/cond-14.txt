@@ -1,0 +1,5 @@
+procedure main {
+while ((a > t) || ((a > b) + (c < d))) {
+    print a;
+}
+}

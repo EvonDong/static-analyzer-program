@@ -1,0 +1,5 @@
+procedure main {
+  if (x * x + y * y > 1) then {
+    numInCircle = numInCircle + 1; } else {
+    numOutCircle = numOutCircle + 1; }
+}

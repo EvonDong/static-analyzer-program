@@ -1,0 +1,5 @@
+procedure main {
+	while (()) {
+		print a;
+	}
+}

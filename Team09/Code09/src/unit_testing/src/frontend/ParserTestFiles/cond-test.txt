@@ -1,0 +1,7 @@
+procedure main {
+	while (!(a == b)) {
+		while ((!(x != y)) && ((d > y) || ((( a + b) * 3 < 2) || ((x  + 3 / y * (2 / y)) + 3 >= 2 )))) {
+			print a;
+		}
+	}
+}

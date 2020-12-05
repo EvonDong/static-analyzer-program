@@ -1,0 +1,155 @@
+1 - Find all while statements with sum as control variable
+while w;
+Select w pattern w("sum",_)
+15,52
+5000
+2 - Find all while statements with b as control variable
+while w;
+Select w pattern w("b", _)
+30,42,56,81,101,107,108,112,114,120,123,124,128,131,133,170,172
+5000
+3 - Find all while statements with grape as control variable
+while w;
+Select w pattern w("grape",_)
+216,234
+5000
+4 - Find all while statements with while as control variable
+while w;
+Select w pattern w("while",_)
+342,358,373,377,399
+5000
+5 - Find all while statements with control variable
+while w;
+Select w pattern w(_,_)
+15,30,42,52,56,76,81,97,101,107,108,112,114,120,123,124,128,131,133,142,157,160,163,165,170,171,172,176,198,209,216,234,245,259,269,275,289,291,294,319,321,326,332,335,342,354,358,362,373,377,391,399,410,417,429,437,440,444,453,460
+5000
+6 - Find all while statements with synonym
+while w; variable v;
+Select w pattern w(v,_) with v.varName = "while"
+342, 358, 373,377,399
+5000  
+7 - Find all while statements with synonym
+while w; variable v;
+Select w pattern w(v,_) with v.varName = "b"
+30,42,56,81,101,107,108,112,114,120,123,124,128,131,133,170,172
+5000
+8- Find all while statements with synonym
+while w; variable v;
+Select w pattern w(v,_) with v.varName = "brazil"
+none
+5000
+9 - Find all while statements with synonym
+while w; variable v;
+Select w pattern w(v,_) with v.varName = "pear"
+245
+5000
+10 - Find all variables as control variables inside while statements
+while w; variable v;
+Select v pattern w(v,_)
+sum,b,c,a,d,g,f,apple,banana,grape,call,kiwi,orange,pink,yellow,blue,green,if,print,else,read,mrt,grab,uber,france,germany,russia,malaysia,laos,div,gojek,k,minus,minus2,pear,spain,times,uk,vietnam,while,x
+5000
+22 - Find all variables as control variables inside if statements
+if ifs; variable v;
+Select v pattern ifs(v,_,_)
+minus,a,div,b,f,i,procedure,read,print,while,banana,grape,avocado,kiwi,red,blue,yellow,if,bus,uber,gojek,thailand,vietnam,indonesia,china,brazil,c,call,cherry,g,grab,green,j,japan,k,malaysia,minus1,minus2,pear,pink,statement,taxi,times
+5000
+23 - Find all if statements with synonym
+if ifs; variable v;
+Select ifs pattern ifs(v,_,_) with v.varName = "japan"
+462
+5000
+24 - Find all if statements with synonym
+if ifs; variable v;
+Select ifs pattern ifs(v,_,_) with v.varName = "if"
+194,347,367
+5000
+25 - Find all if statements with synonym
+if ifs; variable v;
+Select ifs pattern ifs(v,_,_) with v.varName = "banana"
+202,222,233
+5000
+26 - Find all if statements with control variable
+if ifs;
+Select ifs pattern ifs(_,_,_)
+8,26,28,33,40,54,60,74,95,156,161,162,168,173,194,202,222,233,242,268,274,347,367,370,382,394,406,420,451,462
+5000
+27 - Find all if statmenets with minus as control variable
+if ifs;
+Select ifs pattern ifs("minus",_,_)
+26
+5000
+28 - Find all if statements with a as control variable
+if ifs;
+Select ifs pattern ifs("a",_,_)
+28,33,40,54,60,156
+5000
+29 - Find all if statements with china as control variable
+if ifs;
+Select ifs pattern ifs("china",_,_)
+462
+5000
+30 - Find all if statments with india as control variable
+if ifs;
+Select ifs pattern ifs("india",_,_)
+none
+5000
+31 - Missing third wildcard for if pattern
+if ifs;
+Select ifs pattern ifs("india",_)
+none
+5000
+32 -  Find all if statements
+if ifs; procedure p; variable v;
+Select ifs pattern ifs(v,_, _)
+156,161,162,168,173,194,202,222,233,242,26,268,274,28,33,347,367,370,382,394,40,406,420,451,462,54,60,74,8,95
+5000
+33 - Missing second comma for if pattern
+if ifs; procedure p; variable v;
+Select ifs pattern ifs(v,_   _)
+none
+5000
+34 - Invalid second input for if pattern
+if ifs; procedure p; variable v;
+Select ifs pattern ifs(v,v ,  _)
+none
+5000
+35 - Invalid third input for if pattern
+if ifs; procedure p; variable v;
+Select ifs pattern ifs(v, _,  v)
+none
+5000
+36 - Undeclared variable if pattern
+if ifs; procedure p; variable v;
+Select ifs pattern blah(v, _,  _)
+none
+5000
+37 - Extra wildcard while pattern
+if ifs; procedure p; variable v; while w;
+Select ifs pattern w(v, _, _)
+none
+5000
+38 - Missing second input while pattern
+if ifs; procedure p; variable v; while w;
+Select ifs pattern w(v)
+none
+5000
+39 - Wrong first input while pattern
+if ifs; procedure p; variable v; while w;
+Select w pattern w(p, _)
+none
+5000
+40 - Wrong name while pattern
+if ifs; procedure p; variable v; while w;
+Select w parn w(v, _)
+none
+5000
+41 - Undeclared variable while pattern
+if ifs; procedure p; variable v; while w;
+Select w pattern w(v32, _)
+none
+5000
+42 - Invalid second input while pattern
+if ifs; procedure p; variable v; while w;
+Select w pattern w(v, v)
+none
+5000

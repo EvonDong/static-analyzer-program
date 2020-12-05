@@ -1,0 +1,450 @@
+1 - procedure Uses syn variable with procName exist
+procedure p;
+Select p such that Uses(p, "brazil") with p.procName = "country"
+country
+5000
+2 - procedure Uses stmt variable with procName exist
+procedure p;
+Select p such that Uses(449, "singapore") with "country" = p.procName
+country
+5000
+3 - procedure Uses syn wildcard with procName exist
+procedure p;
+Select p such that Uses(p, _) with p.procName = "country"
+country
+5000
+4 - procedure Uses stmt wildcard with procName exist
+procedure p;
+Select p such that Uses(449, _) with p.procName = "country"
+country
+5000
+5 - procedure Modifies syn variable with procName exist
+procedure p;
+Select p such that Modifies(p, "brazil") with p.procName = "country"
+country
+5000
+6 - procedure Modifies stmt variable with procName exist
+procedure p;
+Select p such that Uses(455, "thailand") with "country" = p.procName
+country
+5000
+7 - procedure Uses syn wildcard with procName exist
+procedure p;
+Select p with p.procName = "country" such that Modifies(p, _)
+country
+5000
+8 - procedure Modifies stmt wildcard with procName exist
+procedure p;
+Select p such that Uses(455, _) with p.procName = "country"
+country
+5000
+9 - procedure Calls syn proc with procName exist
+procedure p;
+Select p such that Calls(p, "TenWhileLoop") with p.procName = "transportation"
+transportation
+5000
+10 - procedure Calls syn wildcard with procName exist
+procedure p;
+Select p such that Calls(p, _) with p.procName = "transportation"
+transportation
+5000
+11 - call Modifies syn variable with procName exist
+call c;
+Select c such that Modifies(c, "x") with c.procName = "TenWhileLoop"
+66, 85, 92, 224, 434
+5000
+12 - call Modifies syn wildcard with procName exist
+call c;
+Select c such that Modifies(c, _) with "TenWhileLoop" = c.procName
+66, 85, 92, 224, 434
+5000
+13 - call Modifies stmt syn with procName exist
+call c; variable v;
+Select c such that Modifies(434, v) with c.procName  = "TenWhileLoop"
+66, 85, 92, 224, 434
+5000
+14 - call Modifies stmt wildcard with procName exist
+call c;
+Select c such that Modifies(434, _) with "TenWhileLoop" = c.procName
+66, 85, 92, 224, 434
+5000
+15 - call Uses syn variable with procName exist
+call c;
+Select c such that Uses(c, "a") with c.procName = "TenWhileLoop"
+66, 85, 92, 224, 434
+5000
+16 - call Uses syn wildcard with procName exist
+call c;
+Select c such that Uses(c, _) with "TenWhileLoop" = c.procName
+66, 85, 92, 224, 434
+5000
+17 - call Uses stmt syn with procName exist
+call c; variable v;
+Select c such that Uses(434, v) with c.procName  = "TenWhileLoop"
+66, 85, 92, 224, 434
+5000
+18 - call Uses stmt wildcard with procName exist
+call c;
+Select c with "TenWhileLoop" = c.procName such that Uses(434, _)
+66, 85, 92, 224, 434
+5000
+19 - Uses stmt syn variable exist
+variable v;
+Select v such that Uses(466, v) with v.varName = "usa"
+usa
+5000
+20 - Uses stmt syn variable exist
+variable v;
+Select v such that Uses(466, v) with v.varName = "uk"
+uk
+5000
+21 - Modifies stmt syn variable doesnt exist
+variable v;
+Select v such that Modifies(438, v) with "usa" = v.varName
+none
+5000
+22 - Uses variable does not exist
+variable v;
+Select v such that Uses(466, v) with v.varName = "asdasasdzxczxczc"
+none
+5000
+23 - Modifies variable does not exist
+variable v;
+Select v such that Modifies(438, v) with "asdasasdzxczxczc" = v.varName
+none
+5000
+24 - read Modifies stmt variable variable exist
+read r;
+Select r such that Modifies(1, "a") with r.varName = "a"
+1, 19, 158
+5000
+25 - read Modifies syn wildcard variable exist
+read r;
+Select r such that Modifies(r, _) with "a" = r.varName
+1, 19, 158
+5000
+26 - read Modifies variable does not exist
+read r;
+Select r such that Modifies(r, _) with r.varName = "hifive5"
+none
+5000
+27 - read Modifies variable does not exist
+read r;
+Select r such that Modifies(1, "a") with "hifive5" = r.varName
+none
+5000
+28 - print Uses stmt wildcard variable exist
+print p;
+Select p such that Uses(p, _) with p.varName = "cherry"
+229, 255
+5000
+29 - print Uses syn var variable exist
+print p;
+Select p such that Uses(p, "cherry") with "cherry" = p.varName
+229, 255
+5000
+30 - print variable does not exist
+print p;
+Select p such that Uses(p, _) with "malaysia" = p.varName
+none
+5000
+31 - print variable does not exist
+print p;
+Select p such that Uses(p, "cherry") with p.varName = "malaysia"
+none
+5000
+32 - constant value does not exist.
+constant c;
+Select c such that Next(1,2) with c.value = 929293
+none
+5000
+33 - constant value does not exist.
+constant c;
+Select c such that Follows(1,2) with 92929 = c.value
+none
+5000
+34 - stmt Modifies syn var number exist.
+stmt s;
+Select s such that Modifies(s, "sum") with s.stmt# = 5
+none
+5000
+35 - stmt Next syn stmt number exist.
+stmt s;
+Select s such that Next(s, 6) with 5 = s.stmt#
+5
+5000
+36 - stmt Follows syn wildcard number exist.
+stmt s;
+Select s such that Follows(s, _) with s.stmt# = 7
+7
+5000
+37 - stmt number does not exist.
+stmt s;
+Select s such that Follows(s, _) with 12941 = s.stmt#
+none
+5000
+38 - read Modifies number exist.
+read r;
+Select r such that Modifies(r, "usa") with r.stmt# = 468
+468
+5000
+39 - read Modifies number exist.
+read r;
+Select r such that Modifies(r, _) with 468 = r.stmt#
+468
+5000
+40 - read number does not exist.
+read r;
+Select r such that Modifies(r, _) with r.stmt# = 12299
+none
+5000
+41 - read number is not a read stmt
+read r;
+Select r such that Modifies(r, _) with r.stmt# = 461
+none
+5000
+42 - print Uses syn proc stm number exist.
+print p;
+Select p such that Uses(p, "brazil") with 471 = p.stmt#
+471
+5000
+43 - print Uses syn wildcard stm number exist.
+print p;
+Select p such that Uses(p, _) with p.stmt# = 471
+471
+5000
+44 - print stm number does not exist.
+print p;
+Select p such that Uses(p, _) with 46111 = p.stmt#
+none
+5000
+45 - print stm number is not a print stm.
+print p;
+Select p such that Uses(p, _) with p.stmt# = 460
+none
+5000
+46 - call Uses stm number exist
+call c;
+Select c such that Uses(c, _) with c.stmt# = 434
+434
+5000
+47 - call Follows stm number exist
+call c;
+Select c such that Follows(c, 3) with 2 = c.stmt#
+2
+5000
+48 - call Modifies stm number exist
+call c;
+Select c such that Modifies(c, _) with c.stmt# = 2
+2
+5000
+49 - call stm number does not exist
+call c;
+Select c such that Modifies(c, _) with 1922 = c.stmt#
+none
+5000
+50 - call is not a call stmt
+call c;
+Select c such that Follows(c, 439) with c.stmt# = 438
+none
+5000
+51 - while stm number exist
+while w;
+Select w pattern w("uber", _) with w.stmt# = 429
+429
+5000
+52 - while stm number exist
+while w;
+Select w pattern w(_, _)  with 429 = w.stmt#
+429
+5000
+53 - while stm number exist
+while w; variable v;
+Select w pattern w(v, _)  with 429 = w.stmt#
+429
+5000
+54 - while stm number does not exist
+while w;
+Select w pattern w("uber", _) with w.stmt# = 192929
+none
+5000
+55 - while is not a while stmt
+while w;
+Select w pattern w("thailand", _) with w.stmt# = 451
+none
+5000
+56 - while is not a while stmt
+while w;
+Select w pattern w("indonesia", _) with 451 = w.stmt#
+none
+5000
+57 - if stm number exist
+if ifs;
+Select ifs pattern ifs("thailand", _, _) with ifs.stmt# = 451
+451
+5000
+58 - if stm number exist
+if ifs;
+Select ifs pattern ifs("indonesia", _, _) with 451 = ifs.stmt#
+451
+5000
+59 - if stm number exist
+if ifs; variable v;
+Select ifs pattern ifs(v, _, _) with 451 = ifs.stmt#
+451
+5000
+60 - if stm number exist
+if ifs;
+Select ifs pattern ifs(_, _, _) with ifs.stmt# = 451
+451
+5000
+61 - if stm number does not exist
+if ifs;
+Select ifs pattern ifs(_, _, _) with 1929 = ifs.stmt#
+none
+5000
+62 - if stm number exist
+if ifs;
+Select ifs such that Parent(ifs, _) with ifs.stmt# = 451
+451
+451
+63 - if stm number exist
+if ifs;
+Select ifs such that Parent(ifs, 452) with 451 = ifs.stmt#
+451
+5000
+64 - if is not an if stmt
+if ifs;
+Select ifs pattern ifs(_, _) with ifs.stmt# = 463
+none
+5000
+65 - if is not an if stmt
+if ifs;
+Select ifs pattern ifs("vietnam", _) with 463 = ifs.stmt#
+none
+5000
+66 - assign stm number exist
+assign a;
+Select a such that Follows*(a, 459) with a.stmt# = 456
+456
+5000
+67 - assign stm number exist
+assign a;
+Select a such that Next*(a, 459) with 456 = a.stmt#
+456
+5000
+68 - assign stm number does not exist
+assign al;
+Select a such that Follows*(a, 45613) with a.stmt# = 45612
+none
+5000
+69 - assign is not an assign stmt
+assign al;
+Select a such that Next(a, 472) with a.stmt# = 471
+none
+5000
+70 - prog_line exist
+prog_line n;
+Select n such that Next(n, 213) with 212 = n
+212
+5000
+71 - prog_line does not exist
+prog_line n;
+Select n such that Next(n, 212113) with 212112 = n
+none
+5000
+72 - with if and progline
+prog_line n; if ifs; assign a;
+Select ifs such that Next(n, a) with ifs.stmt# = n
+8, 26, 28, 33, 40, 54, 60, 194, 202, 222, 242, 347, 367, 370, 394, 420, 451, 462, 161, 274
+5000
+73 - with if and progline
+prog_line n; if ifs; assign a;
+Select n such that Next(n, a) with n = ifs.stmt#
+8, 26, 28, 33, 40, 54, 60, 194, 202, 222, 242, 347, 367, 370, 394, 420, 451, 462, 161, 274
+5000
+74 - meaningless query if
+if ifs;
+Select ifs such that Next(ifs, _) with ifs.stmt# = ifs.stmt#
+8, 26, 28, 33, 40, 54, 60, 74, 95, 156, 161, 162, 168, 173, 194, 202, 222, 233, 242, 268, 274, 347, 367, 370, 382, 394, 406, 420, 451, 462
+5000
+75 - if and another if
+if ifs, ifs1;
+Select ifs such that Next(ifs, _) with ifs.stmt# = ifs1.stmt#
+8, 26, 28, 33, 40, 54, 60, 74, 95, 156, 161, 162, 168, 173, 194, 202, 222, 233, 242, 268, 274, 347, 367, 370, 382, 394, 406, 420, 451, 462
+5000
+76 - if and statement
+if ifs; stmt s, s2;
+Select ifs such that Next(ifs, s2) with ifs.stmt# = s.stmt#
+8, 26, 28, 33, 40, 54, 60, 74, 95, 156, 161, 162, 168, 173, 194, 202, 222, 233, 242, 268, 274, 347, 367, 370, 382, 394, 406, 420, 451, 462
+5000
+77 - with while and progline
+prog_line n; while w; stmt s;
+Select w such that Next(w, s) with w.stmt# = n
+15, 30, 42, 52, 56, 76, 81, 97, 101, 107, 108, 112, 114, 120, 123, 124, 128, 131, 133, 142, 157, 160, 163, 165, 170, 171, 172, 176, 198, 209, 216, 234, 245, 259, 269, 275, 289, 291, 294, 319, 321, 326, 332, 335, 342, 354, 358, 362, 373, 377, 391, 399, 410, 417, 429, 437, 440, 444, 453, 460
+5000
+78 - with while and progline
+prog_line n; while w; stmt s;
+Select w such that Next(w, s) with n = w.stmt#
+15, 30, 42, 52, 56, 76, 81, 97, 101, 107, 108, 112, 114, 120, 123, 124, 128, 131, 133, 142, 157, 160, 163, 165, 170, 171, 172, 176, 198, 209, 216, 234, 245, 259, 269, 275, 289, 291, 294, 319, 321, 326, 332, 335, 342, 354, 358, 362, 373, 377, 391, 399, 410, 417, 429, 437, 440, 444, 453, 460
+5000
+79 - meaningless while
+while w; stmt s;
+Select w such that Next(w, s) with w.stmt# = w.stmt#
+15, 30, 42, 52, 56, 76, 81, 97, 101, 107, 108, 112, 114, 120, 123, 124, 128, 131, 133, 142, 157, 160, 163, 165, 170, 171, 172, 176, 198, 209, 216, 234, 245, 259, 269, 275, 289, 291, 294, 319, 321, 326, 332, 335, 342, 354, 358, 362, 373, 377, 391, 399, 410, 417, 429, 437, 440, 444, 453, 460
+5000
+80 - while and another while
+while w, w1; stmt s;
+Select w such that Next(w, s) with w.stmt# = w1.stmt#
+15, 30, 42, 52, 56, 76, 81, 97, 101, 107, 108, 112, 114, 120, 123, 124, 128, 131, 133, 142, 157, 160, 163, 165, 170, 171, 172, 176, 198, 209, 216, 234, 245, 259, 269, 275, 289, 291, 294, 319, 321, 326, 332, 335, 342, 354, 358, 362, 373, 377, 391, 399, 410, 417, 429, 437, 440, 444, 453, 460
+5000
+81 - invalid meaningless read query
+read r; variable v;
+Select v such that Modifies(r, v) with r.varName == v.varName
+none
+5000
+82 - procedure Uses procName does not exist
+procedure p;
+Select p such that Uses(449, "india") with "alibaba" = p.procName
+none
+5000
+83 - select synonym, stmtNum, 1 such that 1 with 1 pattern
+stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c; variable v; procedure p, q;
+Select a such that Modifies(a, v) with v.varName = "grab" pattern a(_, _"bike"_)
+426
+5000
+84 - select synonym, stmtNum, 1 such that 1 with 1 pattern
+stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c; variable v; procedure p, q;
+Select ifs such that Uses(ifs, v) with v.varName = "b" pattern ifs(v, _, _)
+28, 54, 74, 95, 161, 162
+5000
+85 - invalid extra with word
+stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c; variable v; procedure p, q;
+Select ifs such that Uses(ifs, v) with with v.varName = "b" pattern ifs(v, _, _)
+none
+5000
+86 - invalid format
+stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c; variable v; procedure p, q;
+Select ifs such that Uses(ifs, v) with pattern ifs(v, _, _)
+none
+5000
+87 - invalid suchThat clause inputs
+stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c; variable v; procedure p, q;
+Select ifs such that v.varName = "b" pattern ifs(v, _, _)
+none
+5000
+88 - invalid format with extra synonym
+stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c; variable v; procedure p, q;
+Select ifs such that Uses(ifs, v) with v.varName = "b" "blahhh" pattern ifs(v, _, _)
+none
+5000
+89 - wrong clause name
+stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c; variable v; procedure p, q;
+Select ifs such that Uses(ifs, v) with v.varName = "b" pat ifs(v, _, _)
+none
+5000
+90 - multiple clause with extra tabs
+stmt s; assign a; print pr; read re; if ifs; while w; constant cons; call c; variable v; procedure p, q;
+Select ifs such that Uses(ifs, v) with v.varName = "b" pattern ifs(v,_,_)
+28, 54, 74, 95, 161, 162
+5000

@@ -1,0 +1,75 @@
+1 - Integer Statement Modifies variable synonym
+variable v;
+Select v such that Modifies(209, v)
+pear, banana
+5000
+2 - Variable Statement Modifies variable synonym
+variable v; stmt s;
+Select v such that Modifies(s, v)
+sum, minus1, minus2, minus, times, div, c, b, a, d, apple, avocado, banana, bike, black,blue,brazil,brown,bus,car,cherry,else,f,gojek,grab,grape,green,grey,i,if,india,j,japan,k,kiwi,laos,m,malaysia,motorcycle,mrt,orange,p,pear,pink,print,procedure,purple,r,read,red,russia,s,singapore,spain,thailand,then,train,uk,usa,vietnam,while,white,x,yellow,z
+5000
+3 - Variable Statement Modifies variable string empty
+stmt s;
+Select s such that Modifies(s, "pikachu")
+none
+5000
+4 - Variable Statement Modifies variable string
+stmt s;
+Select s such that Modifies(s, "orange")
+222, 223, 226, 233, 234, 235, 239, 242, 244, 245, 249, 259, 260, 263, 266, 14,156,159,160,161,162,163,164,167,187,20,26,28,30,33,35,40,42,43,49,52,54,56,58,60,64,72,73,74,75,76,79,81,83,86,88
+5000
+5 - Variable Procedure Modifies WildCard
+procedure p;
+Select p such that Modifies(p, _)
+TestA, TestB, TestC, TenWhileLoop, procedure, fruits, colours, Pr0c3dUr3, transportation, country, oneCall
+5000
+6 - Procedure with print, wildcard
+procedure p; print pn;
+Select p such that Modifies(pn, _)
+none
+5000
+7 - Procedure with variable inside it
+stmt s; variable v;
+Select s such that Modifies(v, "bus")
+none
+5000
+8 - Procedure with variable inside a procedure called by it
+stmt s; variable v;
+Select s such that Modifies(s, s)
+none
+5000
+9 - Procedure with synonym variable
+variable v;
+Select v such that Modifies("transportation", v)
+a,b,bike,black,blue,brazil,brown,bus,c,car,d,else,gojek,grab,green,grey,if,india,japan,k,laos,malaysia,motorcycle,mrt,pink,print,purple,r,read,red,russia,s,singapore,spain,thailand,train,uk,usa,vietnam,while,white,x,yellow,z
+5000
+10 - Procedure synonym with variable
+procedure p;
+Select p such that Modifies(p, "orange")
+TestA,TestB,TestC,fruits,procedure
+5000
+11 - Procedure synonym with variable incorrect clause
+procedure p;
+Select p such that Modifi(p, "orange")
+none
+5000
+12 - Procedure synonym with variable multiple tabs, spaces
+procedure p;
+Select p such that      Modifies(   p,       "orange")
+TestA,TestB,TestC,fruits,procedure
+5000
+13 - Call synonym with variable
+call c;
+Select c such that Modifies(c, "bus")
+404, 80, 69, 32, 10, 2, 20, 58, 83, 251, 183, 178, 175, 169, 90, 16, 11, 73, 187, 167, 164, 159, 88, 86, 79, 75, 72, 14, 35, 43, 49, 64
+5000
+14 - Call stmt num with variable synonym
+variable v;
+Select v such that Modifies(405, v)
+uk,usa,spain,russia,brazil,malaysia,thailand,japan,india,singapore,vietnam,laos
+5000
+15 - Modifies variable stmt throught direct and call stmts
+stmt s; 
+Select s such that Modifies(s, "black")
+10,107,108,109,11,112,113,114,119,120,122,123,124,128,131,133,135,14,15,156,159,16,160,161,162,163,164,167,168,169,170,171,172,173,175,178,183,187,2,20,222,224,233,234,237,242,245,251,26,268,269,28,30,301,302,32,33,35,40,404,42,43,434,49,52,54,56,58,60,64,66,69,72,73,74,75,76,79,8,80,81,83,85,86,88,90,92,95,96
+5000

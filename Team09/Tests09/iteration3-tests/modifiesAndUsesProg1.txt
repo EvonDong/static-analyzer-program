@@ -1,0 +1,170 @@
+1 - Modifies stmt
+stmt s; variable v;
+Select v such that Modifies(334, v)
+m,o,n,f
+5000
+2 - Modifies, wildcard, while
+stmt s;
+Select s such that Modifies(s, _) with s.stmt#=127
+127
+5000
+3- Modifies, assign
+assign s; variable v;
+Select v such that Modifies(s, v) with s.stmt# = 317
+u
+5000
+4 - Modifies, assign wildcard
+assign s;
+Select s such that Modifies(s, _) with s.stmt# = 317
+317
+5000
+5 - Modifies, read
+read s; variable v;
+Select s such that Modifies(s, v) with v.varName = "dog"
+228
+5000
+6 - Modifies, read wildcard
+read s;
+Select s such that Modifies(s, _) with s.stmt# = 228
+228
+5000
+7 - Modifies, while
+while s; variable v;
+Select s such that Modifies(s, v) with v.varName = "chihuahua"
+225,229
+5000
+8 - Modifies, while wildcard
+while s;
+Select s such that Modifies(s, _) with s.stmt# = 225
+225
+5000
+9 - Modifies, if
+if s; variable v;
+Select s such that Modifies(s, "dog")
+226
+5000
+10 - Modifies, if wildcard
+if s;
+Select s such that Modifies(s, _) with s.stmt# = 226
+226
+5000
+11 - Modifies, call
+call s; variable v;
+Select BOOLEAN such that Modifies(172, "x")
+TRUE
+5000
+12 - Modifies, call, chained calls
+call s; variable v;
+Select BOOLEAN such that Modifies(176, "x")
+TRUE
+5000
+13 - Modifies call, wildcard
+call s;
+Select BOOLEAN such that Modifies(179, _) 
+TRUE
+5000
+14 - Modifies, prog_line, variable
+prog_line s; variable v;
+Select BOOLEAN such that Modifies(s, v)
+TRUE
+5000
+15 - Modifies, prog_line, variable
+prog_line s;
+Select BOOLEAN such that Modifies(s, _)
+TRUE
+5000
+16 - Modifies procedure variable
+procedure s; variable v;
+Select s such that Modifies(s, "a") with s.procName = "whileOne"
+whileOne
+5000
+17 - Modifies
+procedure s;
+Select BOOLEAN such that Modifies(s, _)
+TRUE
+5000
+18 - Uses stmt
+stmt s; variable v;
+Select v such that Uses(335, v)
+i,j,k,l,a,n,o
+5000
+19 - Uses, wildcard, while
+stmt s;
+Select s such that Uses(s, _) with s.stmt#=127
+127
+5000
+20- Uses, assign
+assign s; variable v;
+Select v such that Uses(s, v) with s.stmt# = 317
+e,d,w,b,g,q,l
+5000
+21 - Uses, assign wildcard
+assign s;
+Select s such that Uses(s, _) with s.stmt# = 317
+317
+5000
+22 - Uses, print
+print s; variable v;
+Select s such that Uses(s, v) with v.varName = "bread"
+250
+5000
+23 - Uses, print wildcard
+print s;
+Select s such that Uses(s, _) with s.stmt# = 366
+366
+5000
+24 - Uses, while
+while s; variable v;
+Select s such that Uses(s, v) with v.varName = "maltese"
+225,229
+5000
+25 - Uses, while wildcard
+while s;
+Select s such that Uses(s, _) with s.stmt# = 225
+225
+5000
+26 - Uses, if
+if s; variable v;
+Select s such that Uses(s, "chihuahua")
+226
+5000
+27 - Uses, if wildcard
+if s;
+Select s such that Uses(s, _) with s.stmt# = 226
+226
+5000
+28 - Uses, call
+call s; variable v;
+Select BOOLEAN such that Uses(172, "a")
+TRUE
+5000
+29 - Uses, call, chained calls
+call s; variable v;
+Select BOOLEAN such that Uses(176, "a")
+TRUE
+5000
+30 - Uses call, wildcard
+call s;
+Select BOOLEAN such that Uses(179, _) 
+TRUE
+5000
+31 - Uses, prog_line, variable
+prog_line s; variable v;
+Select BOOLEAN such that Uses(s, v)
+TRUE
+5000
+32 - Uses, prog_line, variable
+prog_line s;
+Select BOOLEAN such that Uses(s, _)
+TRUE
+5000
+33 - Uses procedure variable
+procedure s; variable v;
+Select s such that Uses(s, "a") with s.procName = "whileOne"
+whileOne
+5000
+34 - Uses
+procedure s;
+Select BOOLEAN such that Uses(s, _)
+TRUE
+5000

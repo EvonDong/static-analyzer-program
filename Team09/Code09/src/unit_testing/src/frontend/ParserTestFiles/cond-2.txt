@@ -1,0 +1,5 @@
+procedure main {
+	while ((a + b) && (a / b > 8)) {
+		print a;
+	}
+}

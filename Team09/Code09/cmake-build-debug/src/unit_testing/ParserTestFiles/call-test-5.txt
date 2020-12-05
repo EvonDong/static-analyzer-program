@@ -1,0 +1,38 @@
+procedure main {
+	call test;
+	call test2;
+	call test3;
+	call test4;
+	call test5;
+	call test6;
+}
+
+procedure test {
+	call test2;
+	call test3;
+	call test4;
+	call test5;
+}
+
+procedure test2 {
+	call test3;
+	call test4;
+	call test5;
+}
+
+procedure test3 {
+	call test4;
+	call test5;
+}
+
+procedure test4 {
+	call test5;
+}
+
+procedure test5 {
+	a = b + 6;
+}
+
+procedure test6 {
+	call test5;
+}
